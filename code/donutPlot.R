@@ -1,11 +1,36 @@
+## ---------------------------
+##
+## Script name: donutPlot.R
+##
+## Purpose of script: Create donuts plots based on the the number and abundance (coverage) of MAGs in the
+## Vanishing glacier dataset
+##
+## Author: Dr. Grégoire Michoud
+##
+## Date Created: 2023-09-05
+##
+## Copyright (c) Grégoire Michoud, 2023
+##
+## ---------------------------
+##
+## Notes:
+##   
+##
+## ---------------------------
+
+
 library("RColorBrewer")
 library("ggplot2")
 library(tidyverse)
 library(reshape2)
+library("ggrepel")
 
-setwd("~/../switchdrive/Institution/NOMIS_MAGs/Prokaryotes/TaxQual/")
-dat	<- read_tsv("NOMIS_MAGS_tax.tsv", col_names = T)
-covsum <- read_tsv("../MAGs_cov_sum.txt")
+source("customFunctions/plot_functions.R")
+
+dat	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv", col_names = T)
+covsum <- read_tsv("../Prokaryotes/MAGs_cov_sum.txt")
+
+## 
 
 dat$p_c <- if_else(dat$p == "p__Proteobacteria", dat$c, dat$p)
 dat$p_c <- gsub(".__","",dat$p_c, perl = T)
@@ -41,7 +66,7 @@ datToPlot$labelPosition <- (datToPlot$ymax + datToPlot$ymin) / 2
 
 p1 <- ggplot(datToPlot, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) +
   geom_rect() +
-  geom_label( x=4, aes(y=labelPosition, label=p_c), size=6) +
+  geom_label_repel( x=4, aes(y=labelPosition, label=p_c), size=6) +
   scale_fill_manual(values = colorRampPalette(brewer.pal(10,"Paired"))(length(unique(datToPlot$p_c)))) +
   coord_polar(theta="y") +
   #xlim(c(2, 4)) +
@@ -50,7 +75,7 @@ p1 <- ggplot(datToPlot, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) +
   theme(legend.position = "none")
 
 
-ggsave("donutPlotAbundance_p_c.pdf", p1, width = 15, height = 10)
+ggsave_fitmax("Figures/donutPlotAbundance_pc.pdf", p1, maxwidth = 10)
 
 
 datToPlotCov	<- dat%>%
@@ -75,7 +100,7 @@ datToPlotCov$labelPosition <- (datToPlotCov$ymax + datToPlotCov$ymin) / 2
 
 p2 <- ggplot(datToPlotCov, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) +
   geom_rect() +
-  geom_label( x=4, aes(y=labelPosition, label=p_c), size=6) +
+  geom_label_repel( x=4, aes(y=labelPosition, label=p_c), size=6) +
   scale_fill_manual(values = colorRampPalette(brewer.pal(10,"Paired"))(length(unique(datToPlotCov$p_c)))) +
   coord_polar(theta="y") +
   #xlim(c(2, 4)) +
@@ -84,5 +109,5 @@ p2 <- ggplot(datToPlotCov, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) 
   theme(legend.position = "none")
 p2
 
-ggsave("donutPlotCoverage_pc.pdf", p2, width = 15, height = 10)
+ggsave_fitmax("Figures/donutPlotCoverage_pc.pdf", p2, maxwidth = 10)
 
