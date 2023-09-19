@@ -45,4 +45,4 @@ p1$Count <- p1$Count + rotate()
   
 p2 <- ggarrange(plotlist = p1, common.legend = TRUE)
 
-ggsave_fitmax("Figures/Fig_X_NOMIS_MAGs_stats.pdf", p2, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_1a_NOMIS_MAGs_stats.pdf", p2, maxwidth = 10)

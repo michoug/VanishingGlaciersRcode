@@ -138,6 +138,6 @@ p4 <- gheatmap(p3, bactcov, offset=0.6, width=0.05,
 
 # bac <- print(open_tree(p4, angle = 2))
 
-ggsave_fitmax("Figures/Fig_X_bacterialTree.pdf",
+ggsave_fitmax("Figures/Fig_1c_bacterialTree.pdf",
        p4,
        maxheight =  15)

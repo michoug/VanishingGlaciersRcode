@@ -2,7 +2,7 @@
 ##
 ## Script name: barplotNovelTaxa.R
 ##
-## Purpose of script: Create a barplot showing for each taxonomical level, the number of known and unknows taxa
+## Purpose of script: Create a barplot showing for each taxonomical level, the number of known and unknowns taxa
 ##
 ## Author: Dr. Grégoire Michoud
 ##
@@ -45,7 +45,7 @@ dat2Plot <- dat_m %>%
   
 dat2Plot$variable <- factor(dat2Plot$variable, levels = c("Class", "Order", "Family", "Genus"))
 
-ggplot(dat2Plot, aes(x = perc, y = reorder(variable, desc(variable)), fill = status, label = label))+
+p1 <- ggplot(dat2Plot, aes(x = perc, y = reorder(variable, desc(variable)), fill = status, label = label))+
   geom_bar(stat = "identity", color = "black")+
   geom_text(nudge_x = 0.25)+
   scale_fill_manual(values = c("Known" = "white", "UnKnown" = "black"), labels = c("Known taxa", "Novel taxa"))+
@@ -55,4 +55,4 @@ ggplot(dat2Plot, aes(x = perc, y = reorder(variable, desc(variable)), fill = sta
   theme_classic()+
   theme(legend.position="top")
 
-ggsave("Figures/Fig_X_barplotNovelTaxa.pdf")
+ggsave("Figures/Fig_1b_barplotNovelTaxa.pdf", p1)
