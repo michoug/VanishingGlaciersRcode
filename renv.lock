@@ -1526,12 +1526,20 @@
     },
     "ggtree": {
       "Package": "ggtree",
-      "Version": "3.2.1",
-      "Source": "Bioconductor",
+      "Version": "3.9.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "bioc",
+      "RemoteRepo": "ggtree",
+      "RemoteRef": "devel",
+      "RemoteSha": "b51cece3bcd1093f41c36570a47c5c1441f8c3c7",
+      "Remotes": "GuangchuangYu/treeio",
       "Requirements": [
         "R",
         "ape",
         "aplot",
+        "cli",
         "dplyr",
         "ggfun",
         "ggplot2",
@@ -1541,13 +1549,14 @@
         "purrr",
         "rlang",
         "scales",
+        "stats",
         "tidyr",
         "tidytree",
         "treeio",
         "utils",
         "yulab.utils"
       ],
-      "Hash": "f156c85173024c88e2fdfd63ccca3fd7"
+      "Hash": "882ef6965cd00f2b4fc0aad1086e5752"
     },
     "ggtreeExtra": {
       "Package": "ggtreeExtra",
