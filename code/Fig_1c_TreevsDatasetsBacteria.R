@@ -131,7 +131,7 @@ p3 <- gheatmap(p2, bacDatset,width = 0.2,offset = 0.1,# offset=8, width=0.6,
 
 p4 <- gheatmap(p3, bactcov, offset=0.6, width=0.05,
                colnames=FALSE, color = NULL)+
-  scale_fill_viridis_b()+
+  scale_fill_viridis_c()+
   labs(fill = "Normalized log10\nabundance")
 
 # p4

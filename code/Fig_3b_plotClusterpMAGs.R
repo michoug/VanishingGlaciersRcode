@@ -79,7 +79,7 @@ colors <- c(brewer.pal(6, "Set1"), "black")
 
 p1 <- p +
   layout_circular() + 
-  scale_color_manual(values = colors, breaks = names(clades)) +
+  scale_color_manual(values = colors, breaks = sort(names(clades))) +
   labs(color = "Functional Cluster")+
   theme_dendrogram(plot.margin=margin(6,6,80,6)) +
   theme(legend.position=c(.9, .6))+
@@ -93,4 +93,4 @@ p2 <- gheatmap(p1, bacDat,width = 0.05,offset = 0.1,# offset=8, width=0.6,
   labs(fill = "Taxa")
 # p2
 
-ggsave("Figures/Fig_X_bactClustTree.pdf",p2,width = 18,height = 18)
+ggsave("Figures/Fig_3b_bactClustTree.pdf",p2,width = 18,height = 18)

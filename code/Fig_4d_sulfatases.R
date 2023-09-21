@@ -84,10 +84,10 @@ p1 <-  ggbetweenstats(
   results.subtitle = T)
 # p1
 
-p2 <- AddLetters(dat_sulf, plot = p1, x= d, y=n,ytext = 35, type = "n")+
+p2 <- AddLetters(dat_sulf, plot = p1, x= d, y=n,ytext = 130, type = "n")+
   theme(text = element_text(colour = "black", size = 12))+
   labs(y = "Number of Genes per MAGs", x = NULL, color = "Functional Clusters")+
   theme_classic2()
 p2
 
-ggsave_fitmax("Figures/Fig_X_sulfatases.pdf", p2, maxwidth = 12)
+ggsave_fitmax("Figures/Fig_4d_sulfatases.pdf", p2, maxwidth = 12)

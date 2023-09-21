@@ -106,7 +106,7 @@ p1 <- ggplot(dat_virus_sank_p, aes(x = x,
         plot.title = element_text(hjust = .5, colour = "black")) 
 
 p1
-ggsave_fitmax("Figures/Fig_X_Sankey_Genomad_Prok.pdf", p1)
+ggsave_fitmax("Figures/Fig_2c_Sankey_Genomad_Prok.pdf", p1)
 
 
 

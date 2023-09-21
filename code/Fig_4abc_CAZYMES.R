@@ -81,4 +81,4 @@ p1 <- grouped_ggbetweenstats(
 p1
 
 
-ggsave_fitmax("Figures/Fig_X_CAZymes_cluster.pdf", p1, maxwidth = 15)
+ggsave_fitmax("Figures/Fig_4abc_CAZymes_cluster.pdf", p1, maxwidth = 15)

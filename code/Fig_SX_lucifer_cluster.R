@@ -90,5 +90,5 @@ dat_filter <- dat_merge%>%
 
 
 
-ggsave_fitmax("Figures/Fig_X_lucifer_cluster.pdf", p1, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_SX_lucifer_cluster.pdf", p1, maxwidth = 10)
 

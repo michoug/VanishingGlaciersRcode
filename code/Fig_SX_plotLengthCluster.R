@@ -76,5 +76,5 @@ p_length <- ggbetweenstats(dat =dat_plot,x = cluster,
 p2 <- AddLetters(dat_plot, plot = p_length, x= cluster, y=LengthNorm2, ytext = 17)
 p2
 
-ggsave_fitmax("Figures/Fig_X_MAGs_cluster_length.pdf",p2, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_SX_MAGs_cluster_length.pdf",p2, maxwidth = 10)
 

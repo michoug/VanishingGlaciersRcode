@@ -157,4 +157,4 @@ p1 <- ggplot(dat_heat_final, aes(variables,resp, fill = t_value))+
 
 p1
 
-ggsave_fitmax("Figures/Fig_X_heatmapGams.pdf", p1, maxwidth = 15, maxheight = 13)
+ggsave_fitmax("Figures/Fig_5_heatmapGams.pdf", p1, maxwidth = 15, maxheight = 13)

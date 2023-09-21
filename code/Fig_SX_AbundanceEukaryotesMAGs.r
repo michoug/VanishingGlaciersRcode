@@ -71,6 +71,6 @@ p1	<-
   theme(strip.text	= element_text(colour = 'black', size = 12))
 
 p1
-ggsave_fitmax("Figures/Fig_X_barplot_Eukaryotic_MAGS.pdf", p1, maxwidth = 13)
+ggsave_fitmax("Figures/Fig_SX_barplot_Eukaryotic_MAGS.pdf", p1, maxwidth = 13)
 
 

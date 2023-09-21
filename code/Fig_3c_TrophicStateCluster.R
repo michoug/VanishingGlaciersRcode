@@ -91,4 +91,4 @@ p1 <- ggplot(dat_final, aes(x = TrophicState, y = Frequence*100, fill = as.facto
         panel.grid.major.y = element_line(color = "black",linewidth = 0.1),
         text = element_text(colour = "black", size = 12))
 
-ggsave_fitmax("Figures/Fig_X_TrophicStateCluster.pdf", p1, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_3c_TrophicStateCluster.pdf", p1, maxwidth = 10)

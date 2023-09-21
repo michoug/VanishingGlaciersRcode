@@ -146,6 +146,6 @@ p1	<-
   
 
 p1
-ggsave_fitmax("Figures/Fig_X_barplotVirusTax.pdf", p1)
+ggsave_fitmax("Figures/Fig_2b_barplotVirusTax.pdf", p1)
 
 

@@ -18,6 +18,7 @@
 ## ---------------------------
 
 library(ggpubr)
+library(ggplot2)
 library(tidyverse)
 
 source("customFunctions/plot_functions.R")
@@ -29,19 +30,22 @@ stats <- read_tsv("../Prokaryotes/Stats_rRNA//NOMIS_MAGs_statsTable.txt")
 dat_plot <- dat_mags %>%
   left_join(tax)%>%
   left_join(stats)%>%
-  mutate(Quality =if_else(Completeness >= 90 & Contamination <= 5,"High","Medium"))
+  mutate(Quality =if_else(Completeness >= 90 & Contamination <= 5,"High","Medium"))%>%
+  mutate(N50 = N50 / 1000)%>%
+  mutate(LengthNorm2 = LengthNorm2/1e6)
 
-dat_plot$N50 <- dat_plot$N50 / 1000
+# dat_plot$N50 <- dat_plot$N50 / 1000
 
-p1 <- ggboxplot(dat_plot, x = "Quality", y = c("N50","Completeness","Count", "Contamination"),
+
+p1 <- ggboxplot(dat_plot, x = "Quality", y = c("N50","Completeness","LengthNorm2", "Contamination"),
           color = "Quality", palette = "jco", title = "",
           xlab = "",
-          ylab = c("N50 (kbp)","Completeness (%)","Contigs number", "Contamination (%)"))
+          ylab = c("N50 (kbp)","Completeness (%)","Genome Length (Mbp)", "Contamination (%)"))
 
 p1$N50 <- p1$N50 + rotate()
 p1$Completeness <- p1$Completeness + rotate()
 p1$Contamination <- p1$Contamination + rotate()
-p1$Count <- p1$Count + rotate()
+p1$LengthNorm2 <- p1$LengthNorm2 + rotate()
   
 p2 <- ggarrange(plotlist = p1, common.legend = TRUE)
 

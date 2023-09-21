@@ -74,7 +74,7 @@ p1 <- ggplot(datToPlot, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) +
   theme(legend.position = "none")
 
 
-ggsave_fitmax("Figures/Fig_X_donutPlotAbundance.pdf", p1, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_SX_donutPlotAbundance.pdf", p1, maxwidth = 10)
 
 
 datToPlotCov	<- dat%>%
@@ -108,5 +108,5 @@ p2 <- ggplot(datToPlotCov, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) 
   theme(legend.position = "none")
 p2
 
-ggsave_fitmax("Figures/Fig_X_donutPlotCoverage.pdf", p2, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_SX_donutPlotCoverage.pdf", p2, maxwidth = 10)
 

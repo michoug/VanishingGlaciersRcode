@@ -32,6 +32,7 @@ genes_mod <- read_tsv("../Prokaryotes/Algae_Bacteria_Genes/listFunctionsAlgaeBac
 
 genes_path$Description <- NULL 
 genes_mod$Category <- gsub("(Biotin biosynthesis),.*","\\1", genes_mod$Category, perl = T)
+genes_path$Category <- gsub("(Biofilm formation).*","\\1", genes_path$Category, perl = T)
 
 colnames(genes_path) <- colnames(genes_mod)
 all_genes <- rbind(genes_path, genes_mod)
@@ -94,4 +95,4 @@ p1 <- ggplot(dat_plot, aes(x = as.character(d), y = Category, fill = mean*100))+
   labs(x = NULL, y = NULL, fill = "Proprotion (%)")+
   theme_pubr()
 p1
-ggsave_fitmax("Figures/Fig_X_Heatmap_cat_algae_bact.pdf", p1, maxwidth = 12)
+ggsave_fitmax("Figures/Fig_4e_Heatmap_cat_algae_bact.pdf", p1, maxwidth = 12)

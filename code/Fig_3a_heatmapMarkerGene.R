@@ -108,7 +108,7 @@ for (d in list$list) {
   name = d
   name <- gsub(" ", "_", name)
   name <- gsub("/", "_", name)
-  name <- paste("Figures/temp/",name, ".pdf", sep = "")
+  name <- paste("Figures/temp/Fig_3a_",name, ".pdf", sep = "")
   ggsave(name, p1, height = 7)
   plot_list[[d]] = p1
 }
