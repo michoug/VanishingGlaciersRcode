@@ -53,7 +53,7 @@ dat_heat <- dat_mod%>%
     resp == "dissimilatory_nitrite_reduction" ~ "Dissimilatory nitrite reduction",
     # resp == "dissimilatory_sulfate_reduction" ~ "Dissimilatory sulfate reduction",
     resp == "dmsp" ~ "DMSP",
-    # resp == "flagella" ~ "Flagella",
+    resp == "flagella" ~ "Flagella",
     resp == "formaldehyde_assimilation" ~ "Formaldehyde assimilation",
     resp == "heterotrophy" ~ "Chemolitoheterotrophy\nMix",
     resp == "heterotrophy_aerobic_respiration" ~ "Chemoorganotrophy\naerobic respiration",
@@ -66,7 +66,7 @@ dat_heat <- dat_mod%>%
     resp == "none" ~ "None",
     resp == "p_mag_diversity" ~ "Prokaryotic Diversity",
     resp == "p_mag_rich" ~ "Prokaryotic Richness",
-    # resp == "pili" ~ "Pili",
+    resp == "pili" ~ "Pili",
     resp == "quorum_sensing" ~ "Quorum sensing",
     resp == "reductive_citrate_cycle" ~ "Reductive citrate cycle",
     resp == "sulfite_oxidation" ~ "Sulfite oxidation",
@@ -98,8 +98,8 @@ dat_heat <- dat_mod%>%
     variables == "water_temp_c" ~ "Water\ntemperature"
   ))
 
-levelsResp <- c("Vitamin B12 transport", "Thiamine transporter", "Thiamine biosynthesis",
-                "Quorum sensing", "DMSP", "Cobalamin biosynthesis", "Chemotaxis",
+levelsResp <- c("Vitamin B12 transport", "Thiamine transporter", "Thiamine biosynthesis","Pili",
+                "Quorum sensing", "Flagella", "DMSP", "Cobalamin biosynthesis", "Chemotaxis",
                 "Biotin transport", "Biotin biosynthesis", "CO oxidation",
                 "Thiosulfate oxidation", "Sulfite oxidation",
                 "Assimilatory/dissimilatory\nsulfate reduction", "Urea metabolism",
@@ -113,12 +113,12 @@ levelsResp <- c("Vitamin B12 transport", "Thiamine transporter", "Thiamine biosy
                 "Chemolithoautotrophy", "Viral Richness", "Viral Diversity",
                 "Prokaryotic Richness", "Prokaryotic Diversity", "Algal Richness", "Algal Diversity")
 
-algal <- levelsResp[1:9]
-sulfur <- levelsResp[11:13]
-nitrogen <- levelsResp[14:19]
-carbon <- levelsResp[20:23]
-trophic <- levelsResp[24:33]
-div <- levelsResp[34:length(levelsResp)]
+algal <- levelsResp[1:11]
+sulfur <- levelsResp[13:15]
+nitrogen <- levelsResp[16:21]
+carbon <- levelsResp[22:25]
+trophic <- levelsResp[27:35]
+div <- levelsResp[36:length(levelsResp)]
 
 levelsExp <- c("Elevation","Glacier Coverage","Glacier Surface\nArea","Distance to\nthe snout",
                "Chla","Conductivity","SRP","NH4","NO3","NO2","pH",
@@ -157,4 +157,4 @@ p1 <- ggplot(dat_heat_final, aes(variables,resp, fill = t_value))+
 
 p1
 
-ggsave_fitmax("Figures/Fig_5_heatmapGams.pdf", p1, maxwidth = 15, maxheight = 13)
+ggsave_fitmax("Figures/Fig_5_heatmapGams.pdf",p1, maxwidth = 15, maxheight = 13)

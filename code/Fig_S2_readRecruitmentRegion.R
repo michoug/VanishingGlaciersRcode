@@ -57,4 +57,4 @@ p1 <- ggbetweenstats(dat =dat_meta,x = Site_c,
 
 p1
 
-ggsave_fitmax("Figures/Fig_SX_readRecruitment.pdf",p1, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_S2_readRecruitment.pdf",p1, maxwidth = 10)

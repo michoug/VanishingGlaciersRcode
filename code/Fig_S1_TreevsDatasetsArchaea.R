@@ -116,6 +116,6 @@ p3_arch
   scale_fill_viridis_b()+
   labs(fill = "Normalized log10\nabundance"))
 
-ggsave_fitmax("Figures/Fig_SX_ArchaealTree.pdf",
+ggsave_fitmax("Figures/Fig_S1_ArchaealTree.pdf",
        p4_arch,
        maxwidth = 9)
