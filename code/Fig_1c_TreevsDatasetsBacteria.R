@@ -110,8 +110,8 @@ p2 <- p1 +
     data=bacDat,
     pwidth	= 0.01,
     geom=geom_bar,
-    mapping=aes(y=MAGs,	x = Abundance, fill = p_c),
-    orientation="y",
+    mapping=aes(y=MAGs, fill = p_c,x = 1),
+    # orientation="y",
     stat="identity",
   )+
   scale_fill_manual(values	= bactColor[-1])+
@@ -119,7 +119,7 @@ p2 <- p1 +
   new_scale_colour()+
   new_scale_fill()
 
-# p2
+p2
 
 p3 <- gheatmap(p2, bacDatset,width = 0.2,offset = 0.1,# offset=8, width=0.6, 
                colnames=FALSE, color = NULL) +

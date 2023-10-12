@@ -69,7 +69,8 @@ dat_cazy_mags <-dat_select %>%
     .default = "Archae"
   ))%>%
   filter(!(d == "Archae"))%>%
-  select(-c(sum, mean))
+  select(-c(sum, mean))%>%
+  filter(n > 0)
 
 sulfGenes <- dat$protein
 sulfGenes <- as.data.frame(sulfGenes)
@@ -109,7 +110,8 @@ dat_sulf <- sulfGenes_all %>%
     d == "6" ~ "Plantomycetes",
     .default = "Archae"
   ))%>%
-  filter(!(d == "Archae"))
+  filter(!(d == "Archae"))%>%
+  filter(n > 0)
 
 dat_final <- rbind(dat_cazy_mags, dat_sulf)
 

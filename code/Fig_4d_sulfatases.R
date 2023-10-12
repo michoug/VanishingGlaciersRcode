@@ -30,7 +30,7 @@ dat_blast <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_60_
 dat_cont_genes <- read_tsv("../Prokaryotes/mags_cont_genes.txt.gz")
 cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
 blast <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase.txt.gz")
-descrition <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/sulfatase_description.txt")
+description <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/sulfatase_description.txt")
 magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
 
 # descrition_fucan <- descrition %>%
@@ -54,13 +54,16 @@ dat_sulf <- sulfGenes_all %>%
   mutate(cat = gsub("(.*?)_(.*)","\\2", perl = T, id))%>%
   separate_rows(cat, sep = ";")%>%
   select(MAGs, cat)%>%
-  left_join(descrition, by = c("cat" = "Subfamily"), multiple = "all",relationship = "many-to-many")%>%
+  left_join(description, by = c("cat" = "Subfamily"), multiple = "all",relationship = "many-to-many")%>%
   na.omit()%>%
   filter(!(Activity == "Other"))%>%
   group_by(MAGs,Activity)%>%
-  summarise(n = n())%>%
+  summarise(numb = n())%>%
   ungroup()%>%
-  complete(MAGs, Activity, fill = list(n = 0))%>%
+  complete(MAGs, Activity, fill = list(numb = 0))%>%
+  group_by(MAGs)%>%
+  summarise(n = sum(numb))%>%
+  mutate(Element = "Sulfatase")%>%
   left_join(cluster, by = c("MAGs" = "sub_grp_6"))%>%
   mutate(d = case_when(
     d == "1" ~ "Diverse Taxa",
@@ -71,7 +74,9 @@ dat_sulf <- sulfGenes_all %>%
     d == "6" ~ "Plantomycetes",
     .default = "Archae"
   ))%>%
-  filter(!(d == "Archae"))
+  filter(!(d == "Archae"))#%>%
+  # filter(n > 0)
+
 
 p1 <-  ggbetweenstats(
   data = dat_sulf,

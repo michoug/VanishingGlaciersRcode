@@ -34,7 +34,7 @@ dat_heat <- dat_mod%>%
   select(resp, variables, t_value)%>%
   mutate(t_value = as.numeric(t_value))%>%
   complete(resp,variables,fill=list(t_value=0))%>%
-  filter(!(resp %in% c("pili", "flagella")))%>%
+  # filter(!(resp %in% c("pili", "flagella")))%>%
   mutate(resp = case_when(
     resp == "alg_mag_diversity" ~ "Algal Diversity",
     resp == "alg_mag_rich" ~ "Algal Richness",

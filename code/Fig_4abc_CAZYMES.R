@@ -62,7 +62,8 @@ dat_cazy_mags <-dat_select %>%
     d == "6" ~ "Plantomycetes",
     .default = "Archae"
   ))%>%
-  filter(!(d == "Archae"))
+  filter(!(d == "Archae"))%>%
+  filter(n > 0)
 
 
 p1 <- grouped_ggbetweenstats(
@@ -82,3 +83,9 @@ p1
 
 
 ggsave_fitmax("Figures/Fig_4abc_CAZymes_cluster.pdf", p1, maxwidth = 15)
+
+
+dat_mostAbund <- dat_cazy_mags %>%
+  group_by(c, Element)%>%
+  summarise(mean = mean(n))
+  

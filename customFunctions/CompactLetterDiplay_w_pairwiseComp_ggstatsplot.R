@@ -1,8 +1,30 @@
 ## Modified from https://github.com/IndrajeetPatil/ggstatsplot/issues/654
 
-library("QsRutils")
 library(statsExpressions)
 library(ggstatsplot)
+
+########### From QsRutils
+#' Get ggplot Plot Limits
+#' 
+#' Gets the ranges for the width and height of a ggplot panel.
+#' 
+#' @param plot A plot created with ggplot2
+#'
+#' @return A list: xmin, xmax, ymin, ymax
+#' @export
+#' @examples
+#' library(ggplot2)
+#' data(iris)
+#' plt <- ggplot(data=iris, aes(x=Species, y=Petal.Length)) + geom_boxplot()
+#' get_plot_limits(plt)
+get_plot_limits <- function(plot) {
+  gb = ggplot2::ggplot_build(plot)
+  xmin = gb$layout$panel_params[[1]]$x.range[1]
+  xmax = gb$layout$panel_params[[1]]$x.range[2]
+  ymin = gb$layout$panel_params[[1]]$y.range[1]
+  ymax = gb$layout$panel_params[[1]]$y.range[2]
+  list(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax)
+}
 
 ########### Get the letters to display:
 CalcMultCompLetters <- function(data){
@@ -62,7 +84,7 @@ AddLetters <- function(data, plot, x, y,ytext,
   ltr_df <- data.frame(x, y, cbd)
   
   #3. If we plot the CLDs at the coordinates in ltr_df, they will over plot the tops of the whiskers . We need to nudge the CLDs upward to avoid the overlap. To determine how much to nudge, I will get the range of the Y-axis and nudge upward 5% of this range.
-  lmts <- QsRutils::get_plot_limits(plot)
+  lmts <- get_plot_limits(plot)
   y.range <- lmts$ymax - lmts$ymin
   y.nudge <- 1 * y.range
   

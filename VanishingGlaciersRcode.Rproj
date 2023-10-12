@@ -11,7 +11,3 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
-
-PythonType: conda
-PythonVersion: 3.8.17
-PythonPath: C:/Users/gmichoud/miniconda3/envs/vanishingGlaciers/python.exe
