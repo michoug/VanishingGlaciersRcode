@@ -125,7 +125,7 @@ p3 <- p2 %<+% tax_temp +
 
 p4 <- gheatmap(p3, cov_max_all, offset=0.2, width=0.05,
                colnames=FALSE,color = NULL)+
-  scale_fill_viridis_c()+
+  scale_fill_viridis_c(na.value = 0)+
   labs(fill = "Normalized log10\nabundance")
 
 p4

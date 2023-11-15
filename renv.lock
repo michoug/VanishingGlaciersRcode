@@ -355,6 +355,16 @@
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
     },
+    "base64url": {
+      "Package": "base64url",
+      "Version": "1.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "backports"
+      ],
+      "Hash": "0c54cf3a08cc0e550fbd64ad33166143"
+    },
     "bayestestR": {
       "Package": "bayestestR",
       "Version": "0.13.1",
@@ -582,6 +592,16 @@
         "lattice"
       ],
       "Hash": "24b6d006b8b2343876cf230687546932"
+    },
+    "codetools": {
+      "Package": "codetools",
+      "Version": "0.2-18",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "019388fc48e48b3da0d3a76ff94608a8"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -1248,17 +1268,26 @@
     },
     "ggtreeExtra": {
       "Package": "ggtreeExtra",
-      "Version": "1.4.2",
-      "Source": "Bioconductor",
+      "Version": "1.11.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "xiangpin",
+      "RemoteRepo": "ggtreeExtra",
+      "RemoteRef": "master",
+      "RemoteSha": "e1de32465fe066aa6c87d1a6abcdf30f243ae7f9",
       "Requirements": [
+        "cli",
         "ggnewscale",
         "ggplot2",
         "ggtree",
+        "magrittr",
         "rlang",
         "stats",
+        "tidytree",
         "utils"
       ],
-      "Hash": "1447c9a03742ce2d64a006498eb1568b"
+      "Hash": "7733d79e97d07d505c2c3f9900264e27"
     },
     "glue": {
       "Package": "glue",
@@ -1477,6 +1506,26 @@
         "uuid"
       ],
       "Hash": "99df65cfef20e525ed38c3d2577f7190"
+    },
+    "igraph": {
+      "Package": "igraph",
+      "Version": "1.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "cpp11",
+        "grDevices",
+        "graphics",
+        "magrittr",
+        "methods",
+        "pkgconfig",
+        "rlang",
+        "stats",
+        "utils"
+      ],
+      "Hash": "3e476b375c746d899fd53a7281d78191"
     },
     "insight": {
       "Package": "insight",
@@ -2508,6 +2557,54 @@
       ],
       "Hash": "90b28393209827327de889f49935140a"
     },
+    "tarchetypes": {
+      "Package": "tarchetypes",
+      "Version": "0.7.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "digest",
+        "dplyr",
+        "fs",
+        "parallel",
+        "rlang",
+        "targets",
+        "tibble",
+        "tidyselect",
+        "utils",
+        "vctrs",
+        "withr"
+      ],
+      "Hash": "aa959b3dcfe7033fafae5ac899d8bac0"
+    },
+    "targets": {
+      "Package": "targets",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "R6",
+        "base64url",
+        "callr",
+        "cli",
+        "codetools",
+        "data.table",
+        "digest",
+        "igraph",
+        "knitr",
+        "rlang",
+        "stats",
+        "tibble",
+        "tidyselect",
+        "tools",
+        "utils",
+        "vctrs",
+        "yaml"
+      ],
+      "Hash": "eea57f5c8154c12cf13467c6ffb919de"
+    },
     "testthat": {
       "Package": "testthat",
       "Version": "3.1.7",
@@ -2610,7 +2707,7 @@
     },
     "tidytree": {
       "Package": "tidytree",
-      "Version": "0.4.4",
+      "Version": "0.4.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2628,7 +2725,7 @@
         "tidyselect",
         "yulab.utils"
       ],
-      "Hash": "738ba063f5808e2249878cd1642bdd50"
+      "Hash": "b6c0b32b3632419e1a91bf4e0c4f7337"
     },
     "tidyverse": {
       "Package": "tidyverse",
@@ -2693,14 +2790,14 @@
     },
     "treeio": {
       "Package": "treeio",
-      "Version": "1.19.1",
+      "Version": "1.27.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "treeio",
       "RemoteUsername": "GuangchuangYu",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "9d4e4bff464684240e74044a1206058692bf825c",
+      "RemoteRepo": "treeio",
+      "RemoteRef": "devel",
+      "RemoteSha": "a8b64d4a3ac47406684f573f6e94080ff1e95b2d",
       "Requirements": [
         "R",
         "ape",
@@ -2709,11 +2806,12 @@
         "magrittr",
         "methods",
         "rlang",
+        "stats",
         "tibble",
         "tidytree",
         "utils"
       ],
-      "Hash": "621aff5e3e8a63a0b85109c1177c3083"
+      "Hash": "cdce4cde2d2f25f0de840b9b344c2303"
     },
     "tzdb": {
       "Package": "tzdb",
