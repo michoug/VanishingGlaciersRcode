@@ -20,10 +20,9 @@
 
 library(tidyverse)
 library(ggplot2)
-library(reshape2)
 library(scales)
 
-dat	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv", col_names = T)
+dat	<- read_tsv("data/NOMIS_MAGS_tax.tsv", col_names = T)
 
 dat2Plot <- dat %>%
   pivot_longer(cols = !MAGs)%>%

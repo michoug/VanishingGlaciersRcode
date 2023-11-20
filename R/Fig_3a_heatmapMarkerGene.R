@@ -24,7 +24,7 @@ library(ggpubr)
 library(RColorBrewer)
 
 dat <- read_tsv("../Prokaryotes/EggNog/listMetabolismMAGs.txt.gz")
-taxAll <- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv")
+taxAll <- read_tsv("data/pMAGs_tax.tsv")
 marker_list <- read_tsv("../Prokaryotes/EggNog/MarkerGenesReduced.txt")
 
 marker_list$Gene_name <- factor(marker_list$Gene_name, levels = unique(marker_list$Gene_name))

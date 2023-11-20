@@ -23,18 +23,15 @@ library(tidyverse)
 
 source("customFunctions/plot_functions.R")
 
-dat_mags	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGs_checkm_stats.txt")
-tax <- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv")
-stats <- read_tsv("../Prokaryotes/Stats_rRNA//NOMIS_MAGs_statsTable.txt")
+dat_mags	<- read_tsv("data/NOMIS_MAGs_checkm_stats.txt")
+tax <- read_tsv("data/NOMIS_MAGS_tax.tsv")
+stats <- read_tsv("data/NOMIS_MAGs_statsTable.txt")
 
 dat_plot <- dat_mags %>%
   left_join(tax)%>%
   left_join(stats)%>%
   mutate(Quality =if_else(Completeness >= 90 & Contamination <= 5,"High","Medium"))%>%
-  # mutate(N50 = N50 / 1000)%>%
   mutate(LengthNorm2 = LengthNorm2/1e6)
-
-# dat_plot$N50 <- dat_plot$N50 / 1000
 
 
 p1 <- ggboxplot(dat_plot, x = "Quality", y = c("GC","Completeness","LengthNorm2", "Contamination"),

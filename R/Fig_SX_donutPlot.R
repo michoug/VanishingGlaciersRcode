@@ -22,7 +22,6 @@
 library("RColorBrewer")
 library("ggplot2")
 library(tidyverse)
-library(reshape2)
 library("ggrepel")
 
 source("customFunctions/plot_functions.R")

@@ -24,9 +24,9 @@ library(ggsankey)
 
 source("customFunctions/plot_functions.R")
 
-dat_prok <- read_tsv("../Virus/Genomad_Virus_host/NOMIS_genomad_virus_summary.txt")
-dat_prok_vtax <- read_tsv("../Virus/Genomad_Virus_host/allhostviruses.names.out", col_names = F)
-dat_prok_ptax <- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv")
+dat_prok <- read_tsv("data/vMAGs_genomadProk.txt")
+dat_prok_vtax <- read_tsv("data/vMAGs_genomadProk_tax.txt", col_names = F)
+dat_prok_ptax <- read_tsv("data/pMAGs_tax.tsv")
 
 colnames(dat_prok_vtax) <- c("class", "seq_name", "taxId", "taxonomy")
 

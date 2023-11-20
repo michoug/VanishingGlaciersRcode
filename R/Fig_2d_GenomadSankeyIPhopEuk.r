@@ -24,9 +24,9 @@ library(ggsankey)
 
 source("customFunctions/plot_functions.R")
 
-dat_euk <- read_tsv("../Virus/Genomad_Virus_Eukaryotes/Genomad_Virus_Eukaryotes.txt")
-dat_euk_vtax <- read_tsv("../Virus/Genomad_Virus_Eukaryotes/allEukviruses.names.out", col_names = F)
-dat_euk_ptax <- read_tsv("../Eukaryotes/Phylofisher/Above30perc/metadata_input_above30.tsv")
+dat_euk <- read_tsv("data/vMAGs_genomadEuk.txt")
+dat_euk_vtax <- read_tsv("data/vMAGs_genomadEuk_tax.out", col_names = F)
+dat_euk_ptax <- read_tsv("data/eMAGs_tax.tsv")
 
 colnames(dat_euk_vtax) <- c("class", "seq_name", "taxId", "taxonomy")
 

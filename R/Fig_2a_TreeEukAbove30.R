@@ -17,8 +17,8 @@
 ##
 ## ---------------------------
 
-library("ggtree")
-library("ape")
+library(ggtree)
+library(ape)
 library(RColorBrewer)
 library(tidyverse)
 library(ggtreeExtra)
@@ -26,10 +26,10 @@ library(ggnewscale)
 
 source("customFunctions/plot_functions.R")
 
-tree	<- read.tree("../Eukaryotes/Phylofisher/Above30perc/tree_fast.tree")
-tax_mags <- read_tsv("../Eukaryotes/Phylofisher/Above30perc/metadata_input.tsv") 
-tax_ref <- read_tsv("../Eukaryotes/Phylofisher/Above30perc/metadata.tsv")
-cov <- read_tsv("../Eukaryotes/Eukaryotes_MAGs_cov_norm.txt")
+tree	<- read.tree("data/eMAGs_phylo.tree")
+tax_mags <- read_tsv("data/eMAGs_metadata_MAGs_addREF.tsv") 
+tax_ref <- read_tsv("data/eMAGs_metadata_REF.tsv")
+cov <- read_tsv("data/eMAGs_cov_norm.txt")
 
 tax_mags <- tax_mags %>%
   select(`Unique ID`, `Lower Taxonomy`)%>%

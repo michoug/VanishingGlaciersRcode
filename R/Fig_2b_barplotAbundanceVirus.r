@@ -24,13 +24,13 @@ library(vegan)
 
 source("customFunctions/plot_functions.R")
 
-dat_host	<- read_tsv("../Virus/genomad_virus_host_cov_norm.txt.gz")
-dat_euk <- read_tsv("../Virus/Genomad_Virus_Eukaryotes_cov_norm.txt.gz")
-dat_tax_virus <- read_tsv("../Virus/nomis_high_complete_kaiju.names.out", col_names = F)
-dat_cov_virus <- read_tsv("../Virus/phamb_viruses_depth_norm.txt.gz")
-dat_virus_genomad <- read_tsv("../Virus/phamb_viruses_depth_genomad_norm.txt.gz")
-map	<- read_tsv("../metadata_NOMIS.txt")
-virusToRemove <- read_tsv("../Virus/virusToRemove.txt")
+dat_host	<- read_tsv("data/pMAGs_genomad_cov_norm.txt.gz")
+dat_euk <- read_tsv("data/eMAGs_genomad_cov_norm.txt.gz")
+dat_tax_virus <- read_tsv("data/vMAGs_tax_kaiju.out", col_names = F)
+dat_cov_virus <- read_tsv("data/eMAGs_cov_norm.txt.gz")
+dat_virus_genomad <- read_tsv("data/vMAGs_genomad_cov_norm.txt.gz")
+map	<- read_tsv("data/metadata_NOMIS_sed_chem.txt")
+virusToRemove <- read_tsv("data/virusToRemove.txt")
 
 colnames(dat_tax_virus) <- c("class", "seq_name", "taxId", "taxonomy")
 

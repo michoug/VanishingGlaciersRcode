@@ -204,17 +204,6 @@
       ],
       "Hash": "1e035db628cefb315c571202d70202fe"
     },
-    "RcppGSL": {
-      "Package": "RcppGSL",
-      "Version": "0.3.13",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "Rcpp",
-        "stats"
-      ],
-      "Hash": "e8fc7310d256a7b6c4de8e57ab76c55d"
-    },
     "Rmpfr": {
       "Package": "Rmpfr",
       "Version": "0.9-1",
@@ -1280,25 +1269,6 @@
       ],
       "Hash": "7733d79e97d07d505c2c3f9900264e27"
     },
-    "ggvegan": {
-      "Package": "ggvegan",
-      "Version": "0.1.999",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "gavinsimpson",
-      "RemoteRepo": "ggvegan",
-      "RemoteRef": "main",
-      "RemoteSha": "058c08c2f085575965cc5501461ddbbe05792ef5",
-      "Requirements": [
-        "ggplot2",
-        "ggrepel",
-        "grid",
-        "tidyr",
-        "vegan"
-      ],
-      "Hash": "15bbfca655b2c7ea756ccc94e8374fee"
-    },
     "glue": {
       "Package": "glue",
       "Version": "1.6.2",
@@ -1829,24 +1799,6 @@
         "methods"
       ],
       "Hash": "6dfe8bf774944bd5595785e3229d8771"
-    },
-    "mvabund": {
-      "Package": "mvabund",
-      "Version": "4.2.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "MASS",
-        "R",
-        "Rcpp",
-        "RcppGSL",
-        "methods",
-        "parallel",
-        "statmod",
-        "stats",
-        "tweedie"
-      ],
-      "Hash": "5ecc462da7ceee1c9d2215ac553a5cb7"
     },
     "mvtnorm": {
       "Package": "mvtnorm",
@@ -2471,18 +2423,6 @@
       ],
       "Hash": "4079070fc210c7901c0832a3aeab894f"
     },
-    "statmod": {
-      "Package": "statmod",
-      "Version": "1.5.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "graphics",
-        "stats"
-      ],
-      "Hash": "26e158d12052c279bdd4ba858b80fb1f"
-    },
     "statsExpressions": {
       "Package": "statsExpressions",
       "Version": "1.5.2",
@@ -2784,17 +2724,6 @@
         "utils"
       ],
       "Hash": "cdce4cde2d2f25f0de840b9b344c2303"
-    },
-    "tweedie": {
-      "Package": "tweedie",
-      "Version": "2.3.5",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "methods"
-      ],
-      "Hash": "517d541554d2e9c392f9a67f42c8b842"
     },
     "tzdb": {
       "Package": "tzdb",
