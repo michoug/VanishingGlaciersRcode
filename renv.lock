@@ -204,6 +204,17 @@
       ],
       "Hash": "1e035db628cefb315c571202d70202fe"
     },
+    "RcppGSL": {
+      "Package": "RcppGSL",
+      "Version": "0.3.13",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "Rcpp",
+        "stats"
+      ],
+      "Hash": "e8fc7310d256a7b6c4de8e57ab76c55d"
+    },
     "Rmpfr": {
       "Package": "Rmpfr",
       "Version": "0.9-1",
@@ -354,16 +365,6 @@
         "R"
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
-    },
-    "base64url": {
-      "Package": "base64url",
-      "Version": "1.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "backports"
-      ],
-      "Hash": "0c54cf3a08cc0e550fbd64ad33166143"
     },
     "bayestestR": {
       "Package": "bayestestR",
@@ -592,16 +593,6 @@
         "lattice"
       ],
       "Hash": "24b6d006b8b2343876cf230687546932"
-    },
-    "codetools": {
-      "Package": "codetools",
-      "Version": "0.2-18",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "019388fc48e48b3da0d3a76ff94608a8"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -963,14 +954,14 @@
     },
     "fs": {
       "Package": "fs",
-      "Version": "1.5.2",
+      "Version": "1.6.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "7c89603d81793f0d5486d91ab1fc6f1d"
+      "Hash": "47b5f30c720c23999b913a1a635cf0bb"
     },
     "gargle": {
       "Package": "gargle",
@@ -1289,6 +1280,25 @@
       ],
       "Hash": "7733d79e97d07d505c2c3f9900264e27"
     },
+    "ggvegan": {
+      "Package": "ggvegan",
+      "Version": "0.1.999",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gavinsimpson",
+      "RemoteRepo": "ggvegan",
+      "RemoteRef": "main",
+      "RemoteSha": "058c08c2f085575965cc5501461ddbbe05792ef5",
+      "Requirements": [
+        "ggplot2",
+        "ggrepel",
+        "grid",
+        "tidyr",
+        "vegan"
+      ],
+      "Hash": "15bbfca655b2c7ea756ccc94e8374fee"
+    },
     "glue": {
       "Package": "glue",
       "Version": "1.6.2",
@@ -1506,26 +1516,6 @@
         "uuid"
       ],
       "Hash": "99df65cfef20e525ed38c3d2577f7190"
-    },
-    "igraph": {
-      "Package": "igraph",
-      "Version": "1.4.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Matrix",
-        "R",
-        "cpp11",
-        "grDevices",
-        "graphics",
-        "magrittr",
-        "methods",
-        "pkgconfig",
-        "rlang",
-        "stats",
-        "utils"
-      ],
-      "Hash": "3e476b375c746d899fd53a7281d78191"
     },
     "insight": {
       "Package": "insight",
@@ -1839,6 +1829,24 @@
         "methods"
       ],
       "Hash": "6dfe8bf774944bd5595785e3229d8771"
+    },
+    "mvabund": {
+      "Package": "mvabund",
+      "Version": "4.2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "MASS",
+        "R",
+        "Rcpp",
+        "RcppGSL",
+        "methods",
+        "parallel",
+        "statmod",
+        "stats",
+        "tweedie"
+      ],
+      "Hash": "5ecc462da7ceee1c9d2215ac553a5cb7"
     },
     "mvtnorm": {
       "Package": "mvtnorm",
@@ -2463,6 +2471,18 @@
       ],
       "Hash": "4079070fc210c7901c0832a3aeab894f"
     },
+    "statmod": {
+      "Package": "statmod",
+      "Version": "1.5.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "graphics",
+        "stats"
+      ],
+      "Hash": "26e158d12052c279bdd4ba858b80fb1f"
+    },
     "statsExpressions": {
       "Package": "statsExpressions",
       "Version": "1.5.2",
@@ -2556,54 +2576,6 @@
         "cpp11"
       ],
       "Hash": "90b28393209827327de889f49935140a"
-    },
-    "tarchetypes": {
-      "Package": "tarchetypes",
-      "Version": "0.7.9",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "digest",
-        "dplyr",
-        "fs",
-        "parallel",
-        "rlang",
-        "targets",
-        "tibble",
-        "tidyselect",
-        "utils",
-        "vctrs",
-        "withr"
-      ],
-      "Hash": "aa959b3dcfe7033fafae5ac899d8bac0"
-    },
-    "targets": {
-      "Package": "targets",
-      "Version": "1.3.2",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "R6",
-        "base64url",
-        "callr",
-        "cli",
-        "codetools",
-        "data.table",
-        "digest",
-        "igraph",
-        "knitr",
-        "rlang",
-        "stats",
-        "tibble",
-        "tidyselect",
-        "tools",
-        "utils",
-        "vctrs",
-        "yaml"
-      ],
-      "Hash": "eea57f5c8154c12cf13467c6ffb919de"
     },
     "testthat": {
       "Package": "testthat",
@@ -2812,6 +2784,17 @@
         "utils"
       ],
       "Hash": "cdce4cde2d2f25f0de840b9b344c2303"
+    },
+    "tweedie": {
+      "Package": "tweedie",
+      "Version": "2.3.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "methods"
+      ],
+      "Hash": "517d541554d2e9c392f9a67f42c8b842"
     },
     "tzdb": {
       "Package": "tzdb",

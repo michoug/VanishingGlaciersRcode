@@ -4,4 +4,5 @@
 .Ruserdata
 Figures
 data
-_targets
+renv
+R/temp

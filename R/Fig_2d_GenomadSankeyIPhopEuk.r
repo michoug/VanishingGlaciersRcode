@@ -65,10 +65,10 @@ dat_virus_sank <- dat_virus_euk %>%
   mutate(next_node = if_else(str_detect(next_node, "-"),gsub("-", " ", next_node, perl = T), next_node ))
 
 p1 <- ggplot(dat_virus_sank, aes(x = x, 
-               next_x = next_x, 
-               node = node, 
-               next_node = next_node,
-               fill = factor(node), label = node)) +
+                                 next_x = next_x, 
+                                 node = node, 
+                                 next_node = next_node,
+                                 fill = factor(node), label = node)) +
   geom_sankey(flow.alpha = .6,
               node.color = "gray30") +
   geom_sankey_text(size = 3, color = "black") +

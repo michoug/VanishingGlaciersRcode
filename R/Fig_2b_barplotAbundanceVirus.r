@@ -52,9 +52,7 @@ dat_host_red <- dat_host%>%
   select(!c(length,topology,coordinates,n_genes,
             genetic_code, virus_score,fdr,n_hallmarks,
             marker_enrichment,clean_seq_name, MAGs))%>%
-  distinct()
-
-dat_host_m <- dat_host_red %>%
+  distinct()%>%
   pivot_longer(cols = !c(seq_name, taxonomy))%>%
   mutate(type = "prok")%>%
   filter(!(seq_name %in% virusToRemove$Virus))
@@ -63,14 +61,11 @@ dat_euk_red <- dat_euk %>%
   select(!c(length,topology,coordinates,n_genes,
             genetic_code, virus_score,fdr,n_hallmarks,
             marker_enrichment,MAGs))%>%
-  distinct()
-  
-dat_euk_m	<- dat_euk_red %>%
+  distinct() %>%
   pivot_longer(cols = !c(seq_name, taxonomy))%>%
   mutate(type = "euk")
 
-datMerge	<- rbind(dat_virus_sel, dat_host_m, dat_euk_m)
-
+datMerge	<- rbind(dat_virus_sel, dat_host_red, dat_euk_red)
 
 dat_stats <- datMerge %>%
   select(-c(name, taxonomy, value))%>%
@@ -78,14 +73,10 @@ dat_stats <- datMerge %>%
   group_by(type)%>%
   summarise(n = n())
 
-
-
-datMerge_tax <- datMerge %>%
+datMergefinal <- datMerge %>%
   separate(taxonomy, into = c("Virus","Realm","Kingdom","Phylum","Class","Order","Family", "Genus", "Species","Name"), sep = ";")%>%
   filter(!(Realm == "unclassifiedviruses"))%>%
-  filter(!(Kingdom == "unclassifiedRiboviria"))
-
-datMergefinal <- datMerge_tax %>%
+  filter(!(Kingdom == "unclassifiedRiboviria")) %>%
   mutate(goodTax = case_when(
     Class == "Caudoviricetes" & is.na(Order) ~ "Caudoviricetes_Unclassified",
     Class == "Caudoviricetes" & Order == "unclassifiedCaudoviricetes" ~ "Caudoviricetes_Unclassified",
@@ -94,7 +85,6 @@ datMergefinal <- datMerge_tax %>%
     .default = Class
     )
   )
-
 
 mostAbundantTax	<- datMergefinal %>%
   group_by(goodTax) %>%
