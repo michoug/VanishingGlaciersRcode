@@ -19,19 +19,16 @@
 
 
 library(ggstatsplot)
-library(ggpubr)
-library(statsExpressions)
 library(tidyverse)
-library("ggpubr")
 
 
 source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 source("customFunctions/plot_functions.R")
 
-cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
-dat_mags	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGs_checkm_stats.txt")
-tax <- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+cluster <- read_tsv("data/pMAGS_clusters.tsv")
+dat_mags	<- read_tsv("data/pMAGs_checkm.txt")
+tax <- read_tsv("data/pMAGs_tax.tsv")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 
 cluster_sel <- cluster%>%
   filter(!(sub_grp_6 %in% magsRem$MAGs))%>%

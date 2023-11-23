@@ -19,19 +19,15 @@
 
 
 library(ggstatsplot)
-library(ggpubr)
-library(statsExpressions)
 library(tidyverse)
-library(RColorBrewer)
-library("ggpubr")
 
 
 source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 source("customFunctions/plot_functions.R")
 
-dat_troph <- read_tsv("../Prokaryotes/Microtrait/MAGsTrophicState.txt")
-dat_mags	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGs_checkm_stats.txt")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+dat_troph <- read_tsv("data/pMAGs_trophicState.txt")
+dat_mags	<- read_tsv("data/pMAGs_checkm.txt")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 
 dat_plot <- dat_mags %>%
   filter(!(MAGs %in% magsRem$MAGs))%>%

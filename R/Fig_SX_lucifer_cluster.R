@@ -22,10 +22,10 @@ library(ggbreak)
 
 source("customFunctions/plot_functions.R")
 
-dat <- read_tsv("../Prokaryotes/LightGenes/lucifer_heatmap_select.tsv")
-cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
-covmax <- read_tsv("../Prokaryotes/MAGs_cov_sum.txt")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+dat <- read_tsv("data/pMAGs_lucifer.tsv")
+cluster <- read_tsv("data/pMAGS_clusters.tsv")
+covmax <- read_tsv("data/pMAGs_cov_sum.txt")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 
 cluster <- cluster %>%
   group_by(d)%>%

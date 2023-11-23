@@ -23,11 +23,9 @@ library(tidyverse)
 
 source("customFunctions/plot_functions.R")
 
-datTax	<- read_tsv("../Eukaryotes/Phylofisher/Eukaryotic_MAGs_taxonomy.txt", col_names = T)
-
-datCov	<- read_tsv("../Eukaryotes/Eukaryotes_MAGs_cov_norm.txt")
-map	<- read_tsv("../metadata_NOMIS_sed_chem.txt")
-busco <- read_tsv("../Eukaryotes/busco_30.txt")
+datTax	<- read_tsv("data/eMAGs_tax.tsv")
+datCov	<- read_tsv("data/eMAGs_cov_norm.txt")
+map	<- read_tsv("data/metadata_NOMIS_sed_chem.txt")
 
 map_sel <- map %>%
   select(Sample, Site_c)
@@ -35,17 +33,16 @@ map_sel <- map %>%
 datToPlot	<- datCov %>%
   pivot_longer(cols = !MAGs)%>%
   right_join(map_sel, by = join_by(name == Sample))%>%
-  left_join(datTax, by = join_by(MAGs)) %>%
-  filter(MAGs %in% busco$MAGs)%>%
-  group_by(Lower_Taxonomy, Site_c) %>%
+  right_join(datTax, by = join_by(MAGs)) %>%
+  group_by(Tax, Site_c) %>%
   summarise(sum	= sum(value)) %>%
   ungroup()%>%
   group_by(Site_c)%>%
   mutate(percentage	= sum / sum(sum))%>%
   mutate(Site_c = if_else(Site_c == "New_Zealand", "New Zealand", Site_c))%>%
-  mutate(Lower_Taxonomy = gsub("_", " - ", Lower_Taxonomy))
+  mutate(Tax = gsub("_", " - ", Tax))
 
-datToPlot$Tax	<- as.factor(datToPlot$Lower_Taxonomy)
+datToPlot$Tax	<- as.factor(datToPlot$Tax)
 datToPlot$Tax	<-
   factor(datToPlot$Tax, levels = rev(levels(datToPlot$Tax)))
 datToPlot$Tax	<-

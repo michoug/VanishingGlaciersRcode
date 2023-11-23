@@ -27,15 +27,15 @@ source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 
 
 dat_select <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/CAZYME_egg.txt.gz")
-dat_cont_genes <- read_tsv("../Prokaryotes/mags_cont_genes.txt.gz")
-cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
-element <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/CAZyme_Element_Baumgen.txt")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+dat_cont_genes <- read_tsv("data/pMAGS_contigs_genes.txt.gz")
+cluster <- read_tsv("data/pMAGS_clusters.tsv")
+element <- read_tsv("data/Other/CAZyme_Element_Baumgen.txt")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 
-dat <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_hmm_sulfAtlas.tsv")
-dat_blast <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_60_sulfAtlas.tsv")
-blast <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase.txt.gz")
-description <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/sulfatase_description.txt")
+dat <- read_tsv("data/pMAGs_sulfatase_sulfatlas_hmm.tsv")
+dat_blast <- read_tsv("data/pMAGs_sulfatase_sulfatlas_blast_60.tsv")
+blast <- read_tsv("data/pMAGs_sulfatase_blast.txt.gz")
+description <- read_tsv("data/Other/sulfatase_description.txt")
 
 element_sep <- element %>%
   separate_rows(CAZyme)

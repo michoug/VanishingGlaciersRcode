@@ -17,15 +17,13 @@
 ##
 ## ---------------------------
 
-library("ggplot2")
 library(tidyverse)
 library(scales)
-library(ggpubr)
 library(RColorBrewer)
 
-dat <- read_tsv("../Prokaryotes/EggNog/listMetabolismMAGs.txt.gz")
+dat <- read_tsv("data/pMAGs_listMetabolism.gz")
 taxAll <- read_tsv("data/pMAGs_tax.tsv")
-marker_list <- read_tsv("../Prokaryotes/EggNog/MarkerGenesReduced.txt")
+marker_list <- read_tsv("data/Other/MetabolishMM_MarkerGenes_Selected.txt")
 
 marker_list$Gene_name <- factor(marker_list$Gene_name, levels = unique(marker_list$Gene_name))
 
@@ -110,7 +108,7 @@ for (d in list$list) {
   name <- gsub("/", "_", name)
   name <- paste("Figures/temp/Fig_3a_",name, ".pdf", sep = "")
   ggsave(name, p1, height = 7)
-  plot_list[[d]] = p1
+  # plot_list[[d]] = p1
 }
 
 # ggarrange(plotlist=plot_list, common.legend = T, align = "h")

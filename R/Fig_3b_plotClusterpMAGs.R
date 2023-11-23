@@ -24,17 +24,9 @@ library(tidyverse)
 library(ggnewscale)
 library(RColorBrewer)
 
-hc <- readRDS("../Prokaryotes/Cluster/agnes_cluster_pMAGs.rds")
-dat <- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv")
-specgen <- read_tsv("../Prokaryotes/EcolUtils/spec_gen_new.tsv")
-max <- read_tsv("../Prokaryotes/MAGs_max_cov.txt")
-
-specgen_sel <- specgen%>%
-  select(MAGs, sign)
-
-specgen_sel <- as.data.frame(specgen_sel)
-rownames(specgen_sel) <- specgen_sel$MAGs
-specgen_sel$MAGs <- NULL
+hc <- readRDS("data/pMAGs_cluster.rds")
+dat <- read_tsv("data/pMAGs_tax.tsv")
+max <- read_tsv("data/pMAGs_cov_sum.txt")
 
 dat$p_c <- if_else(dat$p == "p__Proteobacteria", dat$c, dat$p)
 dat$p_c <- gsub(".__","",dat$p_c, perl = T)

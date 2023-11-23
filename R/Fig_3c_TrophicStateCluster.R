@@ -24,9 +24,9 @@ library(ggpubr)
 source("customFunctions/plot_functions.R")
 
 
-dat_troph <- read_tsv("../Prokaryotes/Microtrait/MAGsTrophicState.txt")
-cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+dat_troph <- read_tsv("data/pMAGs_trophicState.txt")
+cluster <- read_tsv("data/pMAGS_clusters.tsv")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 
 
 dat_summary <- dat_troph%>%

@@ -19,19 +19,14 @@
 
 
 library(ggstatsplot)
-library(ggpubr)
-library(statsExpressions)
 library(tidyverse)
-library(RColorBrewer)
-library("ggpubr")
-
 
 source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 source("customFunctions/plot_functions.R")
 
-dat_ogt <- read_tsv("../Prokaryotes/table_OGT.txt")
-dat_mags	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGs_checkm_stats.txt")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+dat_ogt <- read_tsv("data/pMAGS_OptimalGrowthTemperature.txt")
+dat_mags	<- read_tsv("data/pMAGs_checkm.txt")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 
 dat_ogt$bins <- cut(dat_ogt$Temperature,breaks = c(0, 10, 20, 30, 40, 50, 60),include.lowest = TRUE)
 

@@ -27,10 +27,10 @@ library(tidyverse)
 
 source("customFunctions/plot_functions.R")
 
-ArTree	<- read.tree("../Prokaryotes/TaxQual/NOMIS_MAGS_gtdbtk_full/classify/gtdbtk.ar53.classify_user.tree")
-dat <- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv")
-dataset <- read_tsv("../Prokaryotes/TaxQual/MAGS_Presence_Datasets.txt")
-covmax <- read_tsv("../Prokaryotes/MAGs_cov_sum.txt")
+ArTree	<- read.tree("data/pMAGs_arch_gtdtk.tree")
+dat <- read_tsv("data/pMAGs_tax.tsv")
+dataset <- read_tsv("data/pMAGs_Presence_Datasets.txt")
+covmax <- read_tsv("data/pMAGs_cov_sum.txt")
 
 archDat <- dat %>%
   filter(d == "d__Archaea")%>%

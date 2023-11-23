@@ -26,8 +26,8 @@ library("ggrepel")
 
 source("customFunctions/plot_functions.R")
 
-dat	<- read_tsv("../Prokaryotes/TaxQual/NOMIS_MAGS_tax.tsv", col_names = T)
-covsum <- read_tsv("../Prokaryotes/MAGs_cov_sum.txt")
+dat	<- read_tsv("data/pMAGs_tax.tsv")
+covsum <- read_tsv("data/pMAGs_cov_sum.txt")
 
 
 dat$p_c <- if_else(dat$p == "p__Proteobacteria", dat$c, dat$p)

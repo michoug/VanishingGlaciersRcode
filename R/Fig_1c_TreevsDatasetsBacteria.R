@@ -27,7 +27,7 @@ library(tidyverse)
 
 source("customFunctions/plot_functions.R")
 
-BacTree	<- read.tree("data/pMAGS_gtdtk_midroot.tree")
+BacTree	<- read.tree("data/pMAGs_bact_gtdtk_midroot.tree")
 dat <- read_tsv("data/pMAGS_tax.tsv")
 dataset <- read_tsv("data/pMAGS_Presence_Datasets.txt")
 covmax <- read_tsv("data/pMAGs_cov_sum.txt")
@@ -135,8 +135,6 @@ p4 <- gheatmap(p3, bactcov, offset=0.6, width=0.05,
   labs(fill = "Normalized log10\nabundance")
 
 # p4
-
-# bac <- print(open_tree(p4, angle = 2))
 
 ggsave_fitmax("Figures/Fig_1c_bacterialTree.pdf",
        p4,

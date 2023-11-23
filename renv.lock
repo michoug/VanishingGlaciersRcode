@@ -1216,19 +1216,20 @@
     },
     "ggtree": {
       "Package": "ggtree",
-      "Version": "3.2.1",
-      "Source": "bioc_xgit",
-      "Remotes": "GuangchuangYu/treeio",
-      "RemoteType": "bioc_xgit",
-      "RemoteMirror": "https://git.bioconductor.org/packages",
+      "Version": "3.11.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "bioc",
       "RemoteRepo": "ggtree",
-      "RemoteRelease": "release",
-      "RemoteSha": "d3747e636fe1a6a9e09b56a3a3899208ebd05547",
-      "RemoteBranch": "RELEASE_3_14",
+      "RemoteRef": "devel",
+      "RemoteSha": "44b546bc6e8d7fd6d0267b6c636abacbacfa38a3",
+      "Remotes": "GuangchuangYu/treeio",
       "Requirements": [
         "R",
         "ape",
         "aplot",
+        "cli",
         "dplyr",
         "ggfun",
         "ggplot2",
@@ -1238,13 +1239,14 @@
         "purrr",
         "rlang",
         "scales",
+        "stats",
         "tidyr",
         "tidytree",
         "treeio",
         "utils",
         "yulab.utils"
       ],
-      "Hash": "d86763504ce814d433785753d4a30553"
+      "Hash": "c1de10db00c8cabe7f5bbd73f47e7f4a"
     },
     "ggtreeExtra": {
       "Package": "ggtreeExtra",
@@ -2262,7 +2264,7 @@
       "Package": "reshape2",
       "Version": "1.4.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "Rcpp",
