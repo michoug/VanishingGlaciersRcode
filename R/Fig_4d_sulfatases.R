@@ -1,6 +1,6 @@
 ## ---------------------------
 ##
-## Script name: 
+## Script name:
 ##
 ## Purpose of script:
 ##
@@ -13,7 +13,7 @@
 ## ---------------------------
 ##
 ## Notes:
-##   
+##
 ##
 ## ---------------------------
 
@@ -25,12 +25,16 @@ library(ggpubr)
 source("customFunctions/plot_functions.R")
 source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 
-dat <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_hmm_sulfAtlas.tsv")
-dat_blast <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_60_sulfAtlas.tsv")
+dat <-
+  read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_hmm_sulfAtlas.tsv")
+dat_blast <-
+  read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase_60_sulfAtlas.tsv")
 dat_cont_genes <- read_tsv("../Prokaryotes/mags_cont_genes.txt.gz")
 cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
-blast <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase.txt.gz")
-description <- read_tsv("../Prokaryotes/CAZymes_Sulfatase/sulfatase_description.txt")
+blast <-
+  read_tsv("../Prokaryotes/CAZymes_Sulfatase/NOMIS_MAGs_sulfatase.txt.gz")
+description <-
+  read_tsv("../Prokaryotes/CAZymes_Sulfatase/sulfatase_description.txt")
 magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
 
 # descrition_fucan <- descrition %>%
@@ -45,37 +49,45 @@ colnames(sulfGenesblast) <- colnames(sulfGenes)
 
 sulfGenes_all <- distinct(rbind(sulfGenes, sulfGenesblast))
 
-sulfGenes_all$MAGs <- gsub("(.*)_\\d+_\\d+$", "\\1", sulfGenes_all$sulfGenes, perl = T)
+sulfGenes_all$MAGs <-
+  gsub("(.*)_\\d+_\\d+$", "\\1", sulfGenes_all$sulfGenes, perl = T)
 
 dat_sulf <- sulfGenes_all %>%
-  filter(!(MAGs %in% magsRem$MAGs))%>%
-  left_join(blast, by = c("sulfGenes" = "qseqid"))%>%
-  separate(sseqid, into = c("bad","id","na"), sep = "\\|")%>%
-  mutate(cat = gsub("(.*?)_(.*)","\\2", perl = T, id))%>%
-  separate_rows(cat, sep = ";")%>%
-  select(MAGs, cat)%>%
-  left_join(description, by = c("cat" = "Subfamily"), multiple = "all",relationship = "many-to-many")%>%
-  na.omit()%>%
-  filter(!(Activity == "Other"))%>%
-  group_by(MAGs,Activity)%>%
-  summarise(numb = n())%>%
-  ungroup()%>%
-  complete(MAGs, Activity, fill = list(numb = 0))%>%
-  group_by(MAGs)%>%
-  summarise(n = sum(numb))%>%
-  mutate(Element = "Sulfatase")%>%
-  left_join(cluster, by = c("MAGs" = "sub_grp_6"))%>%
-  mutate(d = case_when(
-    d == "1" ~ "Diverse Taxa",
-    d == "2" ~ "Myxcoccota &\nBdellovibrionata",
-    d == "3" ~ "Alpha and \nGammaproteobacteria",
-    d == "4" ~ "Bacteroidia",
-    d == "5" ~ "Patescibacteria",
-    d == "6" ~ "Plantomycetes",
-    .default = "Archae"
-  ))%>%
+  filter(!(MAGs %in% magsRem$MAGs)) %>%
+  left_join(blast, by = c("sulfGenes" = "qseqid")) %>%
+  separate(sseqid, into = c("bad", "id", "na"), sep = "\\|") %>%
+  mutate(cat = gsub("(.*?)_(.*)", "\\2", perl = T, id)) %>%
+  separate_rows(cat, sep = ";") %>%
+  select(MAGs, cat) %>%
+  left_join(
+    description,
+    by = c("cat" = "Subfamily"),
+    multiple = "all",
+    relationship = "many-to-many"
+  ) %>%
+  na.omit() %>%
+  filter(!(Activity == "Other")) %>%
+  group_by(MAGs, Activity) %>%
+  summarise(numb = n()) %>%
+  ungroup() %>%
+  complete(MAGs, Activity, fill = list(numb = 0)) %>%
+  group_by(MAGs) %>%
+  summarise(n = sum(numb)) %>%
+  mutate(Element = "Sulfatase") %>%
+  left_join(cluster, by = c("MAGs" = "sub_grp_6")) %>%
+  mutate(
+    d = case_when(
+      d == "1" ~ "Diverse Taxa",
+      d == "2" ~ "Myxcoccota &\nBdellovibrionata",
+      d == "3" ~ "Alpha and \nGammaproteobacteria",
+      d == "4" ~ "Bacteroidia",
+      d == "5" ~ "Patescibacteria",
+      d == "6" ~ "Plantomycetes",
+      .default = "Archae"
+    )
+  ) %>%
   filter(!(d == "Archae"))#%>%
-  # filter(n > 0)
+# filter(n > 0)
 
 
 p1 <-  ggbetweenstats(
@@ -83,15 +95,24 @@ p1 <-  ggbetweenstats(
   x = d,
   y = n,
   type = "n",
-  pairwise.comparisons = FALSE, 
+  pairwise.comparisons = FALSE,
   pairwise.display = "none",
   palette = "Set1",
-  results.subtitle = T)
+  results.subtitle = T
+)
 # p1
 
-p2 <- AddLetters(dat_sulf, plot = p1, x= d, y=n,ytext = 130, type = "n")+
-  theme(text = element_text(colour = "black", size = 12))+
-  labs(y = "Number of Genes per MAGs", x = NULL, color = "Functional Clusters")+
+p2 <-
+  AddLetters(
+    dat_sulf,
+    plot = p1,
+    x = d,
+    y = n,
+    ytext = 130,
+    type = "n"
+  ) +
+  theme(text = element_text(colour = "black", size = 12)) +
+  labs(y = "Number of Genes per MAGs", x = NULL, color = "Functional Clusters") +
   theme_classic2()
 p2
 

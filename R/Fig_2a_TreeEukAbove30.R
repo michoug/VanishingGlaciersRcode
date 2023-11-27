@@ -1,6 +1,6 @@
 ## ---------------------------
 ##
-## Script name: 
+## Script name:
 ##
 ## Purpose of script:
 ##
@@ -13,7 +13,7 @@
 ## ---------------------------
 ##
 ## Notes:
-##   
+##
 ##
 ## ---------------------------
 
@@ -27,24 +27,24 @@ library(ggnewscale)
 source("customFunctions/plot_functions.R")
 
 tree	<- read.tree("data/eMAGs_phylo.tree")
-tax_mags <- read_tsv("data/eMAGs_metadata_MAGs_addREF.tsv") 
+tax_mags <- read_tsv("data/eMAGs_metadata_MAGs_addREF.tsv")
 tax_ref <- read_tsv("data/eMAGs_metadata_REF.tsv")
 cov <- read_tsv("data/eMAGs_cov_norm.txt")
 
 tax_mags <- tax_mags %>%
-  select(`Unique ID`, `Lower Taxonomy`)%>%
-  mutate(type = if_else(grepl("^GC",`Unique ID`),"ref","mags"))
+  select(`Unique ID`, `Lower Taxonomy`) %>%
+  mutate(type = if_else(grepl("^GC", `Unique ID`), "ref", "mags"))
 
-taxToPlot <- tax_mags%>%
-  filter(type == "mags")%>%
-  filter(`Unique ID`%in% tree$tip.label)
+taxToPlot <- tax_mags %>%
+  filter(type == "mags") %>%
+  filter(`Unique ID` %in% tree$tip.label)
 
-tax_ref <- tax_ref%>%
-  select(`Unique ID`, `Lower Taxonomy`)%>%
+tax_ref <- tax_ref %>%
+  select(`Unique ID`, `Lower Taxonomy`) %>%
   mutate(type = "ref")
 
 tax <- rbind(tax_mags, tax_ref)
-colnames(tax) <- c("MAGs","Tax", "type")
+colnames(tax) <- c("MAGs", "Tax", "type")
 
 tax <- tax %>%
   mutate(taxa_good = if_else(Tax %in% taxToPlot$`Lower Taxonomy`, Tax, "Other"))
@@ -52,18 +52,18 @@ tax <- tax %>%
 tax_temp <- tax %>%
   filter(MAGs %in% tree$tip.label)
 
-cov$MAGs <- gsub("_","-",cov$MAGs)
+cov$MAGs <- gsub("_", "-", cov$MAGs)
 
 cov_max <- cov %>%
-  rowwise()%>%
+  rowwise() %>%
   summarise(total = sum(c_across(where(is.numeric))))
 
 cov_max$MAGs <- cov$MAGs
 
 cov_max_all <- cov_max %>%
-  filter(MAGs %in% tree$tip.label)%>%
-  right_join(tax, multiple = "all")%>%
-  select(MAGs, total)%>%
+  filter(MAGs %in% tree$tip.label) %>%
+  right_join(tax, multiple = "all") %>%
+  select(MAGs, total) %>%
   # mutate_all(~replace_na(.,1))%>%
   distinct()
 
@@ -78,10 +78,19 @@ meta	<- split(tax$MAGs, tax$taxa_good)
 
 tree_meta	<- groupOTU(tree, meta)
 
-getPaletteBact = colorRampPalette(brewer.pal(9, "Set1"))
+getPaletteBact <- colorRampPalette(brewer.pal(9, "Set1"))
 
-color <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
-           "#FF7F00", "#FFFF33", "#A65628", "black", "#999999")
+color <- c(
+  "#E41A1C",
+  "#377EB8",
+  "#4DAF4A",
+  "#984EA3",
+  "#FF7F00",
+  "#FFFF33",
+  "#A65628",
+  "black",
+  "#999999"
+)
 
 color[1]	<- "black"
 
@@ -89,45 +98,51 @@ p1	<-
   ggtree(tree_meta,
          layout = 'circular',
          aes(color = group),
-         #branch.length = "none"
-         ) + #
-  geom_tree() +
-  theme_tree() +
-  # geom_tiplab()+
-  geom_treescale(width	= 0.1) +
-  scale_color_manual(values	= color,
-                     na.value = "transparent",
-                     guide = "none") +
-  theme(legend.position = "right")+
-  new_scale_colour()+
-  new_scale_fill()
-
-p2 <- p1 +
-  new_scale_colour()+
-  new_scale_fill()+
-  geom_fruit(
-    data=tax,
-    pwidth	= 0.05,
-    geom=geom_bar,
-    mapping=aes(y=MAGs, x = 4, fill = taxa_good),
-    orientation="y",
-    stat="identity"
-  )+
-  scale_fill_manual(values	= color[-1])+
-  labs(fill = "Taxa")
-
-# p2
-
-p3 <- p2 %<+% tax_temp +
-  geom_tippoint(aes(color = type))+
-  new_scale_colour()+
-  new_scale_fill()
-
-p4 <- gheatmap(p3, cov_max_all, offset=0.2, width=0.05,
-               colnames=FALSE,color = NULL)+
-  scale_fill_viridis_c(na.value = 0)+
-  labs(fill = "Normalized log10\nabundance")
-
-p4
-
-ggsave_fitmax("Figures/Fig_2a_EukaryoticTreeAbove30.pdf", p4, maxwidth = 10)
+         #branch.length = "none") + #
+         geom_tree() +
+           theme_tree() +
+           # geom_tiplab()+
+           geom_treescale(width	= 0.1) +
+           scale_color_manual(values	= color,
+                              na.value = "transparent",
+                              guide = "none") +
+           theme(legend.position = "right") +
+           new_scale_colour() +
+           new_scale_fill()
+         
+         p2 <- p1 +
+           new_scale_colour() +
+           new_scale_fill() +
+           geom_fruit(
+             data = tax,
+             pwidth	= 0.05,
+             geom = geom_bar,
+             mapping = aes(y = MAGs, x = 4, fill = taxa_good),
+             orientation = "y",
+             stat = "identity"
+           ) +
+           scale_fill_manual(values	= color[-1]) +
+           labs(fill = "Taxa")
+         
+         # p2
+         
+         p3 <- p2 %<+% tax_temp +
+           geom_tippoint(aes(color = type)) +
+           new_scale_colour() +
+           new_scale_fill()
+         
+         p4 <- gheatmap(
+           p3,
+           cov_max_all,
+           offset = 0.2,
+           width = 0.05,
+           colnames = FALSE,
+           color = NULL
+         ) +
+           scale_fill_viridis_c(na.value = 0) +
+           labs(fill = "Normalized log10\nabundance")
+         
+         p4
+         
+         ggsave_fitmax("Figures/Fig_2a_EukaryoticTreeAbove30.pdf", p4, maxwidth = 10)
+         
