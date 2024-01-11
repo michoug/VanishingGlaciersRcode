@@ -24,8 +24,8 @@ library(statsExpressions)
 
 source("customFunctions/plot_functions.R")
 
-dat <- read_tsv("../Prokaryotes/Coverage/perc_total.txt")
-meta <- read_tsv("../metadata_NOMIS.txt")
+dat <- read_tsv("data/pMAGs_reads_mapped.txt")
+meta <- read_tsv("data/metadata_NOMIS_sed_chem.txt")
 meta$Sample <- gsub("X", "", meta$Sample)
 
 # meta$Site_c <- factor(meta$Site_c)
@@ -36,12 +36,22 @@ dat_meta <- dat %>%
   # filter(Site_c %in% c("Alps", "Caucasus"))%>%
   na.omit() %>%
   arrange(Site_c) %>%
-  mutate(Site_c = if_else(Site_c == "New_Zealand", "New Zealand", Site_c))
+  mutate(region = case_when(
+    Site_c == "New_Zealand" ~ "Southern Alps,\n New Zealand",
+    Site_c == "Nepal" ~ "Himalayas, Nepal",
+    Site_c == "Caucasus" ~ "Caucasus Mountains,\n Russia",
+    Site_c == "Kyrgyzstan" ~ "Pamir and Tian Shan,\n Kyrgyzstan",
+    Site_c == "Alps" ~ "European Alps",
+    Site_c == "Norway" ~ "Scandinavian Mountains,\n Norway",
+    Site_c == "Greenland" ~ "Southwest Greenland",
+    Site_c == "Uganda" ~ "Rwenzori Mountains,\n Uganda",
+    Site_c == "Ecuador" ~ "Ecuadorian Andes"
+  ))
 
 
 p1 <- ggbetweenstats(
   dat = dat_meta,
-  x = Site_c,
+  x = region,
   y = Percentage,
   type = "nonparametric",
   pairwise.comparisons = FALSE,
@@ -66,4 +76,4 @@ p1 <- ggbetweenstats(
 
 p1
 
-ggsave_fitmax("Figures/Fig_S2_readRecruitment.pdf", p1, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_S2_readRecruitment.pdf", p1, maxwidth = 18)
