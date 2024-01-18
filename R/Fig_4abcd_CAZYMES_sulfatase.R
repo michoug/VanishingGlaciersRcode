@@ -25,9 +25,8 @@ library(patchwork)
 source("customFunctions/plot_functions.R")
 source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 
-
 dat_select <-
-  read_tsv("../Prokaryotes/CAZymes_Sulfatase/CAZYME_egg.txt.gz")
+  read_tsv("data/pMAGs_CAZYME.txt.gz")
 dat_cont_genes <- read_tsv("data/pMAGS_contigs_genes.txt.gz")
 cluster <- read_tsv("data/pMAGS_clusters.tsv")
 element <- read_tsv("data/Other/CAZyme_Element_Baumgen.txt")
@@ -171,5 +170,5 @@ for (i in unique(dat_final$Element)) {
 
 p <- wrap_plots(plot_list, 2, 2)
 
-ggsave_fitmax("Figures/Fig_4_CAZymes_Sulfatases_cluster.pdf", p,
+ggsave_fitmax("Figures/Fig_4abcd_CAZymes_Sulfatases_cluster.pdf", p,
               maxwidth = 15)

@@ -58,7 +58,6 @@ tax$c <- factor(tax$c)
 
 tax$c <- fct_reorder(tax$c, tax$p)
 
-
 dat_Pivot <- dat_merge %>%
   group_by(MAGs,
            KO_ID,
@@ -74,7 +73,6 @@ dat_Pivot <- dat_merge %>%
   group_by(Gene_name, Pathway_small, Metabolism, c) %>%
   summarise(mean_tax = mean(number) * 100) %>%
   mutate(c = gsub("c__", "", c))
-
 
 dat_Pivot$c <- factor(dat_Pivot$c, levels = levels(tax$c))
 

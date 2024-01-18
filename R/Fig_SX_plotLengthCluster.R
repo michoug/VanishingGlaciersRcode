@@ -42,19 +42,32 @@ dat_plot <- dat_mags %>%
   left_join(tax) %>%
   left_join(cluster_sel) %>%
   mutate(LengthNorm2 = LengthNorm2 / 1e6) %>%
+  # mutate(
+  #   cluster = case_when(
+  #     cluster == "1" ~ "Diverse Taxa",
+  #     cluster == "2" ~ "Myxcoccota &\n Bdellovibrionata",
+  #     cluster == "3" ~ "Alpha and \n Gammaproteobacteria",
+  #     cluster == "4" ~ "Bacteroidia",
+  #     cluster == "5" ~ "Pactescibacteria",
+  #     cluster == "6" ~ "Plantomycetes",
+  #     .default = "Archae"
+  #   )
+  # ) %>%
   mutate(
     cluster = case_when(
-      cluster == "1" ~ "Diverse Taxa",
-      cluster == "2" ~ "Myxcoccota &\n Bdellovibrionata",
-      cluster == "3" ~ "Alpha and \n Gammaproteobacteria",
-      cluster == "4" ~ "Bacteroidia",
-      cluster == "5" ~ "Pactescibacteria",
-      cluster == "6" ~ "Plantomycetes",
+      cluster == "1" ~ "A4",
+      cluster == "2" ~ "A5",
+      cluster == "3" ~ "A1",
+      cluster == "4" ~ "A2",
+      cluster == "5" ~ "A6",
+      cluster == "6" ~ "A3",
       .default = "Archae"
     )
   ) %>%
   filter(!(cluster == "Archae"))
 
+colors <- c(brewer.pal(6, "Set1"))
+names(colors) <- c("A1", "A2", "A4", "A5", "A6", "A3")
 
 p_length <- ggbetweenstats(
   dat = dat_plot,
@@ -63,7 +76,7 @@ p_length <- ggbetweenstats(
   type = "nonparametric",
   pairwise.comparisons = FALSE,
   pairwise.display = "none",
-  palette = "Set1",
+  # palette = "Set1",
   # point.args = list(size = 3),
   centrality.label.args = list(
     size = 4,
@@ -74,6 +87,7 @@ p_length <- ggbetweenstats(
   xlab = "Functional Cluster",
   ylab = "Estimated genome length (million bp)"
 ) +
+  scale_color_manual(values = colors)+
   theme_classic() +
   theme(
     axis.text = element_text(color = "black", size = 12),

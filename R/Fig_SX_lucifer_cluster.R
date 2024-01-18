@@ -75,18 +75,32 @@ dat_filter <- dat_merge %>%
     )
   ) %>%
   filter(!(Description == "Anabaena sensory rhodopsin transducer")) %>%
+  # mutate(
+  #   d = case_when(
+  #     d == "1" ~ "Diverse Taxa",
+  #     d == "2" ~ "Myxcoccota &\nBdellovibrionata",
+  #     d == "3" ~ "Alpha and \nGammaproteobacteria",
+  #     d == "4" ~ "Bacteroidia",
+  #     d == "5" ~ "Pactescibacteria",
+  #     d == "6" ~ "Plantomycetes",
+  #     .default = "Archae"
+  #   )
+  # ) %>%
   mutate(
     d = case_when(
-      d == "1" ~ "Diverse Taxa",
-      d == "2" ~ "Myxcoccota &\nBdellovibrionata",
-      d == "3" ~ "Alpha and \nGammaproteobacteria",
-      d == "4" ~ "Bacteroidia",
-      d == "5" ~ "Pactescibacteria",
-      d == "6" ~ "Plantomycetes",
+      d == "1" ~ "A4",
+      d == "2" ~ "A5",
+      d == "3" ~ "A1",
+      d == "4" ~ "A2",
+      d == "5" ~ "A6",
+      d == "6" ~ "A3",
       .default = "Archae"
     )
-  ) %>%
+  )%>%
   filter(!(d == "Archae"))
+
+colors <- c(brewer.pal(6, "Set1"))
+names(colors) <- c("A1", "A2", "A4", "A5", "A6", "A3")
 
 (
   p1 <-
@@ -94,7 +108,7 @@ dat_filter <- dat_merge %>%
       x = Description, y = Proportion, fill = as.factor(d)
     )) +
     geom_bar(stat = "identity", position = "dodge") +
-    scale_fill_brewer(palette = "Set1") +
+    scale_fill_manual(values = colors) +
     labs(fill = "Functional Cluster", x = NULL, y = "Percentage (%)") +
     scale_y_break(c(20, 35)) +
     theme_classic() +
@@ -105,8 +119,5 @@ dat_filter <- dat_merge %>%
       text = element_text(colour = "black", size = 12)
     )
 )
-
-
-
 
 ggsave_fitmax("Figures/Fig_SX_lucifer_cluster.pdf", p1, maxwidth = 10)
