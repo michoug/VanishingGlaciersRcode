@@ -27,7 +27,7 @@ source("customFunctions/plot_functions.R")
 dat_mod <- read_tsv("../Correlations/Models_good.txt")
 
 
-dat_heat <- dat_mod %>%
+dat_heat <- dat_mod %>%a
   filter(!(Estimate == "Estimate")) %>%
   filter(!(variables == "(Intercept)")) %>%
   clean_names() %>%
