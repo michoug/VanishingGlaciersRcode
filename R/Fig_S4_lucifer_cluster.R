@@ -19,6 +19,7 @@
 
 library(tidyverse)
 library(ggbreak)
+library(RColorBrewer)
 
 source("customFunctions/plot_functions.R")
 
@@ -75,32 +76,28 @@ dat_filter <- dat_merge %>%
     )
   ) %>%
   filter(!(Description == "Anabaena sensory rhodopsin transducer")) %>%
-  # mutate(
-  #   d = case_when(
-  #     d == "1" ~ "Diverse Taxa",
-  #     d == "2" ~ "Myxcoccota &\nBdellovibrionata",
-  #     d == "3" ~ "Alpha and \nGammaproteobacteria",
-  #     d == "4" ~ "Bacteroidia",
-  #     d == "5" ~ "Pactescibacteria",
-  #     d == "6" ~ "Plantomycetes",
-  #     .default = "Archae"
-  #   )
-  # ) %>%
   mutate(
     d = case_when(
-      d == "1" ~ "A4",
-      d == "2" ~ "A5",
-      d == "3" ~ "A1",
-      d == "4" ~ "A2",
-      d == "5" ~ "A6",
-      d == "6" ~ "A3",
+      d == "1" ~ "4 _ Diverse Taxa",
+      d == "2" ~ "5 _ Myxcoccota &\nBdellovibrionata",
+      d == "3" ~ "1 _ Alpha and \nGammaproteobacteria",
+      d == "4" ~ "2 _ Bacteroidia",
+      d == "5" ~ "6 _ Pactescibacteria",
+      d == "6" ~ "3 _ Plantomycetes",
       .default = "Archae"
     )
-  )%>%
+  ) %>%
   filter(!(d == "Archae"))
 
 colors <- c(brewer.pal(6, "Set1"))
-names(colors) <- c("A1", "A2", "A4", "A5", "A6", "A3")
+names(colors) <- c(
+  "1 _ Alpha and \nGammaproteobacteria",
+  "2 _ Bacteroidia",
+  "4 _ Diverse Taxa",
+  "5 _ Myxcoccota &\nBdellovibrionata",
+  "6 _ Pactescibacteria",
+  "3 _ Plantomycetes"
+)
 
 (
   p1 <-
@@ -120,4 +117,4 @@ names(colors) <- c("A1", "A2", "A4", "A5", "A6", "A3")
     )
 )
 
-ggsave_fitmax("Figures/Fig_SX_lucifer_cluster.pdf", p1, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_S4_lucifer_cluster.pdf", p1, maxwidth = 10)

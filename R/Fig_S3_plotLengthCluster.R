@@ -20,7 +20,7 @@
 
 library(ggstatsplot)
 library(tidyverse)
-
+library(RColorBrewer)
 
 source("customFunctions/CompactLetterDiplay_w_pairwiseComp_ggstatsplot.R")
 source("customFunctions/plot_functions.R")
@@ -42,32 +42,28 @@ dat_plot <- dat_mags %>%
   left_join(tax) %>%
   left_join(cluster_sel) %>%
   mutate(LengthNorm2 = LengthNorm2 / 1e6) %>%
-  # mutate(
-  #   cluster = case_when(
-  #     cluster == "1" ~ "Diverse Taxa",
-  #     cluster == "2" ~ "Myxcoccota &\n Bdellovibrionata",
-  #     cluster == "3" ~ "Alpha and \n Gammaproteobacteria",
-  #     cluster == "4" ~ "Bacteroidia",
-  #     cluster == "5" ~ "Pactescibacteria",
-  #     cluster == "6" ~ "Plantomycetes",
-  #     .default = "Archae"
-  #   )
-  # ) %>%
   mutate(
     cluster = case_when(
-      cluster == "1" ~ "A4",
-      cluster == "2" ~ "A5",
-      cluster == "3" ~ "A1",
-      cluster == "4" ~ "A2",
-      cluster == "5" ~ "A6",
-      cluster == "6" ~ "A3",
+      cluster == "1" ~ "4 _ Diverse Taxa",
+      cluster == "2" ~ "5 _ Myxcoccota &\nBdellovibrionata",
+      cluster == "3" ~ "1 _ Alpha and \nGammaproteobacteria",
+      cluster == "4" ~ "2 _ Bacteroidia",
+      cluster == "5" ~ "6 _ Pactescibacteria",
+      cluster == "6" ~ "3 _ Plantomycetes",
       .default = "Archae"
     )
   ) %>%
   filter(!(cluster == "Archae"))
 
 colors <- c(brewer.pal(6, "Set1"))
-names(colors) <- c("A1", "A2", "A4", "A5", "A6", "A3")
+names(colors) <- c(
+  "1 _ Alpha and \nGammaproteobacteria",
+  "2 _ Bacteroidia",
+  "4 _ Diverse Taxa",
+  "5 _ Myxcoccota &\nBdellovibrionata",
+  "6 _ Pactescibacteria",
+  "3 _ Plantomycetes"
+)
 
 p_length <- ggbetweenstats(
   dat = dat_plot,
@@ -105,4 +101,4 @@ p2 <-
   )
 p2
 
-ggsave_fitmax("Figures/Fig_SX_MAGs_cluster_length.pdf", p2, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_S3_MAGs_cluster_length.pdf", p2, maxwidth = 10)

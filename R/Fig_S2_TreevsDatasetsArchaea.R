@@ -132,4 +132,3 @@ p1_arch	<-
          ggsave_fitmax("Figures/Fig_S1_ArchaealTree.pdf",
                        p4_arch,
                        maxwidth = 9)
-         

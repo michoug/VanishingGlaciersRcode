@@ -26,12 +26,20 @@ source("customFunctions/plot_functions.R")
 
 dat_select <-
   read_tsv("../Prokaryotes/EggNog/allMAGs_egg_KO.txt.gz")
-cluster <- read_tsv("../Prokaryotes/Cluster/agnes_groups_6.tsv")
-magsRem <- read_tsv("../Prokaryotes/MAGsInRocks.txt")
+cluster <- read_tsv("data/pMAGS_clusters.tsv")
+magsRem <- read_tsv("data/pMAGsInRocks.txt")
 genes_path <-
   read_tsv("../Prokaryotes/Algae_Bacteria_Genes/listFunctionsAlgaeBacteria_pathway.txt")
 genes_mod <-
   read_tsv("../Prokaryotes/Algae_Bacteria_Genes/listFunctionsAlgaeBacteria_modules.txt")
+
+dat_iron <- read_tsv("../Prokaryotes/Algae_Bacteria_Genes/Iron_MAGs.tsv")
+
+dat_iron_clean <- dat_iron %>%
+  pivot_longer(cols = !pathway)%>%
+  mutate(value = if_else(value > 1, 1, 0))%>%
+  group_by(pathway)%>%
+  summarise(sum = sum(value))
 
 genes_path$Description <- NULL
 genes_mod$Category <-
@@ -48,6 +56,10 @@ all_genes <- all_genes %>%
   group_by(Category) %>%
   mutate(number = n())
 
+cluster <- cluster %>%
+  group_by(d)%>%
+  mutate(nb = n())
+
 dat_filter <- dat_select %>%
   right_join(
     all_genes,
@@ -59,7 +71,6 @@ dat_filter <- dat_select %>%
   group_by(MAGs, KEGG_ko, Category, number) %>%
   summarise(n = n()) %>%
   ungroup() %>%
-  mutate(n = if_else(n > 1, 1, n)) %>%
   group_by(MAGs, Category, number) %>%
   reframe(n = n() / number) %>%
   ungroup() %>%
@@ -75,16 +86,36 @@ dat_plot <- dat_filter %>%
   complete(d, Category, fill = list(mean = 0)) %>%
   mutate(
     d = case_when(
-      d == "1" ~ "Diverse Taxa",
-      d == "2" ~ "Myxcoccota &\nBdellovibrionata",
-      d == "3" ~ "Alpha and \nGammaproteobacteria",
-      d == "4" ~ "Bacteroidia",
-      d == "5" ~ "Patescibacteria",
-      d == "6" ~ "Plantomycetes",
+      d == "1" ~ "4 - Diverse Taxa",
+      d == "2" ~ "5 - Myxcoccota &\nBdellovibrionata",
+      d == "3" ~ "1 - Alpha and \nGammaproteobacteria",
+      d == "4" ~ "2 - Bacteroidia",
+      d == "5" ~ "6 - Patescibacteria",
+      d == "6" ~ "3 - Plantomycetes",
       .default = "Archae"
     )
   ) %>%
   filter(!(d == "Archae"))
+
+# dat_plot <- dat_filter %>%
+#   mutate(n = if_else(n > 0.5, 1, 0))%>%
+#   group_by(d, Category) %>%
+#   reframe(sum = sum(n)/nb) %>%
+#   ungroup() %>%
+#   complete(d, Category, fill = list(sum = 0)) %>%
+#   mutate(
+#     d = case_when(
+#       d == "1" ~ "Diverse Taxa",
+#       d == "2" ~ "Myxcoccota &\nBdellovibrionata",
+#       d == "3" ~ "Alpha and \nGammaproteobacteria",
+#       d == "4" ~ "Bacteroidia",
+#       d == "5" ~ "Patescibacteria",
+#       d == "6" ~ "Plantomycetes",
+#       .default = "Archae"
+#     )
+#   ) %>%
+#   filter(!(d == "Archae"))%>%
+#   distinct()
 
 
 dat_plot_t <- dat_plot %>%
@@ -102,7 +133,7 @@ a <- colnames(dat_plot_t)[ord]
 dat_plot$Category <- factor(dat_plot$Category, levels = a)
 
 p1 <-
-  ggplot(dat_plot, aes(x = as.character(d), y = Category, fill = mean * 100)) +
+  ggplot(dat_plot, aes(x = as.character(d), y = Category, fill = mean*100)) +
   geom_tile() +
   scale_fill_gradient(low = "white", high = "darkgreen") +
   labs(x = NULL, y = NULL, fill = "Proprotion (%)") +

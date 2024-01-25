@@ -60,12 +60,12 @@ clades <- sapply(g, function(n)
   MRCA(p, n))
 
 names(clades) <- c(
-  "Diverse Taxa",
-  "Myxcoccota &\n Bdellovibrionata",
-  "Alpha and \n Gammaproteobacteria",
-  "Bacteroidia",
-  "Pactescibacteria",
-  "Plantomycetes"
+  "4 - Diverse Taxa",
+  "5 - Myxcoccota &\n Bdellovibrionata",
+  "1 - Alpha and \n Gammaproteobacteria",
+  "2 - Bacteroidia",
+  "6 - Pactescibacteria",
+  "3 - Plantomycetes"
 )
 
 p <- groupClade(p, clades, group_name = 'subtree') +

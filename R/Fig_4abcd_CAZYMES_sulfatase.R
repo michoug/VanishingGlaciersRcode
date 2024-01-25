@@ -66,12 +66,12 @@ dat_cazy_mags <- dat_select %>%
   filter(!(Element %in% c("Mannan", "Xylan"))) %>%
   mutate(
     d = case_when(
-      d == "1" ~ "Diverse Taxa",
-      d == "2" ~ "Myxcoccota &\nBdellovibrionata",
-      d == "3" ~ "Alpha and \nGammaproteobacteria",
-      d == "4" ~ "Bacteroidia",
-      d == "5" ~ "Patescibacteria",
-      d == "6" ~ "Plantomycetes",
+      d == "1" ~ "4 - Diverse Taxa",
+      d == "2" ~ "5 - Myxcoccota &\nBdellovibrionata",
+      d == "3" ~ "1 - Alpha and \nGammaproteobacteria",
+      d == "4" ~ "2 - Bacteroidia",
+      d == "5" ~ "6 - Pactescibacteria",
+      d == "6" ~ "3 - Plantomycetes",
       .default = "Archae"
     )
   ) %>%
@@ -116,12 +116,12 @@ dat_sulf <- sulfGenes_all %>%
   left_join(cluster, by = c("MAGs" = "sub_grp_6")) %>%
   mutate(
     d = case_when(
-      d == "1" ~ "Diverse Taxa",
-      d == "2" ~ "Myxcoccota &\nBdellovibrionata",
-      d == "3" ~ "Alpha and \nGammaproteobacteria",
-      d == "4" ~ "Bacteroidia",
-      d == "5" ~ "Patescibacteria",
-      d == "6" ~ "Plantomycetes",
+      d == "1" ~ "4 - Diverse Taxa",
+      d == "2" ~ "5 - Myxcoccota &\nBdellovibrionata",
+      d == "3" ~ "1 - Alpha and \nGammaproteobacteria",
+      d == "4" ~ "2 - Bacteroidia",
+      d == "5" ~ "6 - Pactescibacteria",
+      d == "6" ~ "3 - Plantomycetes",
       .default = "Archae"
     )
   ) %>%
@@ -132,7 +132,7 @@ dat_final <- rbind(dat_cazy_mags, dat_sulf)
 
 plot_list <- list()
 
-for (i in unique(dat_final$Element)) {
+for (i in sort(unique(dat_final$Element))) {
   print(i)
   
   dat_temp <- dat_final %>%
@@ -168,7 +168,8 @@ for (i in unique(dat_final$Element)) {
   
 }
 
-p <- wrap_plots(plot_list, 2, 2)
+p <- wrap_plots(plot_list, 2, 2, byrow = F)
+p
 
 ggsave_fitmax("Figures/Fig_4abcd_CAZymes_Sulfatases_cluster.pdf", p,
               maxwidth = 15)

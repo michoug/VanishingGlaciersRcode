@@ -72,19 +72,19 @@ createplot <- function(data,glacialVar, TrophicVar){
   return(plot_list)
 }
 
-trophicParam <- c("Chemolithoautotrophy\n", "Chemoorganotrophy\nAerobic respiration", "Mixotrophy\nHeterotroph/autotroph")
+trophicParam <- c("Chemoorganotrophy\nAerobic respiration", "Mixotrophy\nHeterotroph/autotroph")
 pCov <- createplot(dat_4plot, "Glacier Coverage (%)", trophicParam)
 
 # trophicParam <- c("No Trophic State\n")
 # pSa <- createplot(dat_4plot, "Glacier Surface\nArea (km^2)", trophicParam)
 
-trophicParam <- c("Mixotrophy\nHeterotroph/autotroph")
-pDist <- createplot(dat_4plot, "Distance to\nthe snout (m)", trophicParam)
+# trophicParam <- c("Mixotrophy\nHeterotroph/autotroph")
+# pDist <- createplot(dat_4plot, "Distance to\nthe snout (m)", trophicParam)
 
-trophicParam <- c("Chemoorganotrophy\nAerobic respiration" , "Mixotrophy\nautotroph/phototroph")
+trophicParam <- c("Chemoorganotrophy\nAerobic respiration")
 pChla <- createplot(dat_4plot, "Chla (ug.g-1)\n", trophicParam)
 
-plotList <- c(pCov, pDist, pChla)
-p <- ggarrange(plotlist = plotList, labels = "auto")
+plotList <- c(pCov, pChla)
+p <- ggarrange(plotlist = plotList, labels = "auto", ncol = 1)
 p
-ggsave_fitmax("Figures/Fig_SX_trophicvsParameters.pdf",p, maxwidth = 12)
+ggsave_fitmax("Figures/Fig_5_trophicvsParameters.pdf",p, maxwidth = 4)
