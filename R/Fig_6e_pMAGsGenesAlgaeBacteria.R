@@ -24,14 +24,11 @@ library(vegan)
 
 source("customFunctions/plot_functions.R")
 
-dat_select <-
-  read_tsv("../Prokaryotes/EggNog/allMAGs_egg_KO.txt.gz")
+dat_select <- read_tsv("data/pMAGs_egg_KO.txt.gz")
 cluster <- read_tsv("data/pMAGS_clusters.tsv")
 magsRem <- read_tsv("data/pMAGsInRocks.txt")
-genes_path <-
-  read_tsv("../Prokaryotes/Algae_Bacteria_Genes/listFunctionsAlgaeBacteria_pathway.txt")
-genes_mod <-
-  read_tsv("../Prokaryotes/Algae_Bacteria_Genes/listFunctionsAlgaeBacteria_modules.txt")
+genes_path <- read_tsv("data/Other/listFunctionsAlgaeBacteria_pathway.txt")
+genes_mod <-  read_tsv("data/Other/listFunctionsAlgaeBacteria_modules.txt")
 
 dat_iron <- read_tsv("../Prokaryotes/Algae_Bacteria_Genes/Iron_MAGs.tsv")
 
@@ -139,4 +136,4 @@ p1 <-
   labs(x = NULL, y = NULL, fill = "Proprotion (%)") +
   theme_pubr()
 p1
-ggsave_fitmax("Figures/Fig_4e_Heatmap_cat_algae_bact.pdf", p1, maxwidth = 12)
+ggsave_fitmax("Figures/Fig_6e_Heatmap_cat_algae_bact.pdf", p1, maxwidth = 12)

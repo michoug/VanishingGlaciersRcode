@@ -89,7 +89,8 @@ names(colors) <- c(
   "1 - Alpha and \nGammaproteobacteria",
   "2 - Bacteroidia",
   "6 - Pactescibacteria",
-  "3 - Plantomycetes"
+  "3 - Plantomycetes",
+  "All"
 )
 
 p1 <-

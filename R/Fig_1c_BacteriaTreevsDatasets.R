@@ -120,7 +120,7 @@ p2 <- p1 +
   new_scale_colour() +
   new_scale_fill()
 
-p2
+# p2
 
 p3 <-
   gheatmap(

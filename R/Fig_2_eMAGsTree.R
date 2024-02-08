@@ -97,52 +97,51 @@ color[1]	<- "black"
 p1	<-
   ggtree(tree_meta,
          layout = 'circular',
-         aes(color = group),
+         aes(color = group)) +#,
          #branch.length = "none") + #
-         geom_tree() +
-           theme_tree() +
-           # geom_tiplab()+
-           geom_treescale(width	= 0.1) +
-           scale_color_manual(values	= color,
-                              na.value = "transparent",
-                              guide = "none") +
-           theme(legend.position = "right") +
-           new_scale_colour() +
-           new_scale_fill()
-         
-         p2 <- p1 +
-           new_scale_colour() +
-           new_scale_fill() +
-           geom_fruit(
-             data = tax,
-             pwidth	= 0.05,
-             geom = geom_bar,
-             mapping = aes(y = MAGs, x = 4, fill = taxa_good),
-             orientation = "y",
-             stat = "identity"
-           ) +
-           scale_fill_manual(values	= color[-1]) +
-           labs(fill = "Taxa")
-         
-         # p2
-         
-         p3 <- p2 %<+% tax_temp +
-           geom_tippoint(aes(color = type)) +
-           new_scale_colour() +
-           new_scale_fill()
-         
-         p4 <- gheatmap(
-           p3,
-           cov_max_all,
-           offset = 0.2,
-           width = 0.05,
-           colnames = FALSE,
-           color = NULL
-         ) +
-           scale_fill_viridis_c(na.value = 0) +
-           labs(fill = "Normalized log10\nabundance")
-         
-         p4
-         
-         ggsave_fitmax("Figures/Fig_2a_EukaryoticTreeAbove30.pdf", p4, maxwidth = 10)
-         
+  geom_tree() +
+  theme_tree() +
+  # geom_tiplab()+
+  geom_treescale(width	= 0.1) +
+  scale_color_manual(values	= color,
+                     na.value = "transparent",
+                     guide = "none") +
+  theme(legend.position = "right") +
+  new_scale_colour() +
+  new_scale_fill()
+
+p2 <- p1 +
+  new_scale_colour() +
+  new_scale_fill() +
+  geom_fruit(
+    data = tax,
+    pwidth	= 0.05,
+    geom = geom_bar,
+    mapping = aes(y = MAGs, x = 4, fill = taxa_good),
+    orientation = "y",
+    stat = "identity"
+  ) +
+  scale_fill_manual(values	= color[-1]) +
+  labs(fill = "Taxa")
+
+# p2
+
+p3 <- p2 %<+% tax_temp +
+  geom_tippoint(aes(color = type)) +
+  new_scale_colour() +
+  new_scale_fill()
+
+p4 <- gheatmap(
+  p3,
+  cov_max_all,
+  offset = 0.2,
+  width = 0.05,
+  colnames = FALSE,
+  color = NULL
+) +
+  scale_fill_viridis_c(na.value = 0) +
+  labs(fill = "Normalized log10\nabundance")
+
+p4
+
+ggsave_fitmax("Figures/Fig_2_EukaryoticTreeAbove30.pdf", p4, maxwidth = 10)

@@ -17,7 +17,6 @@
 ##
 ## ---------------------------
 
-
 library("RColorBrewer")
 library(tidyverse)
 library(vegan)
@@ -42,7 +41,8 @@ dat_virus_sel <- dat_cov_virus %>%
   mutate(taxonomy_final = if_else(class == "U", taxonomy.y, taxonomy.x)) %>%
   select(Contig, taxonomy_final, name, value) %>%
   distinct() %>%
-  mutate(type = "Virus")
+  mutate(type = "Virus")%>%
+  filter(!(Contig %in% virusToRemove$Virus))
 
 colnames(dat_virus_sel) <-
   c("seq_name", "taxonomy", "name", "value", "type")
@@ -66,8 +66,7 @@ dat_host_red <- dat_host %>%
   ) %>%
   distinct() %>%
   pivot_longer(cols = !c(seq_name, taxonomy)) %>%
-  mutate(type = "prok") %>%
-  filter(!(seq_name %in% virusToRemove$Virus))
+  mutate(type = "prok")
 
 dat_euk_red <- dat_euk %>%
   select(
@@ -184,4 +183,4 @@ p1	<-
 
 
 p1
-ggsave_fitmax("Figures/Fig_2b_barplotVirusTax.pdf", p1)
+ggsave_fitmax("Figures/Fig_5a_barplotVirusTax.pdf", p1)

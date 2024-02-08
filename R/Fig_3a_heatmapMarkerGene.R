@@ -72,7 +72,8 @@ dat_Pivot <- dat_merge %>%
   mutate(number = if_else(n > 1, 1, n)) %>%
   group_by(Gene_name, Pathway_small, Metabolism, c) %>%
   summarise(mean_tax = mean(number) * 100) %>%
-  mutate(c = gsub("c__", "", c))
+  mutate(c = gsub("c__", "", c))%>%
+  na.omit()
 
 dat_Pivot$c <- factor(dat_Pivot$c, levels = levels(tax$c))
 

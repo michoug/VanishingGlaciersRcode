@@ -171,5 +171,5 @@ for (i in sort(unique(dat_final$Element))) {
 p <- wrap_plots(plot_list, 2, 2, byrow = F)
 p
 
-ggsave_fitmax("Figures/Fig_4abcd_CAZymes_Sulfatases_cluster.pdf", p,
+ggsave_fitmax("Figures/Fig_6abcd_CAZymes_Sulfatases_cluster.pdf", p,
               maxwidth = 15)

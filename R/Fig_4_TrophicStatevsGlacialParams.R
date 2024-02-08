@@ -31,18 +31,18 @@ dat_4plot <- dat %>%
   select(site,contains("trophy"), "none", contains("gl_"), contains("dist"),chla_ug_g_1) %>%
   select(-c(gl_a_km2, phototrophy))%>%
   rename(
-    "Chemolithoautotrophy\n" = "autotrophy",
+    "Chemolithoautotrophy (%)\n" = "autotrophy",
     "Chemolitoheterotrophy\nOther" = "heterotrophy",
-    "Chemoorganotrophy\nAerobic respiration" = "heterotrophy_aerobic_respiration",
-    "Chemoorganotrophy\nAnaerobic respiration" = "heterotrophy_anaerobic_respiration",
-    "Chemoorganotrophy\nFermentation" = "heterotrophy_fermentation",
-    "Mixotrophy\nautotroph/phototroph" = "mixotrophy_autotrophy_phototrophy",
-    "Mixotrophy\nHeterotroph/autotroph" = "mixotrophy_heterotrophy_autotrophy",
-    "Mixotrophy\nheterotroph/phototroph" = "mixotrophy_heterotrophy_phototrophy",
-    "Mixotrophy\nOther" = "mixotrophy_other",
-    "No Trophic State\n" = "none",
-    "Chla (ug.g-1)\n" = "chla_ug_g_1",
-    "Glacier Coverage (%)" = "gl_cov_percent",
+    "Chemoorganotrophy\nAerobic respiration\n(%)" = "heterotrophy_aerobic_respiration",
+    "Chemoorganotrophy\nAnaerobic respiration\n(%)" = "heterotrophy_anaerobic_respiration",
+    "Chemoorganotrophy\nFermentation\n(%)" = "heterotrophy_fermentation",
+    "Mixotrophy\nautotroph/phototroph\n(%)" = "mixotrophy_autotrophy_phototrophy",
+    "Mixotrophy\nHeterotroph/autotroph\n(%)" = "mixotrophy_heterotrophy_autotrophy",
+    "Mixotrophy\nheterotroph/phototroph\n(%)" = "mixotrophy_heterotrophy_phototrophy",
+    "Mixotrophy\nOther (%)" = "mixotrophy_other",
+    "No Trophic State %\n" = "none",
+    "Chla (ln ug.g-1)\n" = "chla_ug_g_1",
+    "Glacier Coverage (ln proportion)" = "gl_cov_percent",
     "Glacier Surface\nArea (km^2)" = "gl_sa_km2",
     "Distance to\nthe snout (m)" = "sn_sp_dist_m"
   )
@@ -72,19 +72,13 @@ createplot <- function(data,glacialVar, TrophicVar){
   return(plot_list)
 }
 
-trophicParam <- c("Chemoorganotrophy\nAerobic respiration", "Mixotrophy\nHeterotroph/autotroph")
-pCov <- createplot(dat_4plot, "Glacier Coverage (%)", trophicParam)
+trophicParam <- c("Chemoorganotrophy\nAerobic respiration\n(%)", "Mixotrophy\nHeterotroph/autotroph\n(%)")
+pCov <- createplot(dat_4plot, "Glacier Coverage (ln proportion)", trophicParam)
 
-# trophicParam <- c("No Trophic State\n")
-# pSa <- createplot(dat_4plot, "Glacier Surface\nArea (km^2)", trophicParam)
-
-# trophicParam <- c("Mixotrophy\nHeterotroph/autotroph")
-# pDist <- createplot(dat_4plot, "Distance to\nthe snout (m)", trophicParam)
-
-trophicParam <- c("Chemoorganotrophy\nAerobic respiration")
-pChla <- createplot(dat_4plot, "Chla (ug.g-1)\n", trophicParam)
+trophicParam <- c("Chemoorganotrophy\nAerobic respiration\n(%)")
+pChla <- createplot(dat_4plot, "Chla (ln ug.g-1)\n", trophicParam)
 
 plotList <- c(pCov, pChla)
 p <- ggarrange(plotlist = plotList, labels = "auto", ncol = 1)
 p
-ggsave_fitmax("Figures/Fig_5_trophicvsParameters.pdf",p, maxwidth = 4)
+ggsave_fitmax("Figures/Fig_4_trophicvsParameters.pdf",p, maxwidth = 4)

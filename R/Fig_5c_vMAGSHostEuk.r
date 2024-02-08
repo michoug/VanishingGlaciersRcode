@@ -40,7 +40,7 @@ dat_virus_euk <- dat_euk %>%
             relationship = "many-to-many") %>%
   mutate(VTax = if_else(class == "U", taxonomy.x, taxonomy.y)) %>%
   select(MAGs, seq_name, VTax) %>%
-  inner_join(dat_euk_ptax) %>%
+  inner_join(dat_euk_ptax,by = join_by(MAGs)) %>%
   separate(
     VTax,
     into = c(
@@ -68,7 +68,7 @@ dat_virus_euk <- dat_euk %>%
       .default = V_Class
     )
   ) %>%
-  select(seq_name, goodVirusTax, MAGs, taxa_good)
+  select(seq_name, goodVirusTax, MAGs, Tax)
 
 dat_virus_euk$goodVirusTax <-
   gsub(" ", "", dat_virus_euk$goodVirusTax)
@@ -114,4 +114,4 @@ p1 <- ggplot(
         plot.title = element_text(hjust = .5, colour = "black"))
 
 p1
-ggsave_fitmax("Figures/Fig_2d_Sankey_Genomad_Euk.pdf", p1)
+ggsave_fitmax("Figures/Fig_5c_Sankey_Genomad_Euk.pdf", p1)
