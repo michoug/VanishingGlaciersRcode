@@ -1,0 +1,43 @@
+Subfamily	EC Number(s)	Description	PubMed IDs	Activity
+S1_17	3.1.6.-	[a-carrageenan] endo-3,6-anhydro-D-galactose-2-sulfate 2-O-sulfohydrolase	29162826	carrageenan
+S1_81	3.1.6.-	[carrageenan] exo-3,6-anhydro-D-galactose-2-Sulfate 2-O-sulfohydrolase	31886414	carrageenan
+S1_19	3.1.6.-	[i-Carrageenan] endo-D-galactose-4-sulfate 4-O-sulfohydrolase (converts i- to a-carrageenan)	23011004 29162826 29681469	carrageenan
+S1_7	3.1.6.-	[k-carrageenan] endo-/exo-Galactose-4-sulfate 4-O-sulfohydrolase	26585588 29162826 31886414	carrageenan
+S1_19	3.1.6.-	[k-Carrageenan] endo-D-galactose-4-sulfate 4-O-sulfohydrolase (converts k- to b-carrageenan)	26585588	carrageenan
+S1_19	3.1.6.-	[k-Carrageenan] exo-D-galactose-4-Sulfate-4-O-sulfohydrolase	31886414	carrageenan
+S1_27	3.1.6.12	[chondroitin sulfate/dermatan sulfate] endo-N-acetyl-D-galactosamine-4-sulfate 4-O-sulfohydrolase	25002587 25648894 32005816	chondroitin sulfate
+S1_15	3.1.6.4	[chondroitin sulfate] exo-N-acetyl-D-galactosamine-6-O-sulfate 6-O-sulfohydrolase	25002587 32005816	chondroitin sulfate
+S1_5	3.1.6.4	[Chondroitin sulfate] N-acetyl-D-galactosamine-6-sulfate 6-O-sulfohydrolase	1755850 10699374 12489154 22940367	Chondroitin sulfate
+S1_20	3.1.6.-	[Colonic mucin] D-Galactose-3-sulfate 3-O-sulfohydrolase	34616040	Colonic mucin
+S1_16	3.1.6.12	[Colonic mucin] D-Galactose-4-sulfate/N-acetyl-D-galactosamine-4-sulfate 4-O-sulfohydrolase	34616040 35710619	Colonic mucin
+S1_15	3.1.6.4	[Colonic mucin] D-Galactose-6-sulfate/N-acetyl-D-galactosamine-6-sulfate 6-O-sulfohydrolase	34616040 35710619	Colonic mucin
+S1_46	3.1.6.-	[Colonic mucin] exo-N-acetyl-D-glucosamine-3-sulfate 3-O-sulfohydrolase	34616040 35710619	Colonic mucin
+S1_11	3.1.6.14	[Colonic mucin] exo-N-acetyl-D-glucosamine-6-sulfate 6-O-sulfohydrolase	10809675 19726671 34616040 35710619	Colonic mucin
+S1_20	3.1.6.-	[Colonic mucin] N-acetyl-D-galactosamine-3-sulfate 3-O-sulfatase	34616040	Colonic mucin
+S1_13	3.1.6.-	[Fucan sulfated] sulfohydrolase	34593864	Fucan
+S1_17	3.1.6.-	[fucan] exo-Fucose-2-sulfate 2-O-sulfohydrolase	30248971	Fucan
+S1_25	3.1.6.-	[fucan] exo-Fucose-3-sulfate 3-O-sulfohydrolase	30248971	Fucan
+S1_22	3.1.6.-	[α-(1→3;1→4)-L-fucan] endo-4-sulfate 4-O-sulfohydrolase	34364583	Fucan
+S1_11	3.1.6.11	[Heparin/Heparan sulfate] exo-2-N,6-O-disulfo-D-glucosamine 6-O-sulfohydrolase	25002587 34616040 28630303	Heparin
+S1_7	3.1.6.13	[heparin/heparan] Iduronate-2-sulfate 2-O-sulfohydrolase	2122463 8325651 28593992	Heparin
+S1_8	3.10.1.1	[heparin/heparan] N-sulfoglucosamine sulfohydrolase	7493035 19726673 24816101	Heparin
+S1_7	3.1.6.-	[ulvan] endo-Xylose-2-sulfate 2-O-sulfohydrolase	31024490	Ulvan
+S1_25	3.1.6.-	[ulvan] exo-L-Rhamnose-3-sulfate 3-O-sulfohydrolase	31024490	Ulvan
+S1_8	3.1.6.-	[ulvan] exo-Xylose-2-sulfate 2-O-sulfohydrolase	31024490	Ulvan
+S3	3.1.6.19	(R)-specific secondary-alkylsulfate sulfohydrolase	23061549	Other
+S1_9	3.1.6.-	△4,5-hexuronate-2-O-sulfate 2-O-sulfohydrolase	12519775 25002587 31024490 28630303	Other
+S2	1.14.11.-	Alkylsulfate (C4-C12) sulfodioxygenase	10913158 15023059 23762287	Other
+S1_4	3.1.6.1	Arylsulfate sulfohydrolase	2180918 7744061 11435113	Other
+S4	3.1.6.-	Arylsulfate sulfohydrolase	8535517	Other
+S1_1	3.1.6.8	Cerebroside sulfohydrolase	2562955 7910580	Other
+S1_12	3.1.6.6	Choline-sulfate sulfohydrolase	9736747	Other
+S1_4	3.1.6.-	D-Galactose-6-sulfate 6-O-sulfohydrolase	34616040	Other
+S1_4	3.1.6.-	endo-D-Galactose-3-sulfate 3-O-sulfohydrolase	34616040	Other
+S1_11	3.1.6.-	Exo-L-galactose-6-sulfate 6-O-sulfohydrolase	35289327	Other
+S1_10	3.1.6.-	Glucosinolate sulfohydrolase	12161563	Other
+S1_2	3.1.6.12	N-acetyl-D-galactosamine-4-sulfate 4-O-sulfohydrolase	2303452 1427856 8575749 8710849 9032078	Other
+S1_6	3.1.6.14	N-acetyl-D-glucosamine-6-sulfate 6-O-sulfohydrolase	1463457 7605804 11533491 12368295	Other
+S1_0	3.1.-.-	Phosphonate monoester hydrolase / phosphodiesterase	18793651	Other
+S3	3.1.6.-	specific primary-alkylsulfate sulfohydrolase	1587481 16684886 21318560	Other
+S1_3	3.1.6.2	Steryl-sulfate sulfohydrolase	3032454 2668275 2765556 8673109 12657638	Other
+S1_27	3.1.6.-	Ulvan sulfohydrolase	31024490	Ulvan

@@ -1,0 +1,115 @@
+KO_ID	Gene_name	Gene_description	Pathway	Pathway_small	Metabolism
+COG4770	pccA	Acetyl/Propionyl-CoA carboxylase	3-hydroxypropionate / 4-hydrobutyrate pathway	3-HP 4-HB pathway	Carbon metabolism/autotrophic pathways
+COG2185	sbm	Methylmalonyl-CoA mutase	3-hydroxypropionate / 4-hydrobutyrate pathway	3-HP 4-HB pathway	Carbon metabolism/autotrophic pathways
+COG1884	sbm	Methylmalonyl-CoA mutase	3-hydroxypropionate / 4-hydrobutyrate pathway	3-HP 4-HB pathway	Carbon metabolism/autotrophic pathways
+K09709	meh	3-methylfumaryl-CoA hydratase [EC:4.2.1.153]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K14470	mct	2-methylfumaryl-CoA isomerase [EC:5.4.1.3]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K14471	smtA1	succinyl-CoA:(S)-malate CoA-transferase subunit A [EC:2.8.3.22]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K14472	smtB	succinyl-CoA:(S)-malate CoA-transferase subunit B [EC:2.8.3.22]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K14469	acrylyl-red/3HPcoA dehydr/3HPCoA synt	acrylyl-CoA reductase (NADPH) / 3-hydroxypropionyl-CoA dehydratase / 3-hydroxypropionyl-CoA synthetase [EC:1.3.1.84 4.2.1.116 6.2.1.36]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K14468	mcr	malonyl-CoA reductase / 3-hydroxypropionate dehydrogenase (NADP+) [EC:1.2.1.75 1.1.1.298]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K15052	prpE	propionyl-CoA carboxylase [EC:6.4.1.3 2.1.3.15]	3-Hydroxypropionate bi-cycle	3-HP bi-cycle	Carbon metabolism/autotrophic pathways
+K08691	mcl	malyl-CoA/(S)-citramalyl-CoA lyase [EC:4.1.3.24 4.1.3.25]	3-Hydroxypropionate bi-cycle|Ethylmalonyl pathway | Formaldehyde assimilation	Formaldehyde assimilation	Carbon metabolism/autotrophic pathways
+K01961	accC	acetyl-CoA carboxylase, biotin carboxylase subunit [EC:6.4.1.2 6.3.4.14]	3-Hydroxypropionate bi-cycle|Ethylmalonyl pathway | Formaldehyde assimilation	Formaldehyde assimilation	Carbon metabolism/autotrophic pathways
+K20932	hydr synt	hydrazine synthase subunit [EC:1.7.2.7]	anaerobic ammonia oxidizers (anammox bacteria)	Anammox	Nitrogen metabolism
+K20933	hydr synt	hydrazine synthase subunit [EC:1.7.2.7]	anaerobic ammonia oxidizers (anammox bacteria)	Anammox	Nitrogen metabolism
+K20934	hydr synt	hydrazine synthase subunit [EC:1.7.2.7]	anaerobic ammonia oxidizers (anammox bacteria)	Anammox	Nitrogen metabolism
+K20935	hydr dehydr	hydrazine dehydrogenase [EC:1.7.2.8]	anaerobic ammonia oxidizers (anammox bacteria)	Anammox	Nitrogen metabolism
+K17877	NIT-6	nitrite reductase (NAD(P)H) [EC:1.7.1.4]	Assimilatory nitrate reduction	Assimilatory nitrate reduction	Nitrogen metabolism
+K00366	nirA	ferredoxin-nitrite reductase [EC:1.7.7.1]	Assimilatory nitrate reduction	Assimilatory nitrate reduction	Nitrogen metabolism
+K10534	NR	nitrate reductase (NAD(P)H) [EC:1.7.1.1 1.7.1.2 1.7.1.3]	Assimilatory nitrate reduction	Assimilatory nitrate reduction	Nitrogen metabolism
+K00367	narB	ferredoxin-nitrate reductase [EC:1.7.7.2]	Assimilatory nitrate reduction	Assimilatory nitrate reduction	Nitrogen metabolism
+K00360	nasB	assimilatory nitrate reductase electron transfer subunit [EC:1.7.99.4]	Assimilatory nitrate reduction	Assimilatory nitrate reduction	Nitrogen metabolism
+K00372	nasA	assimilatory nitrate reductase catalytic subunit [EC:1.7.99.4]	Assimilatory nitrate reduction	Assimilatory nitrate reduction	Nitrogen metabolism
+K00956	cysN	sulfate adenylyltransferase subunit 1 [EC:2.7.7.4]	Assimilatory sulfate reduction, sulfate => H2S ; Dissimilatory sulfate reduction, sulfate => H2S	Ass_Diss sulfate reduction	Sulfur metabolism
+K00958	sat, met3	sulfate adenylyltransferase [EC:2.7.7.4]	Assimilatory sulfate reduction, sulfate => H2S ; Dissimilatory sulfate reduction, sulfate => H2S	Ass_Diss sulfate reduction	Sulfur metabolism
+K00957	cysD	sulfate adenylyltransferase subunit 2 [EC:2.7.7.4]	Assimilatory sulfate reduction, sulfate => H2S; Dissimilatory sulfate reduction, sulfate => H2S	Ass_Diss sulfate reduction	Sulfur metabolism
+K00320	mer	5,10-methylenetetrahydromethanopterin reductase [EC:1.5.98.2]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00200	fwdA, fmdA	formylmethanofuran dehydrogenase subunit A [EC:1.2.7.12]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00201	fwdB, fmdB	formylmethanofuran dehydrogenase subunit B [EC:1.2.7.12]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00202	fwdC, fmdC	formylmethanofuran dehydrogenase subunit C [EC:1.2.7.12]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00672	ftr	formylmethanofuran--tetrahydromethanopterin N-formyltransferase [EC:2.3.1.101].	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K01895	acs	acetyl-CoA synthetase [EC:6.2.1.1]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K04480	mtaB	methanol---5-hydroxybenzimidazolylcobamide Co-methyltransferase [EC:2.1.1.90]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K03390	hdrC	heterodisulfide reductase subunit C [EC:1.8.98.1]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K14083	mttB	trimethylamine---corrinoid protein Co-methyltransferase [EC:2.1.1.250]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00577	mtrA	tetrahydromethanopterin S-methyltransferase subunit A [EC:2.1.1.86]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00584	mtrH	tetrahydromethanopterin S-methyltransferase subunit H [EC:2.1.1.86]	C1 metabolism/Methanogenesis	C1 metabolism/Methanogenesis	Methane metabolism
+K00855	PRK, prkB	phosphoribulokinase [EC:2.7.1.19]	Calvin Cycle	Calvin Cycle	Carbon metabolism/autotrophic pathways
+K01601	rbcL	ribulose-bisphosphate carboxylase large chain [EC:4.1.1.39]	Calvin Cycle	Calvin Cycle	Carbon metabolism/autotrophic pathways
+K01602	rbcS	ribulose-bisphosphate carboxylase small chain [EC:4.1.1.39]	Calvin Cycle	Calvin Cycle	Carbon metabolism/autotrophic pathways
+K05979	comB	2-phosphosulfolactate phosphatase [EC:3.1.3.71]	Coenzyme M biosynthesis	Coenzyme M biosynthesis	Methane metabolism
+K06034	comD	sulfopyruvate decarboxylase subunit alpha [EC:4.1.1.79]	Coenzyme M biosynthesis	Coenzyme M biosynthesis	Methane metabolism
+K08097	comA	phosphosulfolactate synthase [EC:4.4.1.19]	Coenzyme M biosynthesis	Coenzyme M biosynthesis	Methane metabolism
+K13039	comE	sulfopyruvate decarboxylase subunit beta [EC:4.1.1.79]	Coenzyme M biosynthesis	Coenzyme M biosynthesis	Methane metabolism
+K03520	coxL, cutL	aerobic carbon-monoxide dehydrogenase large subunit [EC:1.2.5.3]	CO-Oxidation (C1 metabolism)	CO-Oxidation (C1 metabolism)	CO-Oxidation
+K03519	coxM, cutM	aerobic carbon-monoxide dehydrogenase medium subunit [EC:1.2.5.3]	CO-Oxidation (C1 metabolism)	CO-Oxidation (C1 metabolism)	CO-Oxidation
+K03518	coxS	aerobic carbon-monoxide dehydrogenase large subunit [EC:1.2.5.3]	CO-Oxidation (C1 metabolism)	CO-Oxidation (C1 metabolism)	CO-Oxidation
+K00368	nirK	nitrite reductase (NO-forming) [EC:1.7.2.1]	Denitrification	Denitrification	Nitrogen metabolism
+K15864	nirS	nitrite reductase (NO-forming) / hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]	Denitrification	Denitrification	Nitrogen metabolism
+K04561	norB	nitric oxide reductase subunit B [EC:1.7.2.5]	Denitrification	Denitrification	Nitrogen metabolism
+K02305	norC	nitric oxide reductase subunit C	Denitrification	Denitrification	Nitrogen metabolism
+K00376	nosZ	nitrous-oxide reductase [EC:1.7.2.4]	Denitrification	Denitrification	Nitrogen metabolism
+K15877	CYP55	fungal nitric oxide reductase [EC:1.7.1.14]	Denitrification	Denitrification	Nitrogen metabolism
+K00374	narI, narV	nitrate reductase gamma subunit [EC:1.7.5.1 1.7.99.-]	Denitrification|Dissimilatory nitrate reduction	Dissimilatory nitrate reduction	Nitrogen metabolism
+K02567	napA	periplasmic nitrate reductase NapA [EC:1.7.99.-]	Denitrification|Dissimilatory nitrate reduction	Dissimilatory nitrate reduction	Nitrogen metabolism
+K02568	napB	cytochrome c-type protein NapB	Denitrification|Dissimilatory nitrate reduction	Dissimilatory nitrate reduction	Nitrogen metabolism
+K00362	nirB	nitrite reductase (NADH) large subunit [EC:1.7.1.15]	Dissimilatory nitrite reduction	Dissimilatory nitrite reduction	Nitrogen metabolism
+K00363	nirD	nitrite reductase (NADH) small subunit [EC:1.7.1.15]	Dissimilatory nitrite reduction	Dissimilatory nitrite reduction	Nitrogen metabolism
+K03385	nrfA	nitrite reductase (cytochrome c-552) [EC:1.7.2.2]	Dissimilatory nitrite reduction	Dissimilatory nitrite reduction	Nitrogen metabolism
+K15876	nrfH	cytochrome c nitrite reductase small subunit	Dissimilatory nitrite reduction	Dissimilatory nitrite reduction	Nitrogen metabolism
+K00394	aprA	adenylylsulfate reductase, subunit A [EC:1.8.99.2]	Dissimilatory sulfate reduction	Dissimilatory sulfate reduction	Sulfur metabolism
+K00395	aprB	adenylylsulfate reductase, subunit B [EC:1.8.99.2]	Dissimilatory sulfate reduction	Dissimilatory sulfate reduction	Sulfur metabolism
+K11180	dsrA	dissimilatory sulfite reductase alpha subunit [EC:1.8.99.5]	Dissimilatory sulfate reduction	Dissimilatory sulfate reduction	Sulfur metabolism
+K11181	dsrB	dissimilatory sulfite reductase beta subunit [EC:1.8.99.5]	Dissimilatory sulfate reduction	Dissimilatory sulfate reduction	Sulfur metabolism
+K15039	3HP dehydr	3-hydroxypropionate dehydrogenase (NADP+) [EC:1.1.1.298]	Hydroxypropionate-hydroxybutylate cycle	Hydroxypropionate-hydroxybutylate cycle	Carbon metabolism/autotrophic pathways
+K15018	3HPcoA synt	3-hydroxypropionyl-coenzyme A synthetase [EC:6.2.1.36]	Hydroxypropionate-hydroxybutylate cycle	Hydroxypropionate-hydroxybutylate cycle	Carbon metabolism/autotrophic pathways
+K15019	3HPcoA dehydr	3-hydroxypropionyl-coenzyme A dehydratase [EC:4.2.1.116]	Hydroxypropionate-hydroxybutylate cycle	Hydroxypropionate-hydroxybutylate cycle	Carbon metabolism/autotrophic pathways
+K15020	3HPcoA red	acryloyl-coenzyme A reductase [EC:1.3.1.84]	Hydroxypropionate-hydroxybutylate cycle	Hydroxypropionate-hydroxybutylate cycle	Carbon metabolism/autotrophic pathways
+K15017	mal/succ-coA red	malonyl-CoA/succinyl-CoA reductase (NADPH) [EC:1.2.1.75 1.2.1.76]	Hydroxypropionate-hydroxybutylate cycle/ Dicarboxylate-hydroxybutyrate cycle	Dicarboxylate-hydroxybutyrate cycle	Carbon metabolism/autotrophic pathways
+K14534	abfD	4-hydroxybutyryl-CoA dehydratase / vinylacetyl-CoA-Delta-isomerase [EC:4.2.1.120 5.3.3.3]	Hydroxypropionate-hydroxybutylate cycle/ Dicarboxylate-hydroxybutyrate cycle	Dicarboxylate-hydroxybutyrate cycle	Carbon metabolism/autotrophic pathways
+K16157	mmoX	methane monooxygenase component A alpha chain [EC:1.14.13.25]	Methane oxidation	Methane oxidation	Methane metabolism
+K16158	mmoY	methane monooxygenase component A beta chain [EC:1.14.13.25]	Methane oxidation	Methane oxidation	Methane metabolism
+K16159	mmoZ	methane monooxygenase component A gamma chain [EC:1.14.13.25]	Methane oxidation	Methane oxidation	Methane metabolism
+K16160	mmoB	methane monooxygenase regulatory protein B	Methane oxidation	Methane oxidation	Methane metabolism
+K16161	mmoC	methane monooxygenase component C [EC:1.14.13.25]	Methane oxidation	Methane oxidation	Methane metabolism
+K16162	mmoD	methane monooxygenase component D	Methane oxidation	Methane oxidation	Methane metabolism
+K00399	mcrA	methyl-coenzyme M reductase alpha subunit [EC:2.8.4.1]	Methanogenesis	Methanogenesis	Methane metabolism
+K10535	hao	hydroxylamine dehydrogenase [EC:1.7.2.6]	Nitrification	Nitrification	Nitrogen metabolism
+PF01774	UreD	Urease accessory protein 	Nitrification	Nitrification	Nitrogen metabolism
+PF00449	UreC	Urease alpha-subunit [3.5.1.5]	Nitrification	Nitrification	Nitrogen metabolism
+K00370	narG, narZ, nxrA	nitrate reductase / nitrite oxidoreductase, alpha subunit [EC:1.7.5.1 1.7.99.-]	Nitrification|Denitrification|Dissimilatory nitrate reduction	Nit_Denitr_Dissimil_nitrate_red	Nitrogen metabolism
+K00371	narH, narY, nxrB	nitrate reductase / nitrite oxidoreductase, beta subunit [EC:1.7.5.1 1.7.99.-]	Nitrification|Denitrification|Dissimilatory nitrate reduction	Nit_Denitr_Dissimil_nitrate_red	Nitrogen metabolism
+K10944	pmoA-amoA	methane/ammonia monooxygenase subunit A [EC:1.14.18.3 1.14.99.39]	Nitrification|Methane oxidation	Ammonia oxidation	Nitrogen metabolism
+K10945	pmoB-amoB	methane/ammonia monooxygenase subunit B	Nitrification|Methane oxidation	Ammonia oxidation	Nitrogen metabolism
+K10946	pmoC-amoC	methane/ammonia monooxygenase subunit C	Nitrification|Methane oxidation	Ammonia oxidation	Nitrogen metabolism
+PF02461	AmoA	ammonia monooxygenase	Nitrification|Methane oxidation	Ammonia oxidation	Nitrogen metabolism
+K02588	nifH	nitrogenase iron protein NifH [EC:1.18.6.1]	Nitrogen fixation	Nitrogen fixation	Nitrogen metabolism
+K02586	nifD	nitrogenase molybdenum-iron protein alpha chain [EC:1.18.6.1]	Nitrogen fixation	Nitrogen fixation	Nitrogen metabolism
+K02591	nifK	nitrogenase molybdenum-iron protein beta chain [EC:1.18.6.1]	Nitrogen fixation	Nitrogen fixation	Nitrogen metabolism
+K18049	mpnS	methylphosphonate synthase [EC:1.13.11.73]	Phosphonate and phosphinate metabolism	Phosphonate and phosphinate metabolism	Methane production 
+K00198	cooS, acsA	anaerobic carbon-monoxide dehydrogenase catalytic subunit [EC:1.2.7.4]	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	Wood-Ljungdahl pathway	Carbon metabolism/autotrophic pathways
+K14138	acsB	acetyl-CoA synthase [EC:2.3.1.169]	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	Wood-Ljungdahl pathway	Carbon metabolism/autotrophic pathways
+K15023	acsE	5-methyltetrahydrofolate corrinoid/iron sulfur protein methyltransferase [EC:2.1.1.258]	Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)	Wood-Ljungdahl pathway	Carbon metabolism/autotrophic pathways
+K00244	frdA	fumarate reductase flavoprotein subunit [EC:1.3.5.4]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K00245	frdB	fumarate reductase iron-sulfur subunit [EC:1.3.5.4]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K15230	aclA	ATP-citrate lyase alpha-subunit [EC:2.3.3.8]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K15231	aclB	ATP-citrate lyase beta-subunit [EC:2.3.3.8]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K00177	korC, oorC	2-oxoglutarate ferredoxin oxidoreductase subunit gamma [EC:1.2.7.3]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K00176	korD, oorD	2-oxoglutarate ferredoxin oxidoreductase subunit delta [EC:1.2.7.3]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K00174	korA, oorA, oforA	2-oxoglutarate/2-oxoacid ferredoxin oxidoreductase subunit alpha [EC:1.2.7.3 1.2.7.11]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K00175	korB, oorB, oforB	2-oxoglutarate/2-oxoacid ferredoxin oxidoreductase subunit beta [EC:1.2.7.3 1.2.7.11]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K01595	ppc	PEP carboxylase [EC:4.1.1.31]	Reductive citrate cycle (rTCA cycle; Arnon-Buchanan cycle)	Reductive citrate cycle	Carbon metabolism/autotrophic pathways
+K05301	sulfite deh.	sulfite dehydrogenase [EC:1.8.2.1]	Sulfite oxidation	Sulfite oxidation	Sulfur metabolism
+K00387	SUOX	sulfite oxidase [EC:1.8.3.1]	Sulfite oxidation	Sulfite oxidation	Sulfur metabolism
+K17222	soxA	sulfur-oxidizing protein SoxA	Thiosulfate oxidation by SOX complex	Thiosulfate oxidation SOX	Sulfur metabolism
+K17223	soxX	sulfur-oxidizing protein SoxX	Thiosulfate oxidation by SOX complex	Thiosulfate oxidation SOX	Sulfur metabolism
+K17224	soxB	sulfur-oxidizing protein SoxB	Thiosulfate oxidation by SOX complex	Thiosulfate oxidation SOX	Sulfur metabolism
+K17225	soxC	sulfane dehydrogenase subunit SoxC	Thiosulfate oxidation by SOX complex	Thiosulfate oxidation SOX	Sulfur metabolism
+K17226	soxY	sulfur-oxidizing protein SoxY	Thiosulfate oxidation by SOX complex	Thiosulfate oxidation SOX	Sulfur metabolism
+K17227	soxZ	sulfur-oxidizing protein SoxZ	Thiosulfate oxidation by SOX complex	Thiosulfate oxidation SOX	Sulfur metabolism
+COG0804	ureC	Urease alpha-subunit [3.5.1.5]	Urea metabolism	Urea metabolism	Nitrogen metabolism
+COG0831	ureA	Urease gamma-subunit [3.5.1.5]	Urea metabolism	Urea metabolism	Nitrogen metabolism
+COG0832	ureB	Urease beta-subunit [3.5.1.5]	Urea metabolism	Urea metabolism	Nitrogen metabolism
+COG0829	ureH	Urease accessory protein 	Urea metabolism	Urea metabolism	Nitrogen metabolism
+COG0378	hypB	Nitrite-binding GTPase for urease/hydrogenase expression and maturation	Urea metabolism	Urea metabolism	Nitrogen metabolism

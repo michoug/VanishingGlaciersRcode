@@ -1,0 +1,170 @@
+Location	File Name	Unique ID	Higher Taxonomy	Lower Taxonomy	BLAST Seed	Long Name	Data Type	Source
+toAdd/	GCA_019693525.1_ASM1969352v1_genomic.1.faa	GCA-019693525.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Cylindrotheca fusiformis	genomic	NCBI
+toAdd/	GCA_019154785.2.faa	GCA-019154785.2	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Nitzschia inconspicua	genomic	NCBI
+toAdd/	GCA_019593585.1_ASM1959358v1_genomic.1.faa	GCA-019593585.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Nitzschia palea	genomic	NCBI
+toAdd/	GCA_016586335.1_Nputr_1.0_genomic.1.Tier.faa	GCA-016586335.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Nitzschia putrida	genomic	NCBI
+toAdd/	GCA_013372465.1_Nitz4_genomic.1.Tier.faa	GCA-013372465.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Nitzschia sp. Nitz4	genomic	NCBI
+toAdd/	GCA_900660405.1.faa	GCA-900660405.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Pseudo-nitzschia multistriata	genomic	NCBI
+toAdd/	GCA_004335955.1_ASM433595v1_genomic.1.Tier.faa	GCA-004335955.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Halamphora sp. AAB	genomic	NCBI
+toAdd/	GCA_004335815.1_ASM433581v1_genomic.1.Tier.faa	GCA-004335815.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Halamphora sp. MG8b	genomic	NCBI
+toAdd/	GCA_019693425.1_ASM1969342v1_genomic.1.faa	GCA-019693425.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Fistulifera pelliculosa	genomic	NCBI
+toAdd/	GCA_002217885.1.faa	GCA-002217885.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Fistulifera solaris	genomic	NCBI
+toAdd/	GCA_000150955.2.faa	GCA-000150955.2	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Phaeodactylum tricornutum CCAP 1055/1	genomic	NCBI
+toAdd/	GCF_000150955.2.faa	GCF-000150955.2	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Phaeodactylum tricornutum CCAP 1055/1	genomic	NCBI
+toAdd/	GCA_019693545.1_ASM1969354v1_genomic.1.faa	GCA-019693545.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Chaetoceros muellerii	genomic	NCBI
+toAdd/	GCA_018806925.1_FSU_Scostatum_1.0_genomic.1.faa	GCA-018806925.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Skeletonema costatum	genomic	NCBI
+toAdd/	GCA_013187285.1_ASM1318728v1_genomic.1.Tier.faa	GCA-013187285.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Cyclotella cryptica	genomic	NCBI
+toAdd/	GCA_000296195.2.faa	GCA-000296195.2	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Thalassiosira oceanica	genomic	NCBI
+toAdd/	GCA_019693575.1_ASM1969357v1_genomic.1.faa	GCA-019693575.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Thalassiosira oceanica	genomic	NCBI
+toAdd/	GCA_020086505.1_ASM2008650v1_genomic.1.faa	GCA-020086505.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Thalassiosira sundarbana	genomic	NCBI
+toAdd/	GCA_014885115.2_ASM1488511v2_genomic.1.Tier.faa	GCA-014885115.2	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Asterionellopsis glacialis	genomic	NCBI
+toAdd/	GCA_900642245.1_sac1_genomic.1.Tier.faa	GCA-900642245.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Fragilaria radians	genomic	NCBI
+toAdd/	GCA_900291995.1_CCMP470_genomic.1.Tier.faa	GCA-900291995.1	Stramenopiles	Ochrophyta-Bacillariophyceae	none	Licmophora abbreviata	genomic	NCBI
+toAdd/	GCA_012489335.1_metaeuk.faa	GCA-012489335.1	Stramenopiles	Ochrophyta-Bolidophyceae	none	Triparma laevis f. inornata	genomic	NCBI
+toAdd/	GCA_015148605.1_ASM1514860v1_genomic.1.Tier.faa	GCA-015148605.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Chromulina nebulosa	genomic	NCBI
+toAdd/	GCA_015144965.1_ASM1514496v1_genomic.1.Tier.faa	GCA-015144965.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Chromulinospumella sphaerica	genomic	NCBI
+toAdd/	GCA_015146655.1_ASM1514665v1_genomic.1.Tier.faa	GCA-015146655.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Ochromonas danica	genomic	NCBI
+toAdd/	GCA_015143685.1_ASM1514368v1_genomic.1.Tier.faa	GCA-015143685.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Pedospumella encystans	genomic	NCBI
+toAdd/	GCA_015148585.1_ASM1514858v1_genomic.1.Tier.faa	GCA-015148585.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Pedospumella encystans	genomic	NCBI
+toAdd/	GCA_015148565.1_ASM1514856v1_genomic.1.Tier.faa	GCA-015148565.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Spumella vulgaris	genomic	NCBI
+toAdd/	GCA_015146115.1_ASM1514611v1_genomic.1.Tier.faa	GCA-015146115.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Spumella sp. AR4D6	genomic	NCBI
+toAdd/	GCA_015146095.1_ASM1514609v1_genomic.1.Tier.faa	GCA-015146095.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Dinobryon divergens	genomic	NCBI
+toAdd/	GCA_015144975.1_ASM1514497v1_genomic.1.Tier.faa	GCA-015144975.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Epipyxis sp. PR26KG	genomic	NCBI
+toAdd/	GCA_008000325.1_ASM800032v1_genomic.1.Tier.faa	GCA-008000325.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Poteriospumella lacustris	genomic	NCBI
+toAdd/	GCA_008000375.1_ASM800037v1_genomic.1.Tier.faa	GCA-008000375.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Poteriospumella lacustris	genomic	NCBI
+toAdd/	GCA_008000405.1_ASM800040v1_genomic.1.Tier.faa	GCA-008000405.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Poteriospumella lacustris	genomic	NCBI
+toAdd/	GCA_900617105.1.1.Tier.faa	GCA-900617105.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	Hydrurus foetidus	genomic	NCBI
+toAdd/	GCA_001614245.1_ASM161424v1_genomic.1.faa	GCA-001614245.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis salina CCMP1776	genomic	NCBI
+toAdd/	GCA_004565275.1.faa	GCA-004565275.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis salina CCMP1776	genomic	NCBI
+toAdd/	GCA_004335465.1_metaeuk.faa	GCA-004335465.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis salina CCMP537	genomic	NCBI
+toAdd/	GCA_000569095.1.faa	GCA-000569095.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis gaditana	genomic	NCBI
+toAdd/	GCA_001614215.1_metaeuk.faa	GCA-001614215.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis gaditana	genomic	NCBI
+toAdd/	GCA_002838785.1_metaeuk.faa	GCA-002838785.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis gaditana	genomic	NCBI
+toAdd/	GCA_000240725.1.faa	GCA-000240725.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis gaditana CCMP526	genomic	NCBI
+toAdd/	GCF_000240725.1.faa	GCF-000240725.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis gaditana CCMP526	genomic	NCBI
+toAdd/	GCA_004335405.1_metaeuk.faa	GCA-004335405.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis granulata CCMP529	genomic	NCBI
+toAdd/	GCA_001614225.1_metaeuk.faa	GCA-001614225.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis limnetica	genomic	NCBI
+toAdd/	GCA_000226695.1_NocGME_genomic.1.faa	GCA-000226695.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica	genomic	NCBI
+toAdd/	GCA_004519485.1_metaeuk.faa	GCA-004519485.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica	genomic	NCBI
+toAdd/	GCA_009014695.1_metaeuk.faa	GCA-009014695.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica	genomic	NCBI
+toAdd/	GCA_009014725.1_metaeuk.faa	GCA-009014725.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica	genomic	NCBI
+toAdd/	GCA_004335385.1_metaeuk.faa	GCA-004335385.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica CCMP531	genomic	NCBI
+toAdd/	GCA_001614235.1_ASM161423v1_genomic.1.faa	GCA-001614235.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica OZ-1	genomic	NCBI
+toAdd/	GCA_001870945.1_metaeuk.faa	GCA-001870945.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oceanica strain IMET1	genomic	NCBI
+toAdd/	GCA_004335455.1_metaeuk.faa	GCA-004335455.1	Stramenopiles	Ochrophyta-Eustigmatophyceae	none	Nannochloropsis oculata CCMP525	genomic	NCBI
+toAdd/	GCA_019702425.1_ASM1970242v1_genomic.1.faa	GCA-019702425.1	Stramenopiles	Ochrophyta-Pelagophyceae	none	Pelagococcus subviridis	genomic	NCBI
+toAdd/	GCA_019677205.1_ASM1967720v1_genomic.1.faa	GCA-019677205.1	Stramenopiles	Ochrophyta-Pinguiophyceae	none	Pinguiococcus pyrenoidosus	genomic	NCBI
+toAdd/	GCA_001742925.1.1.faa	GCA-001742925.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Cladosiphon okamuranus	genomic	NCBI
+toAdd/	GCA_000310025.1.faa	GCA-000310025.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Ectocarpus siliculosus	genomic	NCBI
+toAdd/	GCA_902602495.3.faa	GCA-902602495.3	Stramenopiles	Ochrophyta-Phaeophyceae	none	Ectocarpus sp. CCAP 1310/34	genomic	NCBI
+toAdd/	GCA_902705575.1_metaeuk.faa	GCA-902705575.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Ectocarpus sp. CCAP 1310/34	genomic	NCBI
+toAdd/	GCA_004764655.1.1.faa	GCA-004764655.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Ectocarpus sp. Ec32	genomic	NCBI
+toAdd/	GCA_012845835.1_metaeuk.faa	GCA-012845835.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Undaria pinnatifida	genomic	NCBI
+toAdd/	GCA_012273945.1_metaeuk.faa	GCA-012273945.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Macrocystis pyrifera	genomic	NCBI
+toAdd/	GCA_008828725.1_ASM882872v1_genomic.1.faa	GCA-008828725.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Saccharina japonica	genomic	NCBI
+toAdd/	GCA_000498555.1_metaeuk.faa	GCA-000498555.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Heterococcus sp. DN1	genomic	NCBI
+toAdd/	GCA_017506865.1.faa	GCA-017506865.1	Stramenopiles	Ochrophyta-Phaeophyceae	none	Tribonema minus	genomic	NCBI
+toAdd/	GCA_015143345.1_metaeuk.faa	GCA-015143345.1	Stramenopiles	Ochrophyta-Synurophyceae	none	Mallomonas annulata	genomic	NCBI
+toAdd/	GCA_015143735.1_metaeuk.faa	GCA-015143735.1	Stramenopiles	Ochrophyta-Synurophyceae	none	Synura sp. LO234KE	genomic	NCBI
+toAdd/	10741_metabat_res.25.1.Tier.faa	10741-metabat-res.25	Alveolata	Dinoflagellata	none	10741-metabat-res.25	genomic	NOMIS
+toAdd/	3238_metabat_res.106.1.Tier.faa	3238-metabat-res.106	Alveolata	Ciliate	none	3238-metabat-res.106	genomic	NOMIS
+toAdd/	10092_metabat_res.101.1.Tier.faa	10092-metabat-res.101	Chloroplastida	Streptophyta	none	10092-metabat-res.101	genomic	NOMIS
+toAdd/	12023_metabat_res.122.1.Tier.faa	12023-metabat-res.122	Chloroplastida	Streptophyta	none	12023-metabat-res.122	genomic	NOMIS
+toAdd/	12885_metabat_res.144.1.Tier.faa	12885-metabat-res.144	Chloroplastida	Chlorophyta	none	12885-metabat-res.144	genomic	NOMIS
+toAdd/	GL34_UP_metabat.132.1.Tier.faa	GL34-UP-metabat.132	Chloroplastida	Chlorophyta	none	GL34-UP-metabat.132	genomic	NOMIS
+toAdd/	19497_metabat_res.171.1.Tier.faa	19497-metabat-res.171	Discoba	Euglenozoa	none	19497-metabat-res.171	genomic	NOMIS
+toAdd/	10021_metabat_res.89.1.Tier.faa	10021-metabat-res.89	Obazoa	Fungi	none	10021-metabat-res.89	genomic	NOMIS
+toAdd/	10161_metabat_res.53.1.Tier.faa	10161-metabat-res.53	Obazoa	Metazoa	none	10161-metabat-res.53	genomic	NOMIS
+toAdd/	10168_metabat_res.19.1.Tier.faa	10168-metabat-res.19	Obazoa	Fungi	none	10168-metabat-res.19	genomic	NOMIS
+toAdd/	10889_metabat_res.175.1.Tier.faa	10889-metabat-res.175	Obazoa	Metazoa	none	10889-metabat-res.175	genomic	NOMIS
+toAdd/	11244_metabat_res.104.1.Tier.faa	11244-metabat-res.104	Obazoa	Fungi	none	11244-metabat-res.104	genomic	NOMIS
+toAdd/	1133_metabat_res.110.1.Tier.faa	1133-metabat-res.110	Obazoa	Fungi	none	1133-metabat-res.110	genomic	NOMIS
+toAdd/	11899_metabat_res.174.1.Tier.faa	11899-metabat-res.174	Obazoa	Metazoa	none	11899-metabat-res.174	genomic	NOMIS
+toAdd/	11996_metabat_res.197.1.Tier.faa	11996-metabat-res.197	Obazoa	Metazoa	none	11996-metabat-res.197	genomic	NOMIS
+toAdd/	13173_metabat_res.46.1.Tier.faa	13173-metabat-res.46	Obazoa	Metazoa	none	13173-metabat-res.46	genomic	NOMIS
+toAdd/	13569_metabat_res.166.1.Tier.faa	13569-metabat-res.166	Obazoa	Fungi	none	13569-metabat-res.166	genomic	NOMIS
+toAdd/	13633_metabat_res.108.1.Tier.faa	13633-metabat-res.108	Obazoa	Fungi	none	13633-metabat-res.108	genomic	NOMIS
+toAdd/	1577_metabat_res.105.1.Tier.faa	1577-metabat-res.105	Obazoa	Fungi	none	1577-metabat-res.105	genomic	NOMIS
+toAdd/	15814_metabat_res.34.1.Tier.faa	15814-metabat-res.34	Obazoa	Metazoa	none	15814-metabat-res.34	genomic	NOMIS
+toAdd/	15818_metabat_res.55.1.Tier.faa	15818-metabat-res.55	Obazoa	Metazoa	none	15818-metabat-res.55	genomic	NOMIS
+toAdd/	16347_metabat_res.18.1.Tier.faa	16347-metabat-res.18	Obazoa	Fungi	none	16347-metabat-res.18	genomic	NOMIS
+toAdd/	16514_metabat_res.202.1.Tier.faa	16514-metabat-res.202	Obazoa	Fungi	none	16514-metabat-res.202	genomic	NOMIS
+toAdd/	16557_metabat_res.171.1.Tier.faa	16557-metabat-res.171	Obazoa	Metazoa	none	16557-metabat-res.171	genomic	NOMIS
+toAdd/	1659_metabat_res.113.1.Tier.faa	1659-metabat-res.113	Obazoa	Fungi	none	1659-metabat-res.113	genomic	NOMIS
+toAdd/	18871_metabat_res.9.1.Tier.faa	18871-metabat-res.9	Obazoa	Fungi	none	18871-metabat-res.9	genomic	NOMIS
+toAdd/	19374_metabat_res.59.1.Tier.faa	19374-metabat-res.59	Obazoa	Fungi	none	19374-metabat-res.59	genomic	NOMIS
+toAdd/	19488_metabat_res.1.1.Tier.faa	19488-metabat-res.1	Obazoa	Metazoa	none	19488-metabat-res.1	genomic	NOMIS
+toAdd/	20166_metabat_res.105.1.Tier.faa	20166-metabat-res.105	Obazoa	Metazoa	none	20166-metabat-res.105	genomic	NOMIS
+toAdd/	20416_metabat_res.38.1.Tier.faa	20416-metabat-res.38	Obazoa	Metazoa	none	20416-metabat-res.38	genomic	NOMIS
+toAdd/	22560_metabat_res.2.1.Tier.faa	22560-metabat-res.2	Obazoa	Fungi	none	22560-metabat-res.2	genomic	NOMIS
+toAdd/	23886_metabat_res.9.1.Tier.faa	23886-metabat-res.9	Obazoa	Metazoa	none	23886-metabat-res.9	genomic	NOMIS
+toAdd/	24009_metabat_res.38.1.Tier.faa	24009-metabat-res.38	Obazoa	Metazoa	none	24009-metabat-res.38	genomic	NOMIS
+toAdd/	24578_metabat_res.50.1.Tier.faa	24578-metabat-res.50	Obazoa	Metazoa	none	24578-metabat-res.50	genomic	NOMIS
+toAdd/	25045_metabat_res.27.1.Tier.faa	25045-metabat-res.27	Obazoa	Metazoa	none	25045-metabat-res.27	genomic	NOMIS
+toAdd/	25451_metabat_res.95.1.Tier.faa	25451-metabat-res.95	Obazoa	Metazoa	none	25451-metabat-res.95	genomic	NOMIS
+toAdd/	31101_metabat_res.86.1.Tier.faa	31101-metabat-res.86	Obazoa	Fungi	none	31101-metabat-res.86	genomic	NOMIS
+toAdd/	31130_metabat_res.133.1.Tier.faa	31130-metabat-res.133	Obazoa	Metazoa	none	31130-metabat-res.133	genomic	NOMIS
+toAdd/	31156_metabat_res.3.1.Tier.faa	31156-metabat-res.3	Obazoa	Metazoa	none	31156-metabat-res.3	genomic	NOMIS
+toAdd/	31447_metabat_res.26.1.Tier.faa	31447-metabat-res.26	Obazoa	Fungi	none	31447-metabat-res.26	genomic	NOMIS
+toAdd/	6757_metabat_res.152.1.Tier.faa	6757-metabat-res.152	Obazoa	Metazoa	none	6757-metabat-res.152	genomic	NOMIS
+toAdd/	6969_metabat_res.17.1.Tier.faa	6969-metabat-res.17	Obazoa	Fungi	none	6969-metabat-res.17	genomic	NOMIS
+toAdd/	9938_metabat_res.138.1.Tier.faa	9938-metabat-res.138	Obazoa	Metazoa	none	9938-metabat-res.138	genomic	NOMIS
+toAdd/	GL104_DN_metabat.69.1.Tier.faa	GL104-DN-metabat.69	Obazoa	Metazoa	none	GL104-DN-metabat.69	genomic	NOMIS
+toAdd/	GL106_DN_metabat.18.1.Tier.faa	GL106-DN-metabat.18	Obazoa	Metazoa	none	GL106-DN-metabat.18	genomic	NOMIS
+toAdd/	GL106_DN_metabat.72.1.Tier.faa	GL106-DN-metabat.72	Obazoa	Metazoa	none	GL106-DN-metabat.72	genomic	NOMIS
+toAdd/	GL106_UP_metabat.9.1.Tier.faa	GL106-UP-metabat.9	Obazoa	Metazoa	none	GL106-UP-metabat.9	genomic	NOMIS
+toAdd/	GL116_DN_metabat.71.1.Tier.faa	GL116-DN-metabat.71	Obazoa	Metazoa	none	GL116-DN-metabat.71	genomic	NOMIS
+toAdd/	GL117_UP_metabat.16.1.Tier.faa	GL117-UP-metabat.16	Obazoa	Metazoa	none	GL117-UP-metabat.16	genomic	NOMIS
+toAdd/	GL15_Down_metabat.56.1.Tier.faa	GL15-Down-metabat.56	Obazoa	Metazoa	none	GL15-Down-metabat.56	genomic	NOMIS
+toAdd/	GL24_UP_metabat.106.1.Tier.faa	GL24-UP-metabat.106	Obazoa	Metazoa	none	GL24-UP-metabat.106	genomic	NOMIS
+toAdd/	GL24_UP_metabat.25.1.Tier.faa	GL24-UP-metabat.25	Obazoa	Metazoa	none	GL24-UP-metabat.25	genomic	NOMIS
+toAdd/	GL45_UP_metabat.31.1.Tier.faa	GL45-UP-metabat.31	Obazoa	Metazoa	none	GL45-UP-metabat.31	genomic	NOMIS
+toAdd/	GL48_UP_metabat.44.1.Tier.faa	GL48-UP-metabat.44	Obazoa	Metazoa	none	GL48-UP-metabat.44	genomic	NOMIS
+toAdd/	GL90_UP_metabat.142.1.Tier.faa	GL90-UP-metabat.142	Obazoa	Metazoa	none	GL90-UP-metabat.142	genomic	NOMIS
+toAdd/	GL99_UP_metabat.20.1.Tier.faa	GL99-UP-metabat.20	Obazoa	Metazoa	none	GL99-UP-metabat.20	genomic	NOMIS
+toAdd/	GLR2_GL5_UP_2_metabat.10.1.Tier.faa	GLR2-GL5-UP-2-metabat.10	Obazoa	Metazoa	none	GLR2-GL5-UP-2-metabat.10	genomic	NOMIS
+toAdd/	GLR68_GL53_UP_2_metabat.56.1.Tier.faa	GLR68-GL53-UP-2-metabat.56	Obazoa	Metazoa	none	GLR68-GL53-UP-2-metabat.56	genomic	NOMIS
+toAdd/	GLR80_GL56_UP_1_metabat.74.1.Tier.faa	GLR80-GL56-UP-1-metabat.74	Obazoa	Fungi	none	GLR80-GL56-UP-1-metabat.74	genomic	NOMIS
+toAdd/	10340_metabat_res.194.1.Tier.faa	10340-metabat-res.194	Stramenopiles	Ochrophyta-Chrysophyceae	none	10340-metabat-res.194	genomic	NOMIS
+toAdd/	11060_metabat_res.206.1.Tier.faa	11060-metabat-res.206	Stramenopiles	Ochrophyta-Bacillariophyceae	none	11060-metabat-res.206	genomic	NOMIS
+toAdd/	17196_metabat_res.73.1.Tier.faa	17196-metabat-res.73	Stramenopiles	Ochrophyta-Chrysophyceae	none	17196-metabat-res.73	genomic	NOMIS
+toAdd/	17783_metabat_res.146.1.Tier.faa	17783-metabat-res.146	Stramenopiles	Ochrophyta-Chrysophyceae	none	17783-metabat-res.146	genomic	NOMIS
+toAdd/	17859_metabat_res.188.1.Tier.faa	17859-metabat-res.188	Stramenopiles	Ochrophyta-Chrysophyceae	none	17859-metabat-res.188	genomic	NOMIS
+toAdd/	18865_metabat_res.3.1.Tier.faa	18865-metabat-res.3	Stramenopiles	Ochrophyta-Chrysophyceae	none	18865-metabat-res.3	genomic	NOMIS
+toAdd/	18866_metabat_res.2.1.Tier.faa	18866-metabat-res.2	Stramenopiles	Ochrophyta-Chrysophyceae	none	18866-metabat-res.2	genomic	NOMIS
+toAdd/	18867_metabat_res.5.1.Tier.faa	18867-metabat-res.5	Stramenopiles	Ochrophyta-Chrysophyceae	none	18867-metabat-res.5	genomic	NOMIS
+toAdd/	19207_metabat_res.80.1.Tier.faa	19207-metabat-res.80	Stramenopiles	Ochrophyta-Chrysophyceae	none	19207-metabat-res.80	genomic	NOMIS
+toAdd/	21031_metabat_res.122.1.Tier.faa	21031-metabat-res.122	Stramenopiles	Ochrophyta-Chrysophyceae	none	21031-metabat-res.122	genomic	NOMIS
+toAdd/	21520_metabat_res.87.1.Tier.faa	21520-metabat-res.87	Stramenopiles	Ochrophyta-Chrysophyceae	none	21520-metabat-res.87	genomic	NOMIS
+toAdd/	23968_metabat_res.153.1.Tier.faa	23968-metabat-res.153	Stramenopiles	Ochrophyta-Bacillariophyceae	none	23968-metabat-res.153	genomic	NOMIS
+toAdd/	24484_metabat_res.118.1.Tier.faa	24484-metabat-res.118	Stramenopiles	Ochrophyta-Chrysophyceae	none	24484-metabat-res.118	genomic	NOMIS
+toAdd/	24605_metabat_res.99.1.Tier.faa	24605-metabat-res.99	Stramenopiles	Ochrophyta-Chrysophyceae	none	24605-metabat-res.99	genomic	NOMIS
+toAdd/	25406_metabat_res.67.1.Tier.faa	25406-metabat-res.67	Stramenopiles	Ochrophyta-Chrysophyceae	none	25406-metabat-res.67	genomic	NOMIS
+toAdd/	25619_metabat_res.73.1.Tier.faa	25619-metabat-res.73	Stramenopiles	Ochrophyta-Chrysophyceae	none	25619-metabat-res.73	genomic	NOMIS
+toAdd/	25730_metabat_res.112.1.Tier.faa	25730-metabat-res.112	Stramenopiles	Ochrophyta-Bacillariophyceae	none	25730-metabat-res.112	genomic	NOMIS
+toAdd/	26352_metabat_res.38.1.Tier.faa	26352-metabat-res.38	Stramenopiles	Ochrophyta-Chrysophyceae	none	26352-metabat-res.38	genomic	NOMIS
+toAdd/	26384_metabat_res.44.1.Tier.faa	26384-metabat-res.44	Stramenopiles	Ochrophyta-Chrysophyceae	none	26384-metabat-res.44	genomic	NOMIS
+toAdd/	29525_metabat_res.134.1.Tier.faa	29525-metabat-res.134	Stramenopiles	Ochrophyta-Bacillariophyceae	none	29525-metabat-res.134	genomic	NOMIS
+toAdd/	31158_metabat_res.77.1.Tier.faa	31158-metabat-res.77	Stramenopiles	Ochrophyta-Chrysophyceae	none	31158-metabat-res.77	genomic	NOMIS
+toAdd/	31743_metabat_res.21.1.Tier.faa	31743-metabat-res.21	Stramenopiles	Ochrophyta-Chrysophyceae	none	31743-metabat-res.21	genomic	NOMIS
+toAdd/	3245_metabat_res.97.1.Tier.faa	3245-metabat-res.97	Stramenopiles	Ochrophyta-Bacillariophyceae	none	3245-metabat-res.97	genomic	NOMIS
+toAdd/	33032_metabat_res.94.1.Tier.faa	33032-metabat-res.94	Stramenopiles	Ochrophyta-Chrysophyceae	none	33032-metabat-res.94	genomic	NOMIS
+toAdd/	7030_metabat_res.122.1.Tier.faa	7030-metabat-res.122	Stramenopiles	Ochrophyta-Chrysophyceae	none	7030-metabat-res.122	genomic	NOMIS
+toAdd/	GL45_UP_metabat.40.1.Tier.faa	GL45-UP-metabat.40	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL45-UP-metabat.40	genomic	NOMIS
+toAdd/	GL47_Down_metabat.36.1.Tier.faa	GL47-Down-metabat.36	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL47-Down-metabat.36	genomic	NOMIS
+toAdd/	GL48_Down_metabat.65.1.Tier.faa	GL48-Down-metabat.65	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL48-Down-metabat.65	genomic	NOMIS
+toAdd/	GL48_UP_metabat.48.1.Tier.faa	GL48-UP-metabat.48	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL48-UP-metabat.48	genomic	NOMIS
+toAdd/	GL50_Down_metabat.142.1.Tier.faa	GL50-Down-metabat.142	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL50-Down-metabat.142	genomic	NOMIS
+toAdd/	GL53_Up_metabat.13.1.Tier.faa	GL53-Up-metabat.13	Stramenopiles	Ochrophyta-Bacillariophyceae	none	GL53-Up-metabat.13	genomic	NOMIS
+toAdd/	GL53_Up_metabat.20.1.Tier.faa	GL53-Up-metabat.20	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL53-Up-metabat.20	genomic	NOMIS
+toAdd/	GL93_DN_metabat.110.1.Tier.faa	GL93-DN-metabat.110	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL93-DN-metabat.110	genomic	NOMIS
+toAdd/	GL96_DN_metabat.29.1.Tier.faa	GL96-DN-metabat.29	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL96-DN-metabat.29	genomic	NOMIS
+toAdd/	GL98_UP_metabat.143.1.Tier.faa	GL98-UP-metabat.143	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL98-UP-metabat.143	genomic	NOMIS
+toAdd/	GL99_UP_metabat.8.1.Tier.faa	GL99-UP-metabat.8	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL99-UP-metabat.8	genomic	NOMIS
+toAdd/	GL99_UP_metabat.9.1.Tier.faa	GL99-UP-metabat.9	Stramenopiles	Ochrophyta-Chrysophyceae	none	GL99-UP-metabat.9	genomic	NOMIS
+toAdd/	GLR18_GL16_UP_2_metabat.47.1.Tier.faa	GLR18-GL16-UP-2-metabat.47	Stramenopiles	Ochrophyta-Chrysophyceae	none	GLR18-GL16-UP-2-metabat.47	genomic	NOMIS
+toAdd/	GLR19_GL16_UP_3_metabat.48.1.Tier.faa	GLR19-GL16-UP-3-metabat.48	Stramenopiles	Ochrophyta-Bacillariophyceae	none	GLR19-GL16-UP-3-metabat.48	genomic	NOMIS
+toAdd/	GLR58_GL46_UP_3_metabat.1.1.Tier.faa	GLR58-GL46-UP-3-metabat.1	Stramenopiles	Ochrophyta-Chrysophyceae	none	GLR58-GL46-UP-3-metabat.1	genomic	NOMIS
+toAdd/	GLR68_GL53_UP_2_metabat.15.1.Tier.faa	GLR68-GL53-UP-2-metabat.15	Stramenopiles	Ochrophyta-Bacillariophyceae	none	GLR68-GL53-UP-2-metabat.15	genomic	NOMIS
+toAdd/	GLR68_GL53_UP_2_metabat.58.1.Tier.faa	GLR68-GL53-UP-2-metabat.58	Stramenopiles	Ochrophyta-Chrysophyceae	none	GLR68-GL53-UP-2-metabat.58	genomic	NOMIS
+toAdd/	GLR9_GL11_UP_2_metabat.8.1.Tier.faa	GLR9-GL11-UP-2-metabat.8	Stramenopiles	Ochrophyta-Chrysophyceae	none	GLR9-GL11-UP-2-metabat.8	genomic	NOMIS

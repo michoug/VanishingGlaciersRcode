@@ -1,0 +1,148 @@
+Path	KO	Description	Category
+01053 Biosynthesis of siderophore group nonribosomal peptides	K01851	pchA; salicylate biosynthesis isochorismate synthase [EC:5.4.4.2]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K02552	menF; menaquinone-specific isochorismate synthase [EC:5.4.4.2]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K02361	entC; isochorismate synthase [EC:5.4.4.2]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K01252	entB, dhbB, vibB, mxcF; bifunctional isochorismate lyase / aryl carrier protein [EC:3.3.2.1 6.3.2.14]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K00216	entA; 2,3-dihydro-2,3-dihydroxybenzoate dehydrogenase [EC:1.3.1.28]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K02362	entD; enterobactin synthetase component D [EC:6.3.2.14 2.7.8.-]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K02363	entE, dhbE, vibE, mxcE; 2,3-dihydroxybenzoate---[aryl-carrier protein] ligase [EC:6.3.2.14 6.2.1.71]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K02364	entF; L-serine---[L-seryl-carrier protein] ligase [EC:6.3.2.14 6.2.1.72]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K24147	entH; proofreading thioesterase EntH	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04778	vibH; vibriobactin synthetase	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K12237	vibF; nonribosomal peptide synthetase VibF	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04780	dhbF; glyine---[glycyl-carrier protein] ligase [EC:6.2.1.66]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K15653	mxcG; nonribosomal peptide synthetase MxcG	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K15681	mxcL; aminotransferase MxcL	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04781	mbtI, irp9, ybtS; salicylate synthetase [EC:5.4.4.2 4.2.99.21]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04782	pchB; isochorismate pyruvate lyase [EC:4.2.99.21]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K12238	pchD; salicylate---[aryl-carrier protein] ligase [EC:6.2.1.61]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K12239	pchE; L-cysteine---[L-cysteinyl-carrier protein] ligase PchE [EC:6.2.1.69]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K12240	pchF; L-cysteine---[L-cysteinyl-carrier protein] ligase PchF [EC:6.2.1.69]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K12241	pchG; pyochelin biosynthesis protein PchG	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04783	irp5, ybtE; yersiniabactin salicyl-AMP ligase [EC:6.3.2.-]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04784	irp2, HMWP2; yersiniabactin nonribosomal peptide synthetase	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04785	irp3, ybtU; yersiniabactin synthetase, thiazolinyl reductase component	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04786	irp1, HMWP1; yersiniabactin nonribosomal peptide/polyketide synthase	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04787	mbtA; mycobactin salicyl-AMP ligase [EC:6.3.2.-]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04788	mbtB; mycobactin phenyloxazoline synthetase	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04789	mbtE; mycobactin peptide synthetase MbtE	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04790	mbtC; mycobactin polyketide synthetase MbtC	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04791	mbtD; mycobactin polyketide synthetase MbtD	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04792	mbtF; mycobactin peptide synthetase MbtF	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K04793	mbtG; mycobactin lysine-N-oxygenase	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K15652	asbF; 3-dehydroshikimate dehydratase [EC:4.2.1.118]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K09483	quiC; 3-dehydroshikimate dehydratase [EC:4.2.1.118]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K24108	asbA; spermidine-citrate ligase [EC:6.3.2.-]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K24109	asbB; 3,4-dihydroxybenzoyl-citryl-spermidine/N-citryl-spermidine--spermidine ligase [EC:6.3.2.-]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K24110	asbC; 3,4-dihydroxybenzoate---[aryl-carrier protein] ligase [EC:6.2.1.62]	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K24111	asbD; aryl carrier protein AsbD	Siderophores
+01053 Biosynthesis of siderophore group nonribosomal peptides	K24112	asbE; petrobactin synthase [EC:2.-.-.-]	Siderophores
+02030 Bacterial chemotaxis	K03406	mcp; methyl-accepting chemotaxis protein	Chemotaxis
+02030 Bacterial chemotaxis	K05874	tsr; methyl-accepting chemotaxis protein I, serine sensor receptor	Chemotaxis
+02030 Bacterial chemotaxis	K05875	tar; methyl-accepting chemotaxis protein II, aspartate sensor receptor	Chemotaxis
+02030 Bacterial chemotaxis	K05876	trg; methyl-accepting chemotaxis protein III, ribose and galactose sensor receptor	Chemotaxis
+02030 Bacterial chemotaxis	K05877	tap; methyl-accepting chemotaxis protein IV, peptide sensor receptor	Chemotaxis
+02030 Bacterial chemotaxis	K03776	aer; aerotaxis receptor	Chemotaxis
+02030 Bacterial chemotaxis	K10108	malE; maltose/maltodextrin transport system substrate-binding protein	Chemotaxis
+02030 Bacterial chemotaxis	K10439	rbsB; ribose transport system substrate-binding protein	Chemotaxis
+02030 Bacterial chemotaxis	K10540	mglB; methyl-galactoside transport system substrate-binding protein	Chemotaxis
+02030 Bacterial chemotaxis	K12368	dppA; dipeptide transport system substrate-binding protein	Chemotaxis
+02030 Bacterial chemotaxis	K03407	cheA; two-component system, chemotaxis family, sensor kinase CheA [EC:2.7.13.3]	Chemotaxis
+02030 Bacterial chemotaxis	K03408	cheW; purine-binding chemotaxis protein CheW	Chemotaxis
+02030 Bacterial chemotaxis	K03413	cheY; two-component system, chemotaxis family, chemotaxis protein CheY	Chemotaxis
+02030 Bacterial chemotaxis	K03410	cheC; chemotaxis protein CheC	Chemotaxis
+02030 Bacterial chemotaxis	K03414	cheZ; chemotaxis protein CheZ	Chemotaxis
+02030 Bacterial chemotaxis	K03409	cheX; chemotaxis protein CheX	Chemotaxis
+02030 Bacterial chemotaxis	K03412	cheB; two-component system, chemotaxis family, protein-glutamate methylesterase/glutaminase [EC:3.1.1.61 3.5.1.44]	Chemotaxis
+02030 Bacterial chemotaxis	K13924	cheBR; two-component system, chemotaxis family, CheB/CheR fusion protein [EC:2.1.1.80 3.1.1.61]	Chemotaxis
+02030 Bacterial chemotaxis	K03415	cheV; two-component system, chemotaxis family, chemotaxis protein CheV	Chemotaxis
+02030 Bacterial chemotaxis	K03411	cheD; chemotaxis protein CheD [EC:3.5.1.44]	Chemotaxis
+02030 Bacterial chemotaxis	K00575	cheR; chemotaxis protein methyltransferase CheR [EC:2.1.1.80]	Chemotaxis
+02030 Bacterial chemotaxis	K02410	fliG; flagellar motor switch protein FliG	Chemotaxis
+02030 Bacterial chemotaxis	K02416	fliM; flagellar motor switch protein FliM	Chemotaxis
+02030 Bacterial chemotaxis	K02417	fliN; flagellar motor switch protein FliN	Chemotaxis
+02030 Bacterial chemotaxis	K02556	motA; chemotaxis protein MotA	Chemotaxis
+02030 Bacterial chemotaxis	K02557	motB; chemotaxis protein MotB	Chemotaxis
+02040 Flagellar assembly	K02408	fliE; flagellar hook-basal body complex protein FliE	Flagella
+02040 Flagellar assembly	K02409	fliF; flagellar M-ring protein FliF	Flagella
+02040 Flagellar assembly	K02410	fliG; flagellar motor switch protein FliG	Flagella
+02040 Flagellar assembly	K02411	fliH; flagellar assembly protein FliH	Flagella
+02040 Flagellar assembly	K02412	fliI; flagellum-specific ATP synthase [EC:7.4.2.8]	Flagella
+02040 Flagellar assembly	K02413	fliJ; flagellar protein FliJ	Flagella
+02040 Flagellar assembly	K02414	fliK; flagellar hook-length control protein FliK	Flagella
+02040 Flagellar assembly	K02415	fliL; flagellar protein FliL	Flagella
+02040 Flagellar assembly	K02416	fliM; flagellar motor switch protein FliM	Flagella
+02040 Flagellar assembly	K02417	fliN; flagellar motor switch protein FliN	Flagella
+02040 Flagellar assembly	K02418	fliO, fliZ; flagellar protein FliO/FliZ	Flagella
+02040 Flagellar assembly	K02419	fliP; flagellar biosynthesis protein FliP	Flagella
+02040 Flagellar assembly	K02420	fliQ; flagellar biosynthesis protein FliQ	Flagella
+02040 Flagellar assembly	K02421	fliR; flagellar biosynthesis protein FliR	Flagella
+02040 Flagellar assembly	K03516	flhE; flagellar protein FlhE	Flagella
+02040 Flagellar assembly	K02400	flhA; flagellar biosynthesis protein FlhA	Flagella
+02040 Flagellar assembly	K02401	flhB; flagellar biosynthesis protein FlhB	Flagella
+02040 Flagellar assembly	K13820	fliR-flhB; flagellar biosynthesis protein FliR/FlhB	Flagella
+02040 Flagellar assembly	K02386	flgA; flagellar basal body P-ring formation protein FlgA	Flagella
+02040 Flagellar assembly	K02387	flgB; flagellar basal-body rod protein FlgB	Flagella
+02040 Flagellar assembly	K02388	flgC; flagellar basal-body rod protein FlgC	Flagella
+02040 Flagellar assembly	K02389	flgD; flagellar basal-body rod modification protein FlgD	Flagella
+02040 Flagellar assembly	K02390	flgE; flagellar hook protein FlgE	Flagella
+02040 Flagellar assembly	K02391	flgF; flagellar basal-body rod protein FlgF	Flagella
+02040 Flagellar assembly	K02392	flgG; flagellar basal-body rod protein FlgG	Flagella
+02040 Flagellar assembly	K02393	flgH; flagellar L-ring protein FlgH	Flagella
+02040 Flagellar assembly	K02394	flgI; flagellar P-ring protein FlgI	Flagella
+02040 Flagellar assembly	K02395	flgJ; peptidoglycan hydrolase FlgJ	Flagella
+02040 Flagellar assembly	K02396	flgK; flagellar hook-associated protein 1	Flagella
+02040 Flagellar assembly	K02397	flgL; flagellar hook-associated protein 3 FlgL	Flagella
+02040 Flagellar assembly	K24344	flgO; flagellar H-ring protein FlgO	Flagella
+02040 Flagellar assembly	K09860	flgP; outer membrane protein FlgP	Flagella
+02040 Flagellar assembly	K24346	flgQ; flagellar motility protein FlgQ	Flagella
+02040 Flagellar assembly	K24343	flgT; flagellar H-ring protein FlgT	Flagella
+02040 Flagellar assembly	K21217	motX; sodium-type polar flagellar protein MotX	Flagella
+02040 Flagellar assembly	K21218	motY; sodium-type flagellar protein MotY	Flagella
+02040 Flagellar assembly	K02406	fliC, hag; flagellin	Flagella
+02040 Flagellar assembly	K02407	fliD; flagellar hook-associated protein 2	Flagella
+02040 Flagellar assembly	K02422	fliS; flagellar secretion chaperone FliS	Flagella
+02040 Flagellar assembly	K02423	fliT; flagellar protein FliT	Flagella
+02040 Flagellar assembly	K02556	motA; chemotaxis protein MotA	Flagella
+02040 Flagellar assembly	K02557	motB; chemotaxis protein MotB	Flagella
+02040 Flagellar assembly	K10564	motC; chemotaxis protein MotC	Flagella
+02040 Flagellar assembly	K10565	motD; chemotaxis protein MotD	Flagella
+02040 Flagellar assembly	K02398	flgM; negative regulator of flagellin synthesis FlgM	Flagella
+02040 Flagellar assembly	K02399	flgN; flagellar biosynthesis protein FlgN	Flagella
+02040 Flagellar assembly	K02424	fliY, tcyA; L-cystine transport system substrate-binding protein	Flagella
+02040 Flagellar assembly	K02425	fliZ; regulator of sigma S factor FliZ	Flagella
+02040 Flagellar assembly	K03086	rpoD; RNA polymerase primary sigma factor	Flagella
+02040 Flagellar assembly	K10941	flrA, fleQ, flaK; sigma-54 dependent transcriptional regulator, flagellar regulatory protein	Flagella
+02040 Flagellar assembly	K02403	flhD; flagellar transcriptional activator FlhD	Flagella
+02040 Flagellar assembly	K02402	flhC; flagellar transcriptional activator FlhC	Flagella
+02040 Flagellar assembly	K03092	rpoN; RNA polymerase sigma-54 factor	Flagella
+02040 Flagellar assembly	K10943	flrC, fleR, flaM; two-component system, response regulator FlrC	Flagella
+02040 Flagellar assembly	K02405	fliA, whiG; RNA polymerase sigma factor FliA	Flagella
+09130 Environmental Information Processing	K03523	bioY; biotin transport system substrate-specific component	Biotin Tranport
+09130 Environmental Information Processing	K16783	bioN; biotin transport system permease protein	Biotin Tranport
+09130 Environmental Information Processing	K16784	bioM; biotin transport system ATP-binding protein [EC:7.6.2.-]	Biotin Tranport
+09130 Environmental Information Processing	K06858	btuF; vitamin B12 transport system substrate-binding protein	vitamin B12 transport
+09130 Environmental Information Processing	K06073	btuC; vitamin B12 transport system permease protein	vitamin B12 transport
+09130 Environmental Information Processing	K06074	btuD; vitamin B12 transport system ATP-binding protein [EC:7.6.2.8]	vitamin B12 transport
+09180 Brite Hierarchies	K16789	thiT; thiamine transporter	thiamine transporter
+09130 Environmental Information Processing	K02064	thiB, tbpA; thiamine transport system substrate-binding protein	thiamine transporter
+09130 Environmental Information Processing	K02063	thiP; thiamine transport system permease protein	thiamine transporter
+09130 Environmental Information Processing	K02062	thiQ; thiamine transport system ATP-binding protein [EC:7.6.2.15]	thiamine transporter
+09180 Brite Hierarchies	K24987	thiY; putative thiamine transport system substrate-binding protein	thiamine transporter
+09180 Brite Hierarchies	K24988	thiX; putative thiamine transport system permease protein	thiamine transporter
+09180 Brite Hierarchies	K24989	thiZ; putative thiamine transport system ATP-binding protein	thiamine transporter
+09180 Brite Hierarchies	K05777	ynjB; putative thiamine transport system substrate-binding protein	thiamine transporter
+09180 Brite Hierarchies	K05778	ynjC; putative thiamine transport system permease protein	thiamine transporter
+09180 Brite Hierarchies	K05779	ynjD; putative thiamine transport system ATP-binding protein	thiamine transporter
+09130 Environmental Information Processing	K02661	pilK; type IV pilus assembly protein PilK	Pili
+09130 Environmental Information Processing	K02660	pilJ; twitching motility protein PilJ	Pili
+09130 Environmental Information Processing	K02659	pilI; twitching motility protein PilI	Pili
+09130 Environmental Information Processing	K02657	pilG; twitching motility two-component system response regulator PilG	Pili
+09130 Environmental Information Processing	K02658	pilH; twitching motility two-component system response regulator PilH	Pili
+09100 Metabolism	K17486	dmdA; dimethylsulfoniopropionate demethylase [EC:2.1.1.269]	DMSP
+09100 Metabolism	K20034	dmdB; 3-(methylthio)propionyl---CoA ligase [EC:6.2.1.44]	DMSP
+09100 Metabolism	K20035	dmdC; 3-(methylsulfanyl)propanoyl-CoA dehydrogenase [EC:1.3.99.41]	DMSP
+09100 Metabolism	K20036	dmdD; (methylthio)acryloyl-CoA hydratase [EC:4.2.1.155]	DMSP
+09140 Cellular Processes	K07173	luxS; S-ribosylhomocysteine lyase [EC:4.4.1.21]	Quorum Sensing
+09140 Cellular Processes	K10910	luxP; autoinducer 2-binding periplasmic protein LuxP	Quorum Sensing
+09140 Cellular Processes	K10909	luxQ; two-component system, autoinducer 2 sensor kinase/phosphatase LuxQ [EC:2.7.13.3 3.1.3.-]	Quorum Sensing

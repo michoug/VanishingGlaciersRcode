@@ -1,0 +1,12 @@
+Element	Type	CAZyme
+Agar	Red algae	GH16, GH117, GH50
+Alginate	Brown algae	PL7
+Carrageenan	Red algae	GH16
+Cellulose	Green and Brown algae	GH48, GH17, GH16, GH9
+Fucoidan	Brown algae	GH29, GH107, GH168
+Laminarin	Brown algae and diatoms	GH5
+Mannan	Red and Green algae	GH5
+Pectin	Green algae and diatoms	PL1, PL2, PL3
+Porphyran	Red algae	GH16, GH86
+Ulvan	Green algae	PL24, PL25, PL28
+Xylan	Red and Green algae	GH10, GH11, GH30

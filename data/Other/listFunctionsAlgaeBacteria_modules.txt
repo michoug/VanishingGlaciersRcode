@@ -1,0 +1,37 @@
+Module	KO	Category
+M00122	K00798	Cobalamin biosynthesis
+M00122	K19221	Cobalamin biosynthesis
+M00122	K02232	Cobalamin biosynthesis
+M00122	K02225	Cobalamin biosynthesis
+M00122	K02227	Cobalamin biosynthesis
+M00122	K02231	Cobalamin biosynthesis
+M00122	K00768	Cobalamin biosynthesis
+M00122	K02226	Cobalamin biosynthesis
+M00122	K22316	Cobalamin biosynthesis
+M00122	K02233	Cobalamin biosynthesis
+M00127	K03148	Thiamine biosynthesis, prokaryotes
+M00127	K03154	Thiamine biosynthesis, prokaryotes
+M00127	K03151	Thiamine biosynthesis, prokaryotes
+M00127	K03150	Thiamine biosynthesis, prokaryotes
+M00127	K03149	Thiamine biosynthesis, prokaryotes
+M00127	K03147	Thiamine biosynthesis, prokaryotes
+M00127	K00941	Thiamine biosynthesis, prokaryotes
+M00127	K14153	Thiamine biosynthesis, prokaryotes
+M00127	K21219	Thiamine biosynthesis, prokaryotes
+M00127	K00788	Thiamine biosynthesis, prokaryotes
+M00127	K00946	Thiamine biosynthesis, prokaryotes
+M00573	K16593	Biotin biosynthesis, BioI pathway
+M00573	K00652	Biotin biosynthesis, BioI pathway
+M00573	K19563	Biotin biosynthesis, BioI pathway
+M00573	K01935	Biotin biosynthesis, BioI pathway
+M00573	K01012	Biotin biosynthesis, BioI pathway
+M00577	K01906	Biotin biosynthesis, BioW pathway
+M00577	K00652	Biotin biosynthesis, BioW pathway
+M00577	K00833	Biotin biosynthesis, BioW pathway
+M00577	K19563	Biotin biosynthesis, BioW pathway
+M00577	K01935	Biotin biosynthesis, BioW pathway
+M00577	K01012	Biotin biosynthesis, BioW pathway
+M00950	K00652	Biotin biosynthesis, BioU pathway
+M00950	K25570	Biotin biosynthesis, BioU pathway
+M00950	K01935	Biotin biosynthesis, BioU pathway
+M00950	K01012	Biotin biosynthesis, BioU pathway
