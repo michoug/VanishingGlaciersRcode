@@ -1,5 +1,7 @@
 # VanishingGlaciersRcode
 
+[![DOI](https://zenodo.org/badge/687518253.svg)](https://zenodo.org/doi/10.5281/zenodo.10648971)
+
 R code for the VanishingGlacier MAGs project with the aim to generate figures and panels for the manuscript.
 
 ## Installation
