@@ -7,4 +7,5 @@ renv
 R/temp
 R/.Rhistory
 data/temp
+temp/
 # NewAnalyses
