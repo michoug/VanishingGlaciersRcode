@@ -15,6 +15,29 @@ spec_gen <- read_tsv("data/pMAGS_spec_gen.tsv")
 
 map_clean <- clean_names(map)
 
+getDist <-  function(dat, map, type) {
+  spec_gen <- spec_gen %>%
+    select(MAGs, sign)
+  
+  dat_m <- dat %>%
+    left_join(spec_gen, join_by(MAGs)) %>%
+    filter(sign == !!type) %>%
+    mutate_if(is.double, function(x, na.rm = FALSE)
+      (x * 100)) %>%
+    mutate_if(is.double, as.integer) %>%
+    select(MAGs, map_clean$sample)
+  
+  dat_m <- as.data.frame(dat_m)
+  rownames(dat_m) <- dat_m$MAGs
+  dat_m$MAGs <- NULL
+  
+  dat_dist <- t(dat_m) %>%
+    avgdist(sample = 1000)
+  
+  dat.ano <- with(map, anosim(dat_dist, site_c, distance = "bray"))
+  summary(dat.ano)
+}
+
 getNMDS <- function(dat, map, type) {
   spec_gen <- spec_gen %>%
     select(MAGs, sign)
@@ -191,12 +214,20 @@ plotEnvFitNMDS <- function(nmds, map) {
   p_nmds
 }
 
+
+anos_gen <- getDist(dat, map_clean, "GENERALIST")
+anos_non <- getDist(dat, map_clean, "NON SIGNIFICANT")
+anos_spec <- getDist(dat, map_clean, "SPECIALIST")
+
 nmds_spec <- getNMDS(dat, map_clean, "SPECIALIST")
 nmds_gen <- getNMDS(dat, map_clean, "GENERALIST")
+nmds_non <- getNMDS(dat, map_clean, "NON SIGNIFICANT")
+
+plotSimpleNMDS(nmds_non, map_clean)
 
 p1 <- plotSimpleNMDS(nmds_gen, map_clean)
 p1
-#plotSimpleNMDS(nmds_spec, map_clean)
+
 
 p2 <- plotEnvFitNMDS(nmds_spec, map_clean)
 p2
