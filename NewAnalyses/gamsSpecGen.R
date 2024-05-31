@@ -8,7 +8,7 @@ library(janitor)
 setwd("~/../switchdrive/Institution/NOMIS_MAGs/Correlations/")
 
 meta <- read_tsv("../metadata_NOMIS_sed_chem_noNAs.txt")
-dat_prok <- read_tsv("Prok4CorrelSpecialist.txt")
+dat_prok <- read_tsv("Prok4CorrelGeneralist.txt")
 dat_euk <- read_tsv("Euk4Correl.txt")
 dat_vir <- read_tsv("Virus4Correl.txt")
 dat_AMG <- read_tsv("AMGs4Correl.txt")
@@ -132,7 +132,7 @@ for(resp in response){
   final_summary$resp <- resp
   final_summary$variables <- rownames(final_summary)
   
-  name_resp <- paste("ModelSpec/",resp, "_model.txt", sep = "")
+  name_resp <- paste("ModelGen/",resp, "_model.txt", sep = "")
   write_tsv(final_summary, name_resp)
   print(resp)
 }

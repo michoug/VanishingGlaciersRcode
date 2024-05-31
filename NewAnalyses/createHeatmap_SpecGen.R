@@ -25,6 +25,7 @@ models <- rbind(modSpec, modGen)
 dat_heat <- models%>%
   filter(!(Estimate == "Estimate"))%>%
   filter(!(variables == "(Intercept)"))%>%  
+  filter(`Pr(>|t|)`< 0.05)%>%
   clean_names()%>%
   select(resp, variables, t_value, type)%>%
   mutate(t_value = as.numeric(t_value))%>%
@@ -46,8 +47,8 @@ levelsResp <- c("vitamin_b12_transport","thiamine_transporter",
                 "heterotrophy_aerobic_respiration", "heterotrophy", "autotrophy",
                 "p_mag_rich","p_mag_diversity")
 
-levelsExp <- c("gl_cov_percent","sn_sp_dist_m","chla_ug_g_1",
-               "conductivity_u_s_cm_1","ph_p_h","turb_ntu","water_temp_c")
+levelsExp <- c("gl_cov_percent","chla_ug_g_1")#,"sn_sp_dist_m",
+               # "conductivity_u_s_cm_1","ph_p_h","turb_ntu","water_temp_c")
 
   
 dat_heat$resp <- factor(dat_heat$resp, levels = levelsResp )
@@ -62,4 +63,4 @@ p1 <- dat_heat %>%
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 p1
 
-ggsave_fitmax("heatmapGamsSpecGen.pdf", p1, maxwidth = 10)
+ggsave_fitmax("NewAnalyses/heatmapGamsSpecGen.pdf", p1, maxwidth = 10)
