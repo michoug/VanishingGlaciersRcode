@@ -25,6 +25,31 @@ library(scales)
 
 source("customFunctions/plot_functions.R")
 
+params <- c(
+  "autotrophy",
+  "calvin_cycle",
+  "chemotaxis",
+  "co_oxidation_c1_metabolism",
+  "cobalamin_biosynthesis",
+  "dissimilatory_nitrite_reduction",
+  "formaldehyde_assimilation",
+  "heterotrophy",
+  "heterotrophy_aerobic_respiration",
+  "mixotrophy_autotrophy_phototrophy",
+  "none",
+  "p_mag_rich",
+  "quorum_sensing",
+  "reductive_citrate_cycle",
+  "thiosulfate_oxidation_sox",
+  "urea_metabolism",
+  "vitamin_b12_transport",
+  "x3_hp_4_hb_pathway",
+  "heterotrophy_anaerobic_respiration",
+  "mixotrophy_heterotrophy_autotrophy",
+  "mixotrophy_heterotrophy_phototrophy",
+  "mixotrophy_other"
+)
+
 datSpec <- read_tsv("NewAnalyses/datResponseExplAMGsNOMISMAGsSpec.txt")
 datGen <- read_tsv("NewAnalyses/datResponseExplAMGsNOMISMAGsGen.txt")
 
@@ -54,28 +79,26 @@ models_clean <- models %>%
     variables == "chla_ug_g_1" ~ "Chla (ln ug.g-1)\n",
     variables == "gl_cov_percent" ~ "Glacier Coverage (ln proportion)",
     .default =  variables
-  ))%>%
-  mutate(resp = case_when(
-    resp == "heterotrophy_aerobic_respiration" ~ "Chemoorganotrophy\nAerobic respiration\n(%)",
-    resp == "mixotrophy_autotrophy_phototrophy" ~ "Mixotrophy\nautotroph/phototroph\n(%)",
-    resp == "calvin_cycle" ~ "Calvin Cycle",
-    resp == "x3_hp_4_hb_pathway" ~ "3HP/4HB Pathway",
-    resp == "chemotaxis" ~ "Chemotaxis",
-    .default = resp
-  ))
+  ))#%>%
+  # mutate(resp = case_when(
+  #   resp == "heterotrophy_aerobic_respiration" ~ "Chemoorganotrophy\nAerobic respiration\n(%)",
+  #   resp == "mixotrophy_autotrophy_phototrophy" ~ "Mixotrophy\nautotroph/phototroph\n(%)",
+  #   resp == "calvin_cycle" ~ "Calvin Cycle",
+  #   resp == "x3_hp_4_hb_pathway" ~ "3HP/4HB Pathway",
+  #   resp == "chemotaxis" ~ "Chemotaxis",
+  #   .default = resp
+  # ))
   
 dat_4plotSpec <- datSpec %>%
   clean_names()%>%
   rename(site = "name") %>%
-  select(site,contains("trophy"), "none", contains("gl_"), contains("dist"),chla_ug_g_1,
-         calvin_cycle, x3_hp_4_hb_pathway, chemotaxis) %>%
-  select(-c(gl_a_km2, phototrophy,heterotrophy_fermentation))%>%
+  select(site,gl_cov_percent, chla_ug_g_1, all_of(params)) %>%
   rename(
-    "Chemoorganotrophy\nAerobic respiration\n(%)" = "heterotrophy_aerobic_respiration",
-    "Mixotrophy\nautotroph/phototroph\n(%)" = "mixotrophy_autotrophy_phototrophy",
-    "Calvin Cycle" = "calvin_cycle",
-    "3HP/4HB Pathway" = "x3_hp_4_hb_pathway",
-    "Chemotaxis" = "chemotaxis",
+    # "Chemoorganotrophy\nAerobic respiration\n(%)" = "heterotrophy_aerobic_respiration",
+    # "Mixotrophy\nautotroph/phototroph\n(%)" = "mixotrophy_autotrophy_phototrophy",
+    # "Calvin Cycle" = "calvin_cycle",
+    # "3HP/4HB Pathway" = "x3_hp_4_hb_pathway",
+    # "Chemotaxis" = "chemotaxis",
     "Chla (ln ug.g-1)\n" = "chla_ug_g_1",
     "Glacier Coverage (ln proportion)" = "gl_cov_percent"
   )%>%
@@ -84,15 +107,13 @@ dat_4plotSpec <- datSpec %>%
 dat_4plotGen <- datGen %>%
   clean_names()%>%
   rename(site = "name") %>%
-  select(site,contains("trophy"), "none", contains("gl_"), contains("dist"),chla_ug_g_1,
-         calvin_cycle, x3_hp_4_hb_pathway, chemotaxis) %>%
-  select(-c(gl_a_km2))%>%
+  select(site,gl_cov_percent, chla_ug_g_1, all_of(params)) %>%
   rename(
-    "Chemoorganotrophy\nAerobic respiration\n(%)" = "heterotrophy_aerobic_respiration",
-    "Mixotrophy\nautotroph/phototroph\n(%)" = "mixotrophy_autotrophy_phototrophy",
-    "Calvin Cycle" = "calvin_cycle",
-    "3HP/4HB Pathway" = "x3_hp_4_hb_pathway",
-    "Chemotaxis" = "chemotaxis",
+    # "Chemoorganotrophy\nAerobic respiration\n(%)" = "heterotrophy_aerobic_respiration",
+    # "Mixotrophy\nautotroph/phototroph\n(%)" = "mixotrophy_autotrophy_phototrophy",
+    # "Calvin Cycle" = "calvin_cycle",
+    # "3HP/4HB Pathway" = "x3_hp_4_hb_pathway",
+    # "Chemotaxis" = "chemotaxis",
     "Chla (ln ug.g-1)\n" = "chla_ug_g_1",
     "Glacier Coverage (ln proportion)" = "gl_cov_percent"
   )%>%
@@ -112,7 +133,7 @@ createplot <- function(data,model, glacialVar, TrophicVar){
       select(-c(resp, variables))
     
     data_sel <- data %>%
-      select(glacialVar, var, type) %>%
+      select(all_of(glacialVar), var, type) %>%
       left_join(model_sel, join_by(type))
     
     xmin_all <- min(data_sel[[glacialVar]])
@@ -156,19 +177,33 @@ createplot <- function(data,model, glacialVar, TrophicVar){
   return(plot_list)
 }
 
-trophicParam <- c("Chemoorganotrophy\nAerobic respiration\n(%)",
-                  "Mixotrophy\nautotroph/phototroph\n(%)",
-                  "Calvin Cycle", "3HP/4HB Pathway",
-                  "Chemotaxis")
-pCov <- createplot(dat_all, models_clean, "Glacier Coverage (ln proportion)", trophicParam)
+covParams <- params <- c(
+  "autotrophy",
+  "heterotrophy",
+  "heterotrophy_aerobic_respiration",
+  "heterotrophy_anaerobic_respiration",
+  "mixotrophy_autotrophy_phototrophy",
+  "mixotrophy_heterotrophy_autotrophy",
+  "mixotrophy_heterotrophy_phototrophy",
+  "mixotrophy_other",
+  "none"
+  # "mixotrophy_autotrophy_phototrophy",
+  # "quorum_sensing"
+)
 
-trophicParam <- c("Mixotrophy\nautotroph/phototroph\n(%)",
-                  "3HP/4HB Pathway",
-                  "Chemotaxis")
+pCov <- createplot(dat_all, models_clean, "Glacier Coverage (ln proportion)", covParams)
 
-pChla <- createplot(dat_all, models_clean, "Chla (ln ug.g-1)\n", trophicParam)
+glaParams <- c(
+  "chemotaxis",
+  "none",
+  "heterotrophy_aerobic_respiration",
+  "mixotrophy_autotrophy_phototrophy",
+  "quorum_sensing"
+)
+
+pChla <- createplot(dat_all, models_clean, "Chla (ln ug.g-1)\n", glaParams)
 
 plotList <- c(pCov, pChla)
-p <- ggarrange(plotlist = plotList, labels = "auto", ncol = 1)
+p <- ggarrange(plotlist = plotList, labels = "auto", ncol = 1, align = "v")
 p
-ggsave_fitmax("NewAnalyses//Fig_4_trophicvsParameters_new.pdf",p, maxheight = 25, maxwidth = 10)
+ggsave_fitmax("NewAnalyses//Fig_4_trophicvsParameters_new2.pdf",p, maxheight = 45, maxwidth = 10)

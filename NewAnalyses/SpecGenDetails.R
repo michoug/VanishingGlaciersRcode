@@ -51,7 +51,7 @@ p1 <- ggplot(datToPlot, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=p_c)) +
 datToPlotCov	<- tax%>%
   right_join(specgen,join_by(MAGs))%>%
   left_join(covsum)%>%
-  filter(sign != "NON SIGNIFICANT") %>%
+  # filter(sign != "NON SIGNIFICANT") %>%
   mutate(p_c	= if_else(p_c %in% list,  p_c, "Other"))%>%
   group_by(p_c, sign)%>%
   summarise(sum	= sum(percentage))%>%

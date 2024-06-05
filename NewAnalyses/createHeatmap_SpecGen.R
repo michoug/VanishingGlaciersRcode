@@ -25,7 +25,7 @@ models <- rbind(modSpec, modGen)
 dat_heat <- models%>%
   filter(!(Estimate == "Estimate"))%>%
   filter(!(variables == "(Intercept)"))%>%  
-  filter(`Pr(>|t|)`< 0.05)%>%
+  filter(`Pr(>|t|)`<= 0.05)%>%
   clean_names()%>%
   select(resp, variables, t_value, type)%>%
   mutate(t_value = as.numeric(t_value))%>%
@@ -54,9 +54,14 @@ levelsExp <- c("gl_cov_percent","chla_ug_g_1")#,"sn_sp_dist_m",
 dat_heat$resp <- factor(dat_heat$resp, levels = levelsResp )
 dat_heat$variables <- factor(dat_heat$variables, levels = levelsExp)
 
-p1 <- dat_heat %>%
+dat_heat_filter <- dat_heat %>%
   na.omit() %>%
-  ggplot(aes(variables,resp, fill = t_value))+
+  group_by(resp) %>%
+  mutate(sum = sum(t_value))%>%
+  ungroup()%>%
+  filter(sum != 0)
+
+p1 <- ggplot(dat_heat_filter, aes(variables,resp, fill = t_value))+
   geom_tile()+
   scale_fill_gradient2()+
   facet_wrap(~type)+

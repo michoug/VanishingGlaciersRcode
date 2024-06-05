@@ -1,0 +1,5 @@
+Pathway	KEGG_ko
+crtB	K02291
+crtI	K10027
+crtY	K22502
+crtZ	K15746

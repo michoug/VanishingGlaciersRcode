@@ -14,7 +14,7 @@ map <- read_tsv("data/metadata_NOMIS_sed_chem.txt")
 spec_gen <- read_tsv("data/pMAGS_spec_gen.tsv")
 
 map_clean <- clean_names(map)
-
+map <- map_clean
 getDist <-  function(dat, map, type) {
   spec_gen <- spec_gen %>%
     select(MAGs, sign)
@@ -32,13 +32,13 @@ getDist <-  function(dat, map, type) {
   dat_m$MAGs <- NULL
   
   dat_dist <- t(dat_m) %>%
-    avgdist(sample = 1000)
+    vegdist(method = "bray")
   
   dat.ano <- with(map, anosim(dat_dist, site_c, distance = "bray"))
   summary(dat.ano)
 }
 
-getNMDS <- function(dat, map, type) {
+getPCOA <- function(dat, map, type) {
   spec_gen <- spec_gen %>%
     select(MAGs, sign)
   
@@ -55,7 +55,7 @@ getNMDS <- function(dat, map, type) {
   dat_m$MAGs <- NULL
   
   dat_dist <- t(dat_m) %>%
-    avgdist(sample = 1000)
+    vegdist(method = "bray")
   
   dat_rda <- metaMDS(t(dat_m), trymax = 1000)
 }
