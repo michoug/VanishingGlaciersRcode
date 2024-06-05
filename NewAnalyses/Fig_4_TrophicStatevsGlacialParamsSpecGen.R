@@ -79,26 +79,13 @@ models_clean <- models %>%
     variables == "chla_ug_g_1" ~ "Chla (ln ug.g-1)\n",
     variables == "gl_cov_percent" ~ "Glacier Coverage (ln proportion)",
     .default =  variables
-  ))#%>%
-  # mutate(resp = case_when(
-  #   resp == "heterotrophy_aerobic_respiration" ~ "Chemoorganotrophy\nAerobic respiration\n(%)",
-  #   resp == "mixotrophy_autotrophy_phototrophy" ~ "Mixotrophy\nautotroph/phototroph\n(%)",
-  #   resp == "calvin_cycle" ~ "Calvin Cycle",
-  #   resp == "x3_hp_4_hb_pathway" ~ "3HP/4HB Pathway",
-  #   resp == "chemotaxis" ~ "Chemotaxis",
-  #   .default = resp
-  # ))
+  ))
   
 dat_4plotSpec <- datSpec %>%
   clean_names()%>%
   rename(site = "name") %>%
   select(site,gl_cov_percent, chla_ug_g_1, all_of(params)) %>%
   rename(
-    # "Chemoorganotrophy\nAerobic respiration\n(%)" = "heterotrophy_aerobic_respiration",
-    # "Mixotrophy\nautotroph/phototroph\n(%)" = "mixotrophy_autotrophy_phototrophy",
-    # "Calvin Cycle" = "calvin_cycle",
-    # "3HP/4HB Pathway" = "x3_hp_4_hb_pathway",
-    # "Chemotaxis" = "chemotaxis",
     "Chla (ln ug.g-1)\n" = "chla_ug_g_1",
     "Glacier Coverage (ln proportion)" = "gl_cov_percent"
   )%>%
@@ -191,7 +178,7 @@ covParams <- params <- c(
   # "quorum_sensing"
 )
 
-pCov <- createplot(dat_all, models_clean, "Glacier Coverage (ln proportion)", covParams)
+pCov <- createplot(dat_all, models_clean, "Glacier Coverage (ln proportion)", params)
 
 glaParams <- c(
   "chemotaxis",
@@ -201,9 +188,10 @@ glaParams <- c(
   "quorum_sensing"
 )
 
-pChla <- createplot(dat_all, models_clean, "Chla (ln ug.g-1)\n", glaParams)
+pChla <- createplot(dat_all, models_clean, "Chla (ln ug.g-1)\n", params)
 
-plotList <- c(pCov, pChla)
+# plotList <- c(pCov, pChla)
+plotList <- pChla
 p <- ggarrange(plotlist = plotList, labels = "auto", ncol = 1, align = "v")
 p
-ggsave_fitmax("NewAnalyses//Fig_4_trophicvsParameters_new2.pdf",p, maxheight = 45, maxwidth = 10)
+ggsave_fitmax("NewAnalyses/Fig_4_trophicvsParameters_pChla.pdf",p, maxheight = 45, maxwidth = 10)

@@ -9,7 +9,15 @@ dat_clean <- dat_egg %>%
   right_join(carot, join_by(KEGG_ko))%>%
   select(MAGs, Pathway, KEGG_ko)%>%
   left_join(tax, join_by(MAGs))%>%
+  group_by(Pathway, KEGG_ko, c)%>%
+  mutate(n = n())%>%
+  ungroup()%>%
   left_join(cov, join_by(MAGs))%>%
   group_by(Pathway, c)%>%
-  summarise(sum = sum(percentage))
-  
+  mutate(sum = sum(percentage))%>%
+  select(Pathway, c, n, sum)%>%
+  distinct()%>%
+  mutate(Percentage = sum *100)%>%
+  select(-sum)
+
+write_tsv(dat_clean, "Table_SX_carotenoid_genes.txt")  
