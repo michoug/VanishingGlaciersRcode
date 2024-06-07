@@ -41,9 +41,6 @@ colnames(mags_tab) <- gsub("X\\d+R$", "GLR140_UP", colnames(mags_tab))
 
 
 mags_tab[mags_tab < 100] = 0
-
-# write.table(mags_tab, "../MAGs_cov_norm_100.txt", row.names = TRUE, quote = F, sep = "\t")
-
 spec_tab = mags_tab
 
 colnames(spec_tab) = as.character(vapply(colnames(spec_tab), function(x) strsplit(x, '_')[[1]][1], FUN.VALUE = character(1)))
@@ -61,5 +58,5 @@ Sys.time()
 
 rownames(spec_gen) = rownames(spec_tab)
 
-write_tsv(spec_gen, "spec_gen.tsv")
+write_tsv(spec_gen, "data/spec_gen.tsv")
 

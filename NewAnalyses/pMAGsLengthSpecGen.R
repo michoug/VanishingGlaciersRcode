@@ -35,6 +35,7 @@ dat_plot <- dat_mags %>%
   filter(!(MAGs %in% magsRem$MAGs )) %>%
   left_join(tax) %>%
   right_join(specgen) %>%
+  filter(sign != "NON SIGNIFICANT")%>%
   mutate(LengthNorm2 = LengthNorm2 / 1e6)
 
 

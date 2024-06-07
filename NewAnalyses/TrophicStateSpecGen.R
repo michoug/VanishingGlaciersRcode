@@ -1,4 +1,6 @@
 library(tidyverse)
+
+
 dat_troph <- read_tsv("data/pMAGs_trophicState.txt")
 specgen <- read_tsv("data/pMAGs_spec_gen.tsv")
 maxcov <- read_tsv("data/pMAGs_cov_sum.txt")
@@ -8,6 +10,7 @@ dat_merge <- merge(dat_troph, specgen, by = "MAGs")
 
 dat_summary <- dat_troph%>%
   right_join(specgen, join_by("MAGs")) %>%
+  filter(sign != "NON SIGNIFICANT")%>%
   group_by(sign, TrophicState)%>%
   summarise(n = n())%>%
   ungroup()%>%
@@ -20,4 +23,4 @@ ggplot(dat_summary, aes(x = TrophicState, y = Frequence, fill = sign))+
   theme_bw()+
   theme(axis.text.x = element_text(angle =45, hjust = 1))
 
-ggsave("TrophicStateSpecGen.pdf")
+ggsave("NewAnalyses/TrophicStateSpecGen.pdf")

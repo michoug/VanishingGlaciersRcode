@@ -1,7 +1,6 @@
 library(tidyverse)
 # library(janitor)
 
-
 dat <- read_tsv("NewAnalyses/pMAGs_QuorumSensing_sub.txt")
 db <- read_tsv("data/Other/QSAP_categories.txt")
 tax <- read_tsv("data/pMAGs_tax.tsv")
@@ -47,7 +46,8 @@ dat_clean_type_II <-  dat %>%
   group_by(type_I, type_II)%>%
   reframe(n = n_distinct(MAGs))%>%
   distinct()
-  
+
+dat_quorum_cov <- 
   
 length(unique(dat_clean$type_I))
 
