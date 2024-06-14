@@ -20,6 +20,7 @@
 library(ggplot2)
 library(tidyverse)
 library(ggpubr)
+library(ggstatsplot)
 
 source("customFunctions/plot_functions.R")
 
@@ -72,6 +73,8 @@ dat_plot <- dat_family_MAGs%>%
           add = "jitter", shape = "Type", ggtheme = theme_pubr())+
   labs(y = "Normalized Genome Length (Mbp)", x = "Family")+
   theme(text = element_text(colour = "black", size = 12)))
+
+grouped_ggbetweenstats(dat_plot, x = Type, y = LengthNorm2, grouping.var = f)
   
 ggsave_fitmax("Figures/Fig_X_LargestGenomesFamilies.pdf",p,maxwidth = 10)  
 

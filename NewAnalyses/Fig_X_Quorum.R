@@ -9,7 +9,26 @@ tax_num <- tax %>%
   group_by(c)%>%
   mutate(numb = n())
 
+dat_clean_numb <- dat %>% 
+  mutate(check_value = if_else(HmmscanResults == DiamondResults, T, F))%>%
+  filter(check_value == T)%>%
+  select(-check_value)%>%
+  filter(!(GeneName == "GeneName")) %>%
+  select(GeneName, Subtype) %>%
+  na.omit() %>%
+  # left_join(db, join_by("HmmscanResults" == "protein")) %>%
+  mutate(MAGs = gsub("(.*)_(\\d+)_(\\d+)$", "\\1", GeneName, perl = T ))%>%
+  group_by(MAGs, Subtype) %>%
+  summarise(n = n())%>%
+  filter(n > 0)%>%
+  mutate(Subtype = gsub("AI-2", "AI_2", Subtype))%>%
+  separate(Subtype, into = c("type_I", "type_II", "type_III"), sep = "-")
+
+
 dat_clean_numb_type_I <- dat %>% 
+  mutate(check_value = if_else(HmmscanResults == DiamondResults, T, F))%>%
+  filter(check_value == T)%>%
+  select(-check_value)%>%
   filter(!(GeneName == "GeneName")) %>%
   select(GeneName, Subtype) %>%
   na.omit() %>%
@@ -29,6 +48,9 @@ dat_clean_numb_type_I <- dat %>%
   distinct()
 
 dat_clean_type_II <-  dat %>% 
+  mutate(check_value = if_else(HmmscanResults == DiamondResults, T, F))%>%
+  filter(check_value == T)%>%
+  select(-check_value)%>%
   filter(!(GeneName == "GeneName")) %>%
   select(GeneName, Subtype) %>%
   na.omit() %>%
@@ -47,7 +69,7 @@ dat_clean_type_II <-  dat %>%
   reframe(n = n_distinct(MAGs))%>%
   distinct()
 
-dat_quorum_cov <- 
+
   
 length(unique(dat_clean$type_I))
 
