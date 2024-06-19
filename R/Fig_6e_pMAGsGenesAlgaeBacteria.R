@@ -30,14 +30,6 @@ magsRem <- read_tsv("data/pMAGsInRocks.txt")
 genes_path <- read_tsv("data/Other/listFunctionsAlgaeBacteria_pathway.txt")
 genes_mod <-  read_tsv("data/Other/listFunctionsAlgaeBacteria_modules.txt")
 
-dat_iron <- read_tsv("../Prokaryotes/Algae_Bacteria_Genes/Iron_MAGs.tsv")
-
-dat_iron_clean <- dat_iron %>%
-  pivot_longer(cols = !pathway)%>%
-  mutate(value = if_else(value > 1, 1, 0))%>%
-  group_by(pathway)%>%
-  summarise(sum = sum(value))
-
 genes_path$Description <- NULL
 genes_mod$Category <-
   gsub("(Biotin biosynthesis),.*", "\\1", genes_mod$Category, perl = T)

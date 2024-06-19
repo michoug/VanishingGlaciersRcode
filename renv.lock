@@ -214,17 +214,6 @@
       ],
       "Hash": "df49e3306f232ec28f1604e36a202847"
     },
-    "RcppGSL": {
-      "Package": "RcppGSL",
-      "Version": "0.3.13",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "Rcpp",
-        "stats"
-      ],
-      "Hash": "e8fc7310d256a7b6c4de8e57ab76c55d"
-    },
     "Rmpfr": {
       "Package": "Rmpfr",
       "Version": "0.9-5",
@@ -637,16 +626,6 @@
       ],
       "Hash": "af436915c590afc6fffc3ce3a5be1569"
     },
-    "codetools": {
-      "Package": "codetools",
-      "Version": "0.2-19",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "c089a619a7fae175d149d89164f8c7d8"
-    },
     "colorspace": {
       "Package": "colorspace",
       "Version": "2.1-0",
@@ -858,20 +837,6 @@
       ],
       "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31"
     },
-    "doParallel": {
-      "Package": "doParallel",
-      "Version": "1.0.17",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "foreach",
-        "iterators",
-        "parallel",
-        "utils"
-      ],
-      "Hash": "451e5edf411987991ab6a5410c45011f"
-    },
     "dplyr": {
       "Package": "dplyr",
       "Version": "1.1.4",
@@ -1034,19 +999,6 @@
       ],
       "Hash": "1a0a9a3d5083d0d573c4214576f1e690"
     },
-    "foreach": {
-      "Package": "foreach",
-      "Version": "1.5.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "codetools",
-        "iterators",
-        "utils"
-      ],
-      "Hash": "618609b42c9406731ead03adf5379850"
-    },
     "fs": {
       "Package": "fs",
       "Version": "1.6.3",
@@ -1080,29 +1032,6 @@
       ],
       "Hash": "fc0b272e5847c58cd5da9b20eedbd026"
     },
-    "gdm": {
-      "Package": "gdm",
-      "Version": "1.6.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "fitzLab-AL",
-      "RemoteRepo": "gdm",
-      "RemoteRef": "master",
-      "RemoteSha": "1cf3df0b7a1342cb8d37b1acf14faae78b10f147",
-      "Requirements": [
-        "R",
-        "Rcpp",
-        "doParallel",
-        "foreach",
-        "methods",
-        "parallel",
-        "pbapply",
-        "reshape2",
-        "vegan"
-      ],
-      "Hash": "5d4ee1e2a432f658285f2930f183243a"
-    },
     "generics": {
       "Package": "generics",
       "Version": "0.1.3",
@@ -1113,18 +1042,6 @@
         "methods"
       ],
       "Hash": "15e9634c0fcd294799e9b2e929ed1b86"
-    },
-    "geosphere": {
-      "Package": "geosphere",
-      "Version": "1.5-18",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "Rcpp",
-        "sp"
-      ],
-      "Hash": "45aa4def70a402e7d20efde490c13ecb"
     },
     "ggbreak": {
       "Package": "ggbreak",
@@ -1664,17 +1581,6 @@
       ],
       "Hash": "0080607b4a1a7b28979aecef976d8bc2"
     },
-    "iterators": {
-      "Package": "iterators",
-      "Version": "1.0.14",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "8954069286b4b2b0d023d1b288dce978"
-    },
     "janitor": {
       "Package": "janitor",
       "Version": "2.2.0",
@@ -1946,24 +1852,6 @@
         "methods"
       ],
       "Hash": "4fd8900853b746af55b81fda99da7695"
-    },
-    "mvabund": {
-      "Package": "mvabund",
-      "Version": "4.2.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "MASS",
-        "R",
-        "Rcpp",
-        "RcppGSL",
-        "methods",
-        "parallel",
-        "statmod",
-        "stats",
-        "tweedie"
-      ],
-      "Hash": "5ecc462da7ceee1c9d2215ac553a5cb7"
     },
     "mvtnorm": {
       "Package": "mvtnorm",
@@ -2678,42 +2566,6 @@
       ],
       "Hash": "58767e44739b76965332e8a4fe3f91f1"
     },
-    "sp": {
-      "Package": "sp",
-      "Version": "2.1-3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "grDevices",
-        "graphics",
-        "grid",
-        "lattice",
-        "methods",
-        "stats",
-        "utils"
-      ],
-      "Hash": "1a0cc0cec2915700e63fd0921085cf6a"
-    },
-    "spaa": {
-      "Package": "spaa",
-      "Version": "0.2.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "495e50d113b293416a76232eace1b54c"
-    },
-    "statmod": {
-      "Package": "statmod",
-      "Version": "1.5.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "graphics",
-        "stats"
-      ],
-      "Hash": "26e158d12052c279bdd4ba858b80fb1f"
-    },
     "statsExpressions": {
       "Package": "statsExpressions",
       "Version": "1.5.4",
@@ -3020,17 +2872,6 @@
         "utils"
       ],
       "Hash": "a09203806aa0bc49965563ca7016620e"
-    },
-    "tweedie": {
-      "Package": "tweedie",
-      "Version": "2.3.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "methods"
-      ],
-      "Hash": "517d541554d2e9c392f9a67f42c8b842"
     },
     "tzdb": {
       "Package": "tzdb",
