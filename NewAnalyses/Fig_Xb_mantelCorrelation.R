@@ -71,7 +71,7 @@ mantel <- mantel_test(fullsepc,map_clean[3:12],
                   labels = c("< 0.01", "0.01 - 0.05", ">= 0.05")))
 
 
-p1 <- qcorrplot(correlationMap,type = "upper") +
+p1 <- qcorrplot(correlationMap,type = "lower",diag = FALSE) +
   geom_square() +
   geom_couple(aes(colour = pd, size = rd), 
               data = mantel, 

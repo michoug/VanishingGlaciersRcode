@@ -48,8 +48,8 @@ datfort <-  as.data.frame(scores(nmds))
 datfort_sites <- datfort %>%
   rownames_to_column(var = "label")
 
-datfinal <- datfort_sites %>%
-  left_join(map, join_by(label == sample))
+# datfinal <- datfort_sites %>%
+#   left_join(map, join_by(label == sample))
 
 nmds$stress <- ifelse(nmds$stress < 1e-2,
                       scientific(nmds$stress, digits = 2),
@@ -63,7 +63,7 @@ xvalue = min(datfort_sites$NMDS1) + 0.1 *
   (max(datfort_sites$NMDS1) - min(datfort_sites$NMDS1))
 
 
-plt <- gg_ordiplot(nmds, groups = map_clean$region)
+plt <- gg_ordiplot(nmds, groups = map_clean$region, ellipse = F, spiders = T)
 
 p1 <- plt$plot +
   geom_point(size = 3) + 

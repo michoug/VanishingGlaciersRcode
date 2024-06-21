@@ -72,13 +72,11 @@ createplot <- function(data,glacialVar, TrophicVar){
   return(plot_list)
 }
 
-trophicParam <- c("Chemoorganotrophy\nAerobic respiration\n(%)", "Mixotrophy\nHeterotroph/autotroph\n(%)")
-pCov <- createplot(dat_4plot, "Glacier Coverage (ln proportion)", trophicParam)
 
 trophicParam <- c("Mixotrophy\nHeterotroph/autotroph\n(%)","Chemoorganotrophy\nAerobic respiration\n(%)")
 pChla <- createplot(dat_4plot, "Chla (ln ug.g-1)\n", trophicParam)
 
-plotList <- c(pCov, pChla)
-p <- ggarrange(plotlist = plotList, labels = "auto", ncol = 1)
+
+p <- ggarrange(plotlist = pChla, labels = "auto", ncol = 2)
 p
-ggsave_fitmax("Figures/Fig_4a_trophicvsParameters.pdf",p, maxwidth = 4)
+ggsave_fitmax("Figures/Fig_4a_trophicvsParameters.pdf",p, maxwidth = 8)
