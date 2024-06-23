@@ -1321,6 +1321,25 @@
       ],
       "Hash": "15b5e9e0a570cd2c73ebc315da03eea9"
     },
+    "ggvegan": {
+      "Package": "ggvegan",
+      "Version": "0.1.999",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ggvegan",
+      "RemoteUsername": "gavinsimpson",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "058c08c2f085575965cc5501461ddbbe05792ef5",
+      "Requirements": [
+        "ggplot2",
+        "ggrepel",
+        "grid",
+        "tidyr",
+        "vegan"
+      ],
+      "Hash": "e7bb6a3797c965a19b3ea5e2ee3759b8"
+    },
     "glue": {
       "Package": "glue",
       "Version": "1.7.0",

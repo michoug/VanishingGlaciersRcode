@@ -7,4 +7,6 @@ renv
 R/temp
 R/.Rhistory
 data/temp
-NewAnalyses
+temp/
+NewAnalyses/*cvx
+NewAnalyses/temp
