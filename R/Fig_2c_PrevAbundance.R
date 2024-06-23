@@ -4,8 +4,6 @@ mags_tab <- read_tsv("data/pMAGs_cov_norm.txt.gz")
 meta <- read_tsv("data/metadata_NOMIS_sed_chem.txt")
 specgen <- read_tsv("data/pMAGs_spec_gen.tsv")
 magsRocks <- read_tsv("data/pMAGsInRocks.txt")
-meta <- read_tsv("data/metadata_NOMIS_sed_chem.txt")
-
 
 mags_tab[mags_tab < 100] = 0
 
