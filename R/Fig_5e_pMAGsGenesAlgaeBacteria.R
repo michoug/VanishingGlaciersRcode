@@ -128,4 +128,4 @@ p1 <-
   labs(x = NULL, y = NULL, fill = "Proprotion (%)") +
   theme_pubr()
 p1
-ggsave_fitmax("Figures/Fig_6e_Heatmap_cat_algae_bact.pdf", p1, maxwidth = 12)
+ggsave_fitmax("Figures/Fig_5e_Heatmap_cat_algae_bact.pdf", p1, maxwidth = 12)

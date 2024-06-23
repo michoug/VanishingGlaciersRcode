@@ -94,6 +94,6 @@ p1 <- plt$plot +
 
 p1
 
-ggsave_fitmax("Figures/Fig_Xa_NMDS_pMAGs_Abund.pdf",
+ggsave_fitmax("Figures/Fig_2a_NMDS_pMAGs_Abund.pdf",
               p1,
               maxwidth = 15)

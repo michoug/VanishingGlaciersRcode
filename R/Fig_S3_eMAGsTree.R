@@ -144,4 +144,4 @@ p4 <- gheatmap(
 
 p4
 
-ggsave_fitmax("Figures/Fig_2_EukaryoticTreeAbove30.pdf", p4, maxwidth = 10)
+ggsave_fitmax("Figures/Fig_S3_EukaryoticTree.pdf", p4, maxwidth = 10)

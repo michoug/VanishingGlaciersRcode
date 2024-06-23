@@ -106,7 +106,7 @@ p1
 
 
 ggsave_fitmax(
-  "Figures/Fig_4b_trophicvsParameters_SpecGen.pdf",
+  "Figures/Fig_6c-g_trophicvsParameters_SpecGen.pdf",
   p1,
   maxwidth = 10
 )

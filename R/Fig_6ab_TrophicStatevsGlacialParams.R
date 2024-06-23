@@ -68,4 +68,4 @@ pChla <- createplot(dat_4plot, "Chla (ln ug.g-1)\n", trophicParam)
 
 p <- ggarrange(plotlist = pChla, labels = "auto", ncol = 2)
 p
-ggsave_fitmax("Figures/Fig_4a_trophicvsParameters.pdf",p, maxwidth = 8)
+ggsave_fitmax("Figures/Fig_6ab_trophicvsParameters.pdf",p, maxwidth = 8)

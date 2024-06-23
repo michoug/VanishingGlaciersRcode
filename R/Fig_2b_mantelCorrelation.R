@@ -88,4 +88,4 @@ p1 <- qcorrplot(correlationMap,type = "lower",diag = FALSE) +
          fill = guide_colorbar(title = "Spearman's r", order = 3))
 
 
-ggsave_fitmax("Figures/Fig_Xb_mantel.pdf",p1, maxheight = 10)
+ggsave_fitmax("Figures/Fig_2b_mantel.pdf",p1, maxheight = 10)

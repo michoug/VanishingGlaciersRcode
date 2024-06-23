@@ -138,4 +138,4 @@ p1 <- ggplot(
         plot.title = element_text(hjust = .5, colour = "black"))
 
 p1
-ggsave_fitmax("Figures/Fig_5b_Sankey_Genomad_Prok.pdf", p1)
+ggsave_fitmax("Figures/Fig_4b_Sankey_Genomad_Prok.pdf", p1)

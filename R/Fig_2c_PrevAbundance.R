@@ -46,4 +46,4 @@ p1 <- ggplot(prevAbund, aes(y = log10(abundance_perc*100), x = prevalence*100, c
   )
 p1
 
-ggsave("Figures/Fig_Xc_Niche_prev_abun.pdf", p1)
+ggsave("Figures/Fig_2c_Niche_prev_abun.pdf", p1)
