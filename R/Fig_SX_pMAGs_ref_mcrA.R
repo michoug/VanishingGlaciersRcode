@@ -1,6 +1,7 @@
 library(tidyverse)
 library(gggenomes)
 library(ggpubr)
+library(ggnewscale)
 
 source("customFunctions/plot_functions.R")
 
@@ -55,13 +56,17 @@ rename_genes <- function(table, id){
     ))
 }
 
+genome <- genome_32
+ids_sel <- ids_genome_32
+
 plot_synteny <- function(genome, ids_sel, genes_to_plot) {
   
   ids_sel <- c(genome, ids_sel)
   
   meth_links <- read_paf("data/pMAGs_ref_mcrA_contigs.paf") %>%
     filter(seq_id %in% ids_sel) %>%
-    filter(seq_id2 %in% ids_sel)
+    filter(seq_id2 %in% ids_sel)%>%
+    mutate(perc_id = map_match*100/map_length)
   
   meth_links <- rename_genes(meth_links, "seq_id")
   meth_links <- rename_genes(meth_links, "seq_id2")
@@ -105,11 +110,14 @@ plot_synteny <- function(genome, ids_sel, genes_to_plot) {
     geom_seq() +
     geom_bin_label() +
     geom_gene(aes(fill = Preferred_name)) +
-    geom_link() +
+    scale_fill_brewer("Genes", palette = "Dark2", na.value = "cornsilk3")+
+    new_scale_fill()+
+    geom_link(aes(fill = perc_id)) +
+    scale_fill_gradient(limits = c(70,85), low = "grey80", high = "grey30")+
     geom_gene_tag(aes(label = Preferred_name),
                   nudge_y = 0.1,
-                  check_overlap = TRUE) +
-    scale_fill_brewer("Genes", palette = "Dark2", na.value = "cornsilk3")
+                  check_overlap = TRUE)
+    
   
   p1
 }
@@ -121,7 +129,7 @@ p1 <- plot_synteny(genome_11, ids_genome_11, genes_to_plot)
 p2 <- plot_synteny(genome_32, ids_genome_32, genes_to_plot)
 
 p <- ggarrange(p1, p2, common.legend = T, ncol = 1, labels = "auto")
-
+p
 ggsave_fitmax("Figures/Fig_sX_Methanogens.pdf", p, maxwidth = 14)
 
 
