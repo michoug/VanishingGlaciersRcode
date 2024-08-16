@@ -1,7 +1,6 @@
 library(vegan)
 library(janitor)
 library(tidyverse)
-# library(scales)
 library(ggordiplots)
 
 set.seed(123)
@@ -63,7 +62,7 @@ xvalue = min(datfort_sites$NMDS1) + 0.1 *
   (max(datfort_sites$NMDS1) - min(datfort_sites$NMDS1))
 
 
-plt <- gg_ordiplot(nmds, groups = map_clean$region, ellipse = F, spiders = T)
+plt <- gg_ordiplot(nmds, groups = map_clean$region, ellipse = F, spiders = F)
 
 p1 <- plt$plot +
   geom_point(size = 3) + 
