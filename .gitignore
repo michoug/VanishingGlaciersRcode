@@ -8,5 +8,4 @@ R/temp
 R/.Rhistory
 data/temp
 temp/
-NewAnalyses/*cvx
-NewAnalyses/temp
+NewAnalyses/
